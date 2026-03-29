@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="de"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Über Matti | Ihr geduldiger Tech-Mentor</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-tint": "#316760",
+              "tertiary-fixed": "#ffdbd0",
+              "tertiary": "#4a2113",
+              "surface-container-high": "#eae8e4",
+              "on-secondary-container": "#785c28",
+              "on-error": "#ffffff",
+              "on-surface": "#1b1c1a",
+              "secondary-container": "#fdd897",
+              "error-container": "#ffdad6",
+              "primary": "#00332e",
+              "on-tertiary-fixed": "#351005",
+              "surface-container-lowest": "#ffffff",
+              "primary-container": "#0e4b44",
+              "on-secondary-fixed-variant": "#5b430f",
+              "primary-fixed": "#b5eee3",
+              "on-tertiary": "#ffffff",
+              "primary-fixed-dim": "#9ad1c8",
+              "inverse-on-surface": "#f2f0ed",
+              "surface-bright": "#fbf9f5",
+              "inverse-surface": "#30312e",
+              "surface-variant": "#e4e2de",
+              "tertiary-container": "#653627",
+              "on-primary": "#ffffff",
+              "error": "#ba1a1a",
+              "inverse-primary": "#9ad1c8",
+              "surface-container-low": "#f5f3ef",
+              "on-secondary-fixed": "#271900",
+              "on-secondary": "#ffffff",
+              "surface-container-highest": "#e4e2de",
+              "on-tertiary-container": "#e2a08c",
+              "secondary": "#755a25",
+              "secondary-fixed": "#ffdea7",
+              "on-surface-variant": "#404947",
+              "background": "#fbf9f5",
+              "surface": "#fbf9f5",
+              "outline": "#707977",
+              "tertiary-fixed-dim": "#fbb6a1",
+              "on-primary-container": "#83bab1",
+              "surface-container": "#efeeea",
+              "outline-variant": "#bfc8c6",
+              "secondary-fixed-dim": "#e6c182",
+              "on-background": "#1b1c1a",
+              "on-primary-fixed": "#00201c",
+              "on-error-container": "#93000a",
+              "on-primary-fixed-variant": "#144f48",
+              "surface-dim": "#dbdad6",
+              "on-tertiary-fixed-variant": "#6a3a2b"
+            },
+            fontFamily: {
+              "headline": ["Lexend"],
+              "body": ["Inter"],
+              "label": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .editorial-shadow {
+            box-shadow: 0 8px 32px -4px rgba(27, 28, 26, 0.04);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-[#fbf9f5]/80 dark:bg-[#1b1c1a]/80 backdrop-blur-md shadow-sm shadow-[#1b1c1a]/5 transition-all duration-300">
+<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
+<div class="text-2xl font-bold tracking-tight text-[#00332e] dark:text-[#fbf9f5] font-lexend">Matti</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-[#1b1c1a]/70 dark:text-[#fbf9f5]/70 font-medium hover:text-[#0e4b44] hover:bg-[#f5f3ef] dark:hover:bg-[#2c2d2a] transition-all duration-300 px-3 py-1 rounded-lg" href="#">Home</a>
+<a class="text-[#1b1c1a]/70 dark:text-[#fbf9f5]/70 font-medium hover:text-[#0e4b44] hover:bg-[#f5f3ef] dark:hover:bg-[#2c2d2a] transition-all duration-300 px-3 py-1 rounded-lg" href="#">Leistungen</a>
+<a class="text-[#0e4b44] dark:text-[#fbf9f5] font-semibold border-b-2 border-[#0e4b44] pb-1" href="#">Über mich</a>
+<a class="text-[#1b1c1a]/70 dark:text-[#fbf9f5]/70 font-medium hover:text-[#0e4b44] hover:bg-[#f5f3ef] dark:hover:bg-[#2c2d2a] transition-all duration-300 px-3 py-1 rounded-lg" href="#">Kontakt</a>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2 rounded-lg font-medium active:scale-95 duration-150 ease-in-out">Termin vereinbaren</button>
+</div>
+<!-- Mobile Menu Toggle (Simplified) -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section: Asymmetric Editorial Layout -->
+<section class="max-w-7xl mx-auto px-8 py-16 md:py-24 grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-7 z-10">
+<span class="text-secondary font-label font-medium tracking-widest mb-4 block">DER MENSCH HINTER DER TECHNIK</span>
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-primary leading-tight -tracking-[0.03em] mb-8">
+                    Geduld ist meine <span class="text-secondary italic">Superkraft.</span>
+</h1>
+<p class="text-on-surface-variant text-xl leading-relaxed max-w-xl">
+                    Ich bin Matti, 18 Jahre alt und Abiturient. Während andere in meinem Alter nur konsumieren, liebe ich es, die Brücke zwischen komplexer Technik und dem echten Alltag zu schlagen – besonders für Menschen, die mit digitalen Geräten nicht aufgewachsen sind.
+                </p>
+</div>
+<div class="md:col-span-5 relative">
+<div class="aspect-[4/5] rounded-3xl overflow-hidden editorial-shadow transform rotate-2 hover:rotate-0 transition-transform duration-500 bg-surface-container">
+<img alt="Matti Portrait" class="w-full h-full object-cover" data-alt="A friendly 18-year-old man with a kind smile, wearing a professional but casual linen shirt, sitting in a sunlit modern study with warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1wH_EHcr43bTdXzjbgATNX8m4NQgZnpEslW0wowV1q1mk7psvBKYP4Y874FQfy3B2s61KKb8aEbB5_LN_cMoPZ2OqyK4N5THVUrmXfk0AqOLO6bHpJn5STINRdnIUTdAaXYs1JiZef7_eKYBQTDCtQJMLLQzoldhrPmek7FZorOfg1dxIqPMCpNUbJVivWhb4Nb7TpMeNgZDnCKVB11cqz0rxCANKtPbukR91G_F_savYXH1C8jUjBQL6KvGVh-_CvoH3NRexn3s3"/>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-6 -left-6 w-32 h-32 bg-secondary-fixed rounded-full -z-10 opacity-50"></div>
+</div>
+</section>
+<!-- Mission Section: Tonal Shift -->
+<section class="bg-surface-container-low py-24 mt-12">
+<div class="max-w-7xl mx-auto px-8">
+<div class="max-w-3xl">
+<h2 class="font-headline text-3xl md:text-4xl font-bold text-primary mb-6">Meine Mission</h2>
+<p class="text-body text-lg text-on-surface-variant leading-relaxed mb-12">
+                        In einer Welt, die sich immer schneller digitalisiert, dürfen wir die wichtigste Generation nicht vergessen. Technik sollte verbinden, nicht isolieren. Meine Mission ist es, Senioren die Angst vor dem "falschen Klick" zu nehmen und ihnen die Freiheit zu schenken, digital am Leben ihrer Enkel und der Gesellschaft teilzuhaben.
+                    </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Value Card 1 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl editorial-shadow border border-outline-variant/10">
+<div class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">favorite</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-primary mb-3">Empathie</h3>
+<p class="text-on-surface-variant">Keine Frage ist zu "dumm". Ich verstehe die Hürden und erkläre alles in Ihrem Tempo, bis Sie sich sicher fühlen.</p>
+</div>
+<!-- Value Card 2 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl editorial-shadow border border-outline-variant/10">
+<div class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">visibility</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-primary mb-3">Klarheit</h3>
+<p class="text-on-surface-variant">Ich verzichte auf Fachchinesisch. Wir sprechen Deutsch, nicht Computer-Code. Schritt für Schritt ans Ziel.</p>
+</div>
+<!-- Value Card 3 -->
+<div class="bg-surface-container-lowest p-8 rounded-2xl editorial-shadow border border-outline-variant/10">
+<div class="w-12 h-12 bg-primary/5 rounded-xl flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+</div>
+<h3 class="font-headline text-xl font-bold text-primary mb-3">Zuverlässigkeit</h3>
+<p class="text-on-surface-variant">Als Ihr fester Mentor bin ich erst zufrieden, wenn Ihr Problem gelöst ist. Ein Handschlag zählt für mich.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Background Section: Bento Grid Style -->
+<section class="max-w-7xl mx-auto px-8 py-24">
+<div class="mb-16 text-center md:text-left">
+<h2 class="font-headline text-4xl font-bold text-primary">Mein Hintergrund</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[600px]">
+<!-- Large Feature -->
+<div class="md:col-span-8 bg-surface-container rounded-3xl overflow-hidden relative group">
+<img alt="Working together" class="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700" data-alt="Hands of an older person and a young person working together on a tablet device, warm evening light, close-up with focus on the connection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYMklEFpcq1wCYY_r7KnHrA4H8RHnusL97QygQVKuyBaqm9SdEf7whV-xoA0WMHCTJGSU3N2xpwDoN8-I9dUFMbKbEIaA9uxIZqpPZi7bln0yXQYm-YrUNC37sIs8b3bj0V4Jh9ZS0KnB-OL2ZVMRtQwtwaePTVdBl-VEUrTATtMRtX3PztrdN_rlmsbLqJERzHfyaEF_JNJ4dIHm1L6sZ4xdbfPlPwe6yFd7Gm1vDJFP5km7-M2H5KgJ4kQlxfZZ0DHtXw-DiWqhN"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-12">
+<div class="text-white">
+<h3 class="font-headline text-3xl font-bold mb-4">Schüler, aber Experte.</h3>
+<p class="max-w-lg text-white/90 text-lg">Seit ich klein bin, fasziniert mich, wie Dinge funktionieren. Diese Neugier nutze ich heute, um anderen das digitale Leben zu erleichtern.</p>
+</div>
+</div>
+</div>
+<!-- Small Box Top -->
+<div class="md:col-span-4 bg-secondary-fixed text-on-secondary-fixed p-8 rounded-3xl flex flex-col justify-center">
+<h4 class="font-headline text-2xl font-bold mb-4">Abiturient 2024</h4>
+<p class="opacity-80">Gelernt im Klassenzimmer, bewährt im echten Leben. Ich bringe die Frische der Jugend mit der Ruhe eines Mentors zusammen.</p>
+</div>
+<!-- Small Box Bottom -->
+<div class="md:col-span-4 bg-primary-container text-on-primary-container p-8 rounded-3xl flex flex-col justify-center">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-3xl">school</span>
+<h4 class="font-headline text-2xl font-bold">Ständiges Lernen</h4>
+</div>
+<p class="opacity-80">Technik ändert sich täglich. Ich bleibe für Sie am Ball, damit Sie es nicht tun müssen.</p>
+</div>
+</div>
+</section>
+<!-- Personal Quote / Call to Action -->
+<section class="max-w-5xl mx-auto px-8 py-20 text-center">
+<div class="bg-surface-container-highest rounded-[3rem] p-12 md:p-20 relative overflow-hidden">
+<span class="material-symbols-outlined text-9xl absolute -top-10 -left-10 opacity-5 text-primary">format_quote</span>
+<h2 class="font-headline text-3xl md:text-4xl font-semibold text-primary leading-snug mb-10">
+                    "Ich möchte, dass Sie Ihre Geräte mit einem Lächeln bedienen, statt mit Sorgenfalten."
+                </h2>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform editorial-shadow">
+                        Lernen wir uns kennen?
+                    </button>
+<a class="text-primary font-bold hover:underline flex items-center gap-2" href="#">
+                        Meine Leistungen ansehen
+                        <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-3xl mt-20 bg-[#f5f3ef] dark:bg-[#1b1c1a] border-t border-[#0e4b44]/10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 py-12 max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="text-lg font-bold text-[#00332e] dark:text-[#fbf9f5] font-lexend">Matti</div>
+<p class="text-[#1b1c1a]/60 dark:text-[#fbf9f5]/60 text-sm max-w-xs">
+                    Ihr geduldiger Begleiter in die digitale Welt. Individuelle Betreuung für Senioren und Technik-Neulinge.
+                </p>
+</div>
+<div class="flex flex-col space-y-3">
+<h4 class="font-headline font-bold text-[#0e4b44] dark:text-[#fbf9f5]">Links</h4>
+<a class="text-[#1b1c1a]/60 dark:text-[#fbf9f5]/60 hover:text-[#0e4b44] dark:hover:text-[#fbf9f5] transition-colors text-sm" href="#">Geduldig &amp; Kompetent</a>
+<a class="text-[#1b1c1a]/60 dark:text-[#fbf9f5]/60 hover:text-[#0e4b44] dark:hover:text-[#fbf9f5] transition-colors text-sm" href="#">Hilfe anfragen</a>
+</div>
+<div class="flex flex-col space-y-3">
+<h4 class="font-headline font-bold text-[#0e4b44] dark:text-[#fbf9f5]">Rechtliches</h4>
+<a class="text-[#1b1c1a]/60 dark:text-[#fbf9f5]/60 hover:text-[#0e4b44] dark:hover:text-[#fbf9f5] transition-colors text-sm" href="#">Impressum</a>
+<a class="text-[#1b1c1a]/60 dark:text-[#fbf9f5]/60 hover:text-[#0e4b44] dark:hover:text-[#fbf9f5] transition-colors text-sm" href="#">Datenschutz</a>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-8 pb-12">
+<div class="pt-8 border-t border-[#0e4b44]/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-[#1b1c1a]/40 dark:text-[#fbf9f5]/40 text-xs">© 2024 Matti - Ihr geduldiger Tech-Mentor</p>
+<div class="flex gap-4">
+<!-- Social placeholders using icons -->
+<span class="material-symbols-outlined text-[#1b1c1a]/40 cursor-pointer hover:text-primary transition-colors">phone_iphone</span>
+<span class="material-symbols-outlined text-[#1b1c1a]/40 cursor-pointer hover:text-primary transition-colors">mail</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
