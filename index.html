@@ -3,281 +3,289 @@
 <html class="scroll-smooth" lang="de"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<title>Matti | Ihr geduldiger Tech-Mentor</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "surface-tint": "#316760",
-              "tertiary-fixed": "#ffdbd0",
-              "tertiary": "#4a2113",
-              "surface-container-high": "#eae8e4",
-              "on-secondary-container": "#785c28",
-              "on-error": "#ffffff",
-              "on-surface": "#1b1c1a",
-              "secondary-container": "#fdd897",
-              "error-container": "#ffdad6",
-              "primary": "#00332e",
-              "on-tertiary-fixed": "#351005",
-              "surface-container-lowest": "#ffffff",
-              "primary-container": "#0e4b44",
-              "on-secondary-fixed-variant": "#5b430f",
-              "primary-fixed": "#b5eee3",
-              "on-tertiary": "#ffffff",
-              "primary-fixed-dim": "#9ad1c8",
-              "inverse-on-surface": "#f2f0ed",
-              "surface-bright": "#fbf9f5",
-              "inverse-surface": "#30312e",
-              "surface-variant": "#e4e2de",
-              "tertiary-container": "#653627",
-              "on-primary": "#ffffff",
-              "error": "#ba1a1a",
-              "inverse-primary": "#9ad1c8",
-              "surface-container-low": "#f5f3ef",
-              "on-secondary-fixed": "#271900",
-              "on-secondary": "#ffffff",
-              "surface-container-highest": "#e4e2de",
-              "on-tertiary-container": "#e2a08c",
-              "secondary": "#755a25",
-              "secondary-fixed": "#ffdea7",
-              "on-surface-variant": "#404947",
-              "background": "#fbf9f5",
-              "surface": "#fbf9f5",
-              "outline": "#707977",
-              "tertiary-fixed-dim": "#fbb6a1",
-              "on-primary-container": "#83bab1",
-              "surface-container": "#efeeea",
-              "outline-variant": "#bfc8c6",
-              "secondary-fixed-dim": "#e6c182",
-              "on-background": "#1b1c1a",
-              "on-primary-fixed": "#00201c",
-              "on-error-container": "#93000a",
-              "on-primary-fixed-variant": "#144f48",
-              "surface-dim": "#dbdad6",
-              "on-tertiary-fixed-variant": "#6a3a2b"
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary-fixed": "#b1f0ce",
+                        "surface-bright": "#f8f9fa",
+                        "inverse-on-surface": "#f0f1f2",
+                        "on-primary-fixed-variant": "#0e5138",
+                        "tertiary-fixed-dim": "#cec5bb",
+                        "inverse-surface": "#2e3132",
+                        "primary-container": "#236146",
+                        "surface-dim": "#d9dadb",
+                        "surface-container-high": "#e7e8e9",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#95d4b3",
+                        "surface-variant": "#e1e3e4",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#86d7ad",
+                        "on-tertiary-fixed-variant": "#4c463e",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#3f4949",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-secondary-fixed-variant": "#005236",
+                        "on-primary": "#ffffff",
+                        "outline": "#6f7979",
+                        "surface-container": "#edeeef",
+                        "secondary-container": "#a1f4c8",
+                        "inverse-primary": "#95d4b3",
+                        "tertiary-fixed": "#ebe1d6",
+                        "on-primary-fixed": "#002114",
+                        "secondary-fixed": "#a1f4c8",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-fixed": "#1f1b14",
+                        "on-surface": "#191c1d",
+                        "on-secondary": "#ffffff",
+                        "surface": "#f8f9fa",
+                        "secondary": "#116c4a",
+                        "on-secondary-container": "#1b724f",
+                        "surface-tint": "#2c694e",
+                        "primary": "#004930",
+                        "tertiary": "#433e36",
+                        "surface-container-low": "#f3f4f5",
+                        "on-background": "#191c1d",
+                        "outline-variant": "#bec8c9",
+                        "tertiary-container": "#5b554d",
+                        "background": "#f8f9fa",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#002113",
+                        "on-primary-container": "#9ad9b8",
+                        "on-tertiary-container": "#d3cabf"
+                    },
+                    fontFamily: {
+                        "headline": ["Lexend"],
+                        "body": ["Lexend"],
+                        "label": ["Lexend"]
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+                },
             },
-            fontFamily: {
-              "headline": ["Lexend"],
-              "body": ["Inter"],
-              "label": ["Lexend"]
-            },
-            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-          },
-        },
-      }
+        }
     </script>
 <style>
-      .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      }
-      .font-lexend { font-family: 'Lexend', sans-serif; }
-      .font-inter { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1.5px solid rgba(149, 212, 179, 0.15);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(0, 73, 48, 0.1);
+        }
     </style>
 </head>
-<body class="bg-surface text-on-surface font-body selection:bg-secondary-fixed selection:text-on-secondary-fixed">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-[#fbf9f5]/80 backdrop-blur-md shadow-sm shadow-[#1b1c1a]/5">
-<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-<div class="text-2xl font-bold tracking-tight text-[#00332e] font-lexend">Matti</div>
-<div class="hidden md:flex items-center gap-8">
-<a class="text-[#0e4b44] font-semibold border-b-2 border-[#0e4b44] pb-1" href="#">Home</a>
-<a class="text-[#1b1c1a]/70 font-medium hover:text-[#0e4b44] hover:bg-[#f5f3ef] transition-all duration-300 px-3 py-1 rounded-lg" href="#">Leistungen</a>
-<a class="text-[#1b1c1a]/70 font-medium hover:text-[#0e4b44] hover:bg-[#f5f3ef] transition-all duration-300 px-3 py-1 rounded-lg" href="#">Über mich</a>
-<a class="text-[#1b1c1a]/70 font-medium hover:text-[#0e4b44] hover:bg-[#f5f3ef] transition-all duration-300 px-3 py-1 rounded-lg" href="#">Kontakt</a>
+<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(25,28,29,0.06)]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<a class="text-2xl font-bold text-teal-900 dark:text-teal-50 tracking-tighter font-headline" href="/">Matti</a>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-headline text-lg tracking-tight font-medium text-teal-900 dark:text-teal-50 border-b-2 border-teal-900 dark:border-teal-50 pb-1" href="/">Home</a>
+<a class="font-headline text-lg tracking-tight font-medium text-teal-900/60 dark:text-teal-50/60 hover:text-teal-900 dark:hover:text-teal-50 transition-colors" href="/leistungen/">Leistungen</a>
+<a class="font-headline text-lg tracking-tight font-medium text-teal-900/60 dark:text-teal-50/60 hover:text-teal-900 dark:hover:text-teal-50 transition-colors" href="/ueber-mich/">Über mich</a>
+<a class="font-headline text-lg tracking-tight font-medium text-teal-900/60 dark:text-teal-50/60 hover:text-teal-900 dark:hover:text-teal-50 transition-colors" href="/kontakt/">Kontakt</a>
 </div>
-<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-3 rounded-xl font-lex font-medium text-sm hover:scale-[0.98] transition-transform duration-150">
+<a class="hidden md:block bg-primary text-on-primary px-8 py-3 rounded-xl font-medium hover:scale-105 transition-all duration-400 ease-out shadow-lg" href="/kontakt/">
                 Termin vereinbaren
-            </button>
+            </a>
+<!-- Mobile Menu Toggle (Simplified) -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
 </div>
+<div class="bg-gradient-to-r from-teal-900/10 to-transparent h-[1.5px]"></div>
 </nav>
 <main class="pt-24">
 <!-- Hero Section -->
-<section class="max-w-7xl mx-auto px-8 py-16 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-<div class="order-2 lg:order-1">
-<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant text-sm font-semibold mb-6">
-<span class="material-symbols-outlined text-sm">verified_user</span>
-                    Geduldig &amp; Kompetent
-                </div>
-<h1 class="font-headline text-5xl md:text-6xl lg:text-7xl font-bold text-primary leading-[1.1] tracking-tight mb-8">
-                    Ihr geduldiger Tech-Mentor für den Alltag.
-                </h1>
-<p class="text-on-surface-variant text-lg md:text-xl leading-relaxed mb-10 max-w-xl">
-                    Technik muss nicht kompliziert sein. Ich helfe Ihnen dabei, Ihr Smartphone, Tablet oder Ihren Computer sicher und entspannt zu bedienen – ganz ohne Fachchinesisch.
-                </p>
-<div class="flex flex-wrap gap-4">
-<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-4 rounded-xl font-lex font-semibold text-lg hover:scale-[0.98] transition-all shadow-lg shadow-primary/10">
-                        Jetzt kennenlernen
-                    </button>
-<button class="bg-surface-container-low text-primary px-8 py-4 rounded-xl font-lex font-semibold text-lg hover:bg-surface-container-high transition-all">
-                        Meine Leistungen
-                    </button>
+<section class="relative min-h-[921px] flex items-center overflow-hidden px-6 lg:px-12 py-20">
+<div class="absolute inset-0 z-0">
+<div class="absolute top-[-10%] right-[-5%] w-[600px] h-[600px] bg-secondary-fixed/20 rounded-full blur-[120px]"></div>
+<div class="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] bg-primary-fixed/30 rounded-full blur-[100px]"></div>
 </div>
-<div class="mt-12 flex items-center gap-4">
-<div class="flex -space-x-3">
-<div class="w-10 h-10 rounded-full border-2 border-surface bg-primary-fixed flex items-center justify-center text-xs font-bold text-primary">MH</div>
-<div class="w-10 h-10 rounded-full border-2 border-surface bg-secondary-fixed flex items-center justify-center text-xs font-bold text-secondary">RS</div>
-<div class="w-10 h-10 rounded-full border-2 border-surface bg-tertiary-fixed flex items-center justify-center text-xs font-bold text-tertiary">KL</div>
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+<div class="lg:col-span-7 space-y-8">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card text-primary font-medium text-sm lg:text-base">
+<span class="relative flex h-3 w-3">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-fixed opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary"></span>
+</span>
+                        Persönliche 1:1 Begleitung
+                    </div>
+<h1 class="font-headline text-5xl lg:text-7xl font-extrabold text-primary leading-[1.1] tracking-tight text-glow">
+                        Ihr geduldiger Tech-Mentor für den Alltag.
+                    </h1>
+<p class="text-on-surface-variant text-xl lg:text-2xl leading-relaxed max-w-2xl font-light">
+                        Technik muss nicht kompliziert sein. Ich helfe Ihnen dabei, Ihr Smartphone, Tablet oder Ihren Computer sicher und entspannt zu bedienen – ganz ohne Fachchinesisch.
+                    </p>
+<div class="flex flex-wrap gap-6 pt-4">
+<a class="bg-primary text-on-primary px-10 py-5 rounded-xl text-xl font-semibold hover:scale-105 transition-all duration-400 shadow-[0_10px_30px_rgba(0,73,48,0.2)]" href="/kontakt/">
+                            Jetzt kennenlernen
+                        </a>
+<a class="glass-card text-primary px-10 py-5 rounded-xl text-xl font-semibold hover:bg-white/90 transition-all duration-400" href="/leistungen/">
+                            Meine Leistungen
+                        </a>
 </div>
-<p class="text-sm text-on-surface-variant font-medium">Bereits über 50 glückliche Senioren unterstützt.</p>
 </div>
-</div>
-<div class="order-1 lg:order-2 relative">
-<div class="absolute -top-6 -left-6 w-32 h-32 bg-secondary-fixed/30 rounded-full blur-3xl"></div>
-<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-primary-fixed/20 rounded-full blur-3xl"></div>
-<div class="relative rounded-[2.5rem] overflow-hidden shadow-2xl shadow-primary/5 aspect-[4/5] lg:aspect-auto">
-<img alt="Matti hilft Seniorin am iPad" class="w-full h-full object-cover" data-alt="friendly 18 year old young man with warm smile sitting next to an elderly woman showing her how to use a tablet in a cozy sunlit living room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRg85bfpR5-RDf9kxdhOxWRvnIClyKS8zo6iZHOvS6_cLgJr06XGrw6QK8U1OCO-40YUy9b20ukZm1ocODMkcyUK5xpcDzhoaPLBfKErgcZGcczaJQICLi8J5KVLaJ3wbQbF7Ohw_Yw4-Vz8Be76V-1cfgw1xDOGOf3L7oejv_y3RdGGysE18LLZU-5fOvJeIgXvdTX_ghcGFgJXW0ebEfp60jgQxWheMA3GX8fHHtSuYmY7zsdmnjGt9P0ROxuI1oxPmoIoG13AeN"/>
+<div class="lg:col-span-5 relative">
+<div class="relative rounded-xl overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-700">
+<img alt="Mentor Matti hilft Seniorin am Tablet" class="w-full aspect-[4/5] object-cover" data-alt="A friendly young 18-year-old male mentor with a kind smile sitting beside an elderly woman, patiently pointing at a digital tablet screen in a bright sunlit living room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDklAswqMJuoMUeQTQeSGF2X7-LkSIz8hk3Iy7v2kNiy198E-YU2tuoZ-uMEV2kyjTMu_d8QOpbZ2uo7XYfLbq6p68pi3I3KS6cQlBR5L1yho1lbcapQqhulBv1H_AM9Xe8bnWtbAfHzphv6bBmG1P3cxa19J77YWue_wmtlzwU5w7_6soU4FnK8kBHhnli0J10Hl2b2E6brP22dznkjDQeo6gDwTF06L2kaFNvubz1DBhUMVKNR7n5zkhPVDyItVACMBi8taCFcvAO"/>
 <div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
-<div class="absolute bottom-6 left-6 right-6 p-6 bg-white/10 backdrop-blur-lg rounded-2xl border border-white/20">
-<p class="text-white font-lex font-medium italic">"Matti hat mir die Angst vor meinem neuen iPad genommen. Jetzt kann ich endlich problemlos mit meinen Enkeln videotelefonieren."</p>
-<p class="text-white/80 text-sm mt-3">— Frau Helga (74)</p>
+</div>
+<!-- Mentorship Pulse Badge -->
+<div class="absolute -bottom-8 -left-8 glass-card p-6 rounded-lg max-w-[240px] shadow-xl">
+<div class="flex items-center gap-4 mb-2">
+<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+</div>
+<div class="font-bold text-primary">Garantierte Geduld</div>
+</div>
+<p class="text-sm text-on-surface-variant">Wir nehmen uns genau die Zeit, die Sie brauchen.</p>
 </div>
 </div>
 </div>
 </section>
-<!-- Why Matti? - Bento Grid Style -->
-<section class="bg-surface-container-low py-24 rounded-[3rem] mx-4">
-<div class="max-w-7xl mx-auto px-8">
-<div class="text-center mb-16">
-<h2 class="font-headline text-3xl md:text-4xl font-bold text-primary mb-4">Warum Matti?</h2>
-<p class="text-on-surface-variant max-w-2xl mx-auto">Als Privatperson biete ich Ihnen eine Begleitung auf Augenhöhe – zuverlässig, ehrlich und ohne Zeitdruck.</p>
+<!-- Warum Matti? (Bento-style Grid) -->
+<section class="py-24 px-6 lg:px-12 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="text-center mb-20 space-y-4">
+<h2 class="font-headline text-4xl lg:text-5xl font-bold text-primary tracking-tight">Warum Matti?</h2>
+<div class="w-24 h-1.5 bg-secondary-fixed mx-auto rounded-full"></div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-<!-- Personal Card -->
-<div class="bg-surface-container-lowest p-8 rounded-[2rem] shadow-sm hover:shadow-md transition-shadow duration-300">
-<div class="w-14 h-14 bg-primary-fixed rounded-2xl flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-primary text-3xl">favorite</span>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Feature 1 -->
+<div class="glass-card p-10 rounded-xl space-y-6 hover:shadow-xl transition-shadow duration-500">
+<div class="w-16 h-16 rounded-2xl bg-primary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-4xl">favorite</span>
 </div>
-<h3 class="font-headline text-xl font-bold text-primary mb-4">Persönlich</h3>
-<p class="text-on-surface-variant leading-relaxed">
-                            Ich komme zu Ihnen nach Hause. In Ihrer gewohnten Umgebung lernt es sich am besten. Wir gehen genau die Themen an, die Sie interessieren.
+<h3 class="text-2xl font-bold text-primary">Persönlich</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            Keine Hotline, kein anonymes Tutorial. Ich komme zu Ihnen oder unterstütze Sie digital – immer auf Augenhöhe und mit einem Lächeln.
                         </p>
 </div>
-<!-- Patient Card -->
-<div class="bg-surface-container-lowest p-8 rounded-[2rem] shadow-sm hover:shadow-md transition-shadow duration-300">
-<div class="w-14 h-14 bg-secondary-fixed rounded-2xl flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-secondary text-3xl">hourglass_empty</span>
+<!-- Feature 2 -->
+<div class="glass-card p-10 rounded-xl space-y-6 hover:shadow-xl transition-shadow duration-500 border-t-4 border-secondary-fixed">
+<div class="w-16 h-16 rounded-2xl bg-secondary-container/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary text-4xl">timer</span>
 </div>
-<h3 class="font-headline text-xl font-bold text-primary mb-4">Geduldig</h3>
-<p class="text-on-surface-variant leading-relaxed">
-                            Es gibt keine dummen Fragen. Wir wiederholen jeden Schritt so oft, bis Sie sich absolut sicher fühlen. Ihr Tempo ist mein Maßstab.
+<h3 class="text-2xl font-bold text-primary">Geduldig</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            Es gibt keine "dummen" Fragen. Wir wiederholen jeden Schritt so oft, bis Sie sich absolut sicher fühlen. Versprochen.
                         </p>
 </div>
-<!-- Professional Card -->
-<div class="bg-surface-container-lowest p-8 rounded-[2rem] shadow-sm hover:shadow-md transition-shadow duration-300">
-<div class="w-14 h-14 bg-tertiary-fixed rounded-2xl flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-tertiary text-3xl">verified</span>
+<!-- Feature 3 -->
+<div class="glass-card p-10 rounded-xl space-y-6 hover:shadow-xl transition-shadow duration-500">
+<div class="w-16 h-16 rounded-2xl bg-primary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-4xl">workspace_premium</span>
 </div>
-<h3 class="font-headline text-xl font-bold text-primary mb-4">Professionell</h3>
-<p class="text-on-surface-variant leading-relaxed">
-                            Trotz meines jungen Alters bringe ich jahrelange Technik-Erfahrung mit. Ich erkläre komplexe Dinge einfach und verständlich.
+<h3 class="text-2xl font-bold text-primary">Professionell</h3>
+<p class="text-on-surface-variant text-lg leading-relaxed">
+                            Als Digital Native beherrsche ich die Technik blind, kann sie aber so erklären, dass sie jeder versteht – ohne Fachchinesisch.
                         </p>
 </div>
 </div>
 </div>
 </section>
-<!-- How it Works Section -->
-<section class="max-w-7xl mx-auto px-8 py-24">
-<div class="flex flex-col lg:flex-row gap-16 items-center">
-<div class="w-full lg:w-1/2">
-<img alt="Technik-Beratung Gespräch" class="rounded-[2.5rem] shadow-xl" data-alt="close up of hands holding a smartphone while a young person points at the screen gently explaining a feature to an older person in soft morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3fRcycV80edqafAhEnc5Atb_rnT8mj9Eaoza-00Qq4oAqBn8feaFKYS-I7Ys9idtqF3NfXCjibbhm7QyawIOeCf6wyZcbylM3dnUnrOdEmW-blnlQjNzw632wJmht7r7EAGQ8qroKKgnFXvYPV-mGDJowJK9cJMMyPNc_zasvcBdBr4tC07gkkw40shsD1kUIVipN4WoVJfiRZfqJoESvfQm9kO7MR-lbPQRzMNTug_tnZGSaqc4dKBK2fGrq3isFshw9d6aZW2hE"/>
-</div>
-<div class="w-full lg:w-1/2">
-<h2 class="font-headline text-3xl md:text-4xl font-bold text-primary mb-12">So einfach geht's</h2>
-<div class="space-y-10">
-<div class="flex gap-6">
-<div class="flex-shrink-0 w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-lg">1</div>
-<div>
-<h4 class="font-headline text-xl font-bold text-primary mb-2">Kontakt aufnehmen</h4>
-<p class="text-on-surface-variant">Rufen Sie mich an oder schreiben Sie mir eine Nachricht. Wir besprechen kurz, wo der Schuh drückt.</p>
+<!-- So einfach geht's -->
+<section class="py-24 px-6 lg:px-12 relative overflow-hidden">
+<div class="max-w-7xl mx-auto">
+<div class="lg:flex items-center justify-between mb-16">
+<div class="max-w-2xl">
+<h2 class="font-headline text-4xl lg:text-5xl font-bold text-primary tracking-tight mb-6">So einfach geht's</h2>
+<p class="text-xl text-on-surface-variant">In drei Schritten zu digitaler Souveränität.</p>
 </div>
 </div>
-<div class="flex gap-6">
-<div class="flex-shrink-0 w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-lg">2</div>
-<div>
-<h4 class="font-headline text-xl font-bold text-primary mb-2">Termin vereinbaren</h4>
-<p class="text-on-surface-variant">Ich besuche Sie zum vereinbarten Zeitpunkt bequem bei Ihnen zu Hause im Raum Berlin und Umgebung.</p>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12 relative">
+<!-- Step 1 -->
+<div class="relative group">
+<div class="text-9xl font-black text-primary-fixed/30 absolute -top-12 -left-6 z-0 pointer-events-none select-none">1</div>
+<div class="relative z-10 glass-card p-8 rounded-lg">
+<h4 class="text-2xl font-bold text-primary mb-4">Kontakt</h4>
+<p class="text-on-surface-variant text-lg">Rufen Sie mich an oder schreiben Sie mir eine Nachricht. Wir klären kurz, wobei Sie Hilfe benötigen.</p>
 </div>
 </div>
-<div class="flex gap-6">
-<div class="flex-shrink-0 w-12 h-12 bg-primary text-on-primary rounded-full flex items-center justify-center font-bold text-lg">3</div>
-<div>
-<h4 class="font-headline text-xl font-bold text-primary mb-2">Gemeinsam lösen</h4>
-<p class="text-on-surface-variant">Wir gehen Ihre Fragen Schritt für Schritt durch. Sie behalten die Kontrolle und lernen durch direktes Ausprobieren.</p>
+<!-- Step 2 -->
+<div class="relative group pt-8 lg:pt-16">
+<div class="text-9xl font-black text-primary-fixed/30 absolute -top-4 -left-6 z-0 pointer-events-none select-none">2</div>
+<div class="relative z-10 glass-card p-8 rounded-lg">
+<h4 class="text-2xl font-bold text-primary mb-4">Termin</h4>
+<p class="text-on-surface-variant text-lg">Wir vereinbaren einen Termin, der in Ihren Alltag passt. Ganz entspannt und ohne Zeitdruck.</p>
 </div>
+</div>
+<!-- Step 3 -->
+<div class="relative group pt-16 lg:pt-32">
+<div class="text-9xl font-black text-primary-fixed/30 absolute top-4 -left-6 z-0 pointer-events-none select-none">3</div>
+<div class="relative z-10 glass-card p-8 rounded-lg border-2 border-primary/10">
+<h4 class="text-2xl font-bold text-primary mb-4">Gemeinsam lösen</h4>
+<p class="text-on-surface-variant text-lg">Ich zeige Ihnen alles Schritt für Schritt direkt an Ihrem Gerät, bis Sie es alleine können.</p>
 </div>
 </div>
 </div>
 </div>
 </section>
 <!-- CTA Section -->
-<section class="max-w-7xl mx-auto px-4 mb-24">
-<div class="bg-primary rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
-<div class="absolute top-0 right-0 w-96 h-96 bg-primary-container rounded-full blur-[120px] opacity-50 -translate-y-1/2 translate-x-1/2"></div>
-<div class="absolute bottom-0 left-0 w-64 h-64 bg-secondary text-secondary-fixed rounded-full blur-[100px] opacity-20 translate-y-1/2 -translate-x-1/2"></div>
-<div class="relative z-10">
-<h2 class="font-headline text-4xl md:text-5xl font-bold text-on-primary mb-6">Bereit für den nächsten Schritt?</h2>
-<p class="text-on-primary-container text-lg md:text-xl mb-12 max-w-2xl mx-auto">
-                        Lassen Sie uns gemeinsam die digitale Welt entdecken. Das erste Telefonat zum Kennenlernen ist für Sie völlig kostenfrei.
-                    </p>
-<div class="flex flex-col sm:flex-row justify-center gap-4">
-<button class="bg-secondary-container text-on-secondary-container px-10 py-5 rounded-2xl font-lex font-bold text-xl hover:scale-[0.98] transition-all flex items-center justify-center gap-3">
-<span class="material-symbols-outlined">call</span>
-                            Termin vereinbaren
-                        </button>
-<button class="bg-white/10 text-on-primary px-10 py-5 rounded-2xl font-lex font-bold text-xl hover:bg-white/20 transition-all backdrop-blur-sm border border-white/10">
-                            Frage stellen
-                        </button>
+<section class="py-24 px-6 lg:px-12">
+<div class="max-w-5xl mx-auto rounded-xl overflow-hidden relative">
+<div class="absolute inset-0 bg-gradient-to-br from-primary to-primary-container"></div>
+<div class="relative z-10 p-12 lg:p-20 text-center space-y-8">
+<h2 class="font-headline text-3xl lg:text-5xl font-bold text-on-primary">Bereit für Ihren digitalen Durchbruch?</h2>
+<p class="text-primary-fixed text-xl lg:text-2xl max-w-2xl mx-auto">Lassen Sie uns gemeinsam die Technik-Hürden nehmen. Ich freue mich auf Ihre Nachricht!</p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<a class="bg-white text-primary px-10 py-5 rounded-xl text-xl font-bold hover:scale-105 transition-transform shadow-xl flex items-center justify-center gap-3" href="/kontakt/">
+<span class="material-symbols-outlined">calendar_today</span>
+                            Jetzt anfragen
+                        </a>
+<a class="glass-card bg-white/10 text-white px-10 py-5 rounded-xl text-xl font-bold hover:bg-white/20 transition-all flex items-center justify-center gap-3" href="tel:+49123456789">
+<span class="material-symbols-outlined">phone</span>
+                            Anrufen
+                        </a>
 </div>
-<p class="text-on-primary/60 mt-8 text-sm font-medium">Ich antworte Ihnen in der Regel innerhalb von 24 Stunden.</p>
 </div>
 </div>
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-[#f5f3ef] w-full rounded-t-[3rem] mt-20">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 py-12 max-w-7xl mx-auto border-t border-[#0e4b44]/10">
-<div>
-<div class="text-lg font-bold text-[#00332e] font-lexend mb-6">Matti</div>
-<p class="text-[#1b1c1a]/60 text-sm leading-relaxed max-w-xs">
-                    Ihr geduldiger Begleiter in der digitalen Welt. Spezialisiert auf die Bedürfnisse von Senioren für ein sicheres Online-Erlebnis.
+<footer class="bg-teal-50 dark:bg-slate-950 w-full rounded-t-[3rem] mt-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-16 max-w-7xl mx-auto">
+<div class="space-y-6">
+<h3 class="text-xl font-bold text-teal-900 dark:text-teal-100 font-headline">Matti</h3>
+<p class="text-teal-800/70 dark:text-teal-200/70 font-['Lexend'] body-lg leading-relaxed">
+                    Ihr Technik-Mentor für Smartphone, Computer und mehr. Wir machen Digitales einfach.
                 </p>
 </div>
-<div class="grid grid-cols-2 gap-4">
-<div class="space-y-4">
-<h5 class="font-headline font-bold text-primary text-sm uppercase tracking-wider">Navigation</h5>
-<nav class="flex flex-col gap-2">
-<a class="text-[#1b1c1a]/60 hover:text-[#0e4b44] transition-colors text-sm" href="#">Home</a>
-<a class="text-[#1b1c1a]/60 hover:text-[#0e4b44] transition-colors text-sm" href="#">Leistungen</a>
-<a class="text-[#1b1c1a]/60 hover:text-[#0e4b44] transition-colors text-sm" href="#">Über mich</a>
-</nav>
-</div>
-<div class="space-y-4">
-<h5 class="font-headline font-bold text-primary text-sm uppercase tracking-wider">Rechtliches</h5>
-<nav class="flex flex-col gap-2">
-<a class="text-[#1b1c1a]/60 hover:text-[#0e4b44] transition-colors text-sm" href="#">Impressum</a>
-<a class="text-[#1b1c1a]/60 hover:text-[#0e4b44] transition-colors text-sm" href="#">Datenschutz</a>
-<a class="text-[#1b1c1a]/60 hover:text-[#0e4b44] transition-colors text-sm" href="#">Hilfe anfragen</a>
-</nav>
+<div class="space-y-6">
+<h4 class="text-lg font-bold text-teal-900 dark:text-teal-100">Navigation</h4>
+<div class="flex flex-col gap-4">
+<a class="text-teal-800/70 dark:text-teal-200/70 hover:text-teal-600 dark:hover:text-teal-300 transition-colors duration-300 font-headline" href="/">Home</a>
+<a class="text-teal-800/70 dark:text-teal-200/70 hover:text-teal-600 dark:hover:text-teal-300 transition-colors duration-300 font-headline" href="/leistungen/">Leistungen</a>
+<a class="text-teal-800/70 dark:text-teal-200/70 hover:text-teal-600 dark:hover:text-teal-300 transition-colors duration-300 font-headline" href="/ueber-mich/">Über mich</a>
+<a class="text-teal-800/70 dark:text-teal-200/70 hover:text-teal-600 dark:hover:text-teal-300 transition-colors duration-300 font-headline" href="/kontakt/">Kontakt</a>
 </div>
 </div>
-<div class="flex flex-col md:items-end gap-6">
-<div class="flex gap-4">
-<a class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary shadow-sm hover:scale-110 transition-transform" href="#">
-<span class="material-symbols-outlined text-xl">alternate_email</span>
-</a>
-<a class="w-10 h-10 bg-white rounded-full flex items-center justify-center text-primary shadow-sm hover:scale-110 transition-transform" href="#">
-<span class="material-symbols-outlined text-xl">phone_iphone</span>
-</a>
+<div class="space-y-6">
+<h4 class="text-lg font-bold text-teal-900 dark:text-teal-100">Rechtliches</h4>
+<div class="flex flex-col gap-4">
+<a class="text-teal-800/70 dark:text-teal-200/70 hover:text-teal-600 dark:hover:text-teal-300 transition-colors duration-300 font-headline" href="#">Impressum</a>
+<a class="text-teal-800/70 dark:text-teal-200/70 hover:text-teal-600 dark:hover:text-teal-300 transition-colors duration-300 font-headline" href="#">Datenschutz</a>
 </div>
-<p class="text-[#1b1c1a]/60 text-sm md:text-right">
-                    © 2024 Matti - Ihr geduldiger Tech-Mentor
-                </p>
 </div>
+</div>
+<div class="px-12 py-8 max-w-7xl mx-auto border-t border-teal-900/10">
+<p class="text-center text-teal-900/60 dark:text-teal-100/60 text-sm">
+                © 2024 Matti Tech-Mentoring. Alle Rechte vorbehalten.
+            </p>
 </div>
 </footer>
 </body></html>
