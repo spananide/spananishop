@@ -7,7 +7,6 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;family=Public+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
@@ -80,81 +79,108 @@
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
         .editorial-shadow {
             box-shadow: 0 32px 64px -12px rgba(27, 29, 14, 0.04);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .glare {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 50%);
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .glass-card:hover .glare {
+            opacity: 1;
         }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
 <!-- TopNavBar -->
 <nav class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-md shadow-sm backdrop-saturate-150 h-20 flex justify-between items-center px-8 max-w-full mx-auto">
-<div class="text-2xl font-bold text-blue-900 font-headline tracking-tight">Mentoren-Ecke</div>
+<a class="text-2xl font-bold text-blue-900 font-headline tracking-tight" href="/">Mentoren-Ecke</a>
 <div class="hidden md:flex items-center gap-8">
 <a class="font-headline text-lg font-medium tracking-tight text-blue-700 border-b-2 border-blue-700 pb-1" href="/">Home</a>
-<a class="font-headline text-lg font-medium tracking-tight text-slate-700 hover:text-blue-600 transition-colors" href="#">Leistungen</a>
-<a class="font-headline text-lg font-medium tracking-tight text-slate-700 hover:text-blue-600 transition-colors" href="#">Über mich</a>
-<a class="font-headline text-lg font-medium tracking-tight text-slate-700 hover:text-blue-600 transition-colors" href="#">Kontakt</a>
+<a class="font-headline text-lg font-medium tracking-tight text-slate-700 hover:text-blue-600 transition-colors" href="/leistungen/">Leistungen</a>
+<a class="font-headline text-lg font-medium tracking-tight text-slate-700 hover:text-blue-600 transition-colors" href="/ueber-mich/">Über mich</a>
+<a class="font-headline text-lg font-medium tracking-tight text-slate-700 hover:text-blue-600 transition-colors" href="/kontakt/">Kontakt</a>
 </div>
 <div class="flex items-center gap-4">
-<button class="px-6 py-2.5 bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-semibold rounded-xl scale-95 active:opacity-80 transition-transform shadow-md">
-                Termin vereinbaren
-            </button>
+<a class="px-6 py-2.5 bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-semibold rounded-xl scale-95 active:opacity-80 transition-transform shadow-md inline-block" href="/kontakt/">
+            Termin vereinbaren
+        </a>
 </div>
 </nav>
 <main class="pt-20">
 <!-- Hero Section -->
-<section class="relative min-h-[870px] flex items-center px-8 lg:px-16 overflow-hidden">
+<section class="relative min-h-[870px] flex items-center px-8 lg:px-16 overflow-hidden" id="hero">
 <div class="absolute inset-0 z-0">
-<img class="w-full h-full object-cover opacity-20 grayscale-[0.2]" data-alt="warm sunlit living room where a friendly young male mentor patiently explains a tablet to an elderly woman with soft smiles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE8xdWGauQlQkPjT01BUtfxSrsPhWJeDSCepdM4e_zb2XaDFwmeOUDHZ9qnGwduNEeDSTsCukcQLehXFAsSID1TClaq7Lev8HEN4vLxglEJeAufG35ljKPBpoe6PopOfhqbKBQXSFjtJRhR4wNu7Bvmz-F1DOKcZdnRwCs8CaUrBMQigRqlHr0OcPDpk20j_LO2L5VfxCx2dM9F_cl5SRriO5Az0C5VVDd175gWoakdKbbPudYuuldUSL6Msol0DVUPSWT4e7MlGLg"/>
+<img alt="warm sunlit living room where a friendly young male mentor patiently explains a tablet to an elderly woman with soft smiles" class="w-full h-full object-cover opacity-20 grayscale-[0.2]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDE8xdWGauQlQkPjT01BUtfxSrsPhWJeDSCepdM4e_zb2XaDFwmeOUDHZ9qnGwduNEeDSTsCukcQLehXFAsSID1TClaq7Lev8HEN4vLxglEJeAufG35ljKPBpoe6PopOfhqbKBQXSFjtJRhR4wNu7Bvmz-F1DOKcZdnRwCs8CaUrBMQigRqlHr0OcPDpk20j_LO2L5VfxCx2dM9F_cl5SRriO5Az0C5VVDd175gWoakdKbbPudYuuldUSL6Msol0DVUPSWT4e7MlGLg"/>
 <div class="absolute inset-0 bg-gradient-to-r from-background via-background/95 to-transparent"></div>
 </div>
-<div class="relative z-10 max-w-3xl">
+<div class="relative z-10 max-w-3xl reveal">
 <span class="inline-block px-4 py-1.5 bg-secondary-fixed text-on-secondary-fixed font-label font-bold rounded-full mb-6">Persönlich &amp; Geduldig</span>
 <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-primary leading-[1.1] mb-8 tracking-tight">
-                    Technik verstehen, <br/><span class="text-primary-container">statt verzweifeln.</span>
+                Technik verstehen, <br/><span class="text-primary-container">statt verzweifeln.</span>
 </h1>
 <p class="text-xl md:text-2xl text-on-surface-variant leading-relaxed mb-10 max-w-2xl font-light">
-                    Matti's Tech-Mentoring bringt Ihnen die digitale Welt näher. Ohne Fachchinesisch, in Ihrem Tempo, direkt bei Ihnen zu Hause oder online.
-                </p>
+                Matti's Tech-Mentoring bringt Ihnen die digitale Welt näher. Ohne Fachchinesisch, in Ihrem Tempo, direkt bei Ihnen zu Hause oder online.
+            </p>
 <div class="flex flex-col sm:flex-row gap-4">
-<button class="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline text-lg font-bold rounded-xl shadow-lg hover:translate-y-[-2px] transition-all">
-                        Kostenloses Erstgespräch
-                    </button>
-<button class="px-8 py-4 bg-surface-container-highest text-primary font-headline text-lg font-bold rounded-xl border border-outline-variant/15 hover:bg-surface-bright transition-all">
-                        Leistungen ansehen
-                    </button>
+<a class="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline text-lg font-bold rounded-xl shadow-lg hover:translate-y-[-2px] transition-all text-center" href="/kontakt/">
+                    Kostenloses Erstgespräch
+                </a>
+<a class="px-8 py-4 bg-surface-container-highest text-primary font-headline text-lg font-bold rounded-xl border border-outline-variant/15 hover:bg-surface-bright transition-all inline-flex items-center justify-center" href="/leistungen/">
+                    Leistungen ansehen
+                </a>
 </div>
 </div>
 </section>
 <!-- Why Matti? - Bento Grid Style -->
-<section class="py-24 px-8 lg:px-16 bg-surface-container-low">
+<section class="py-24 px-8 lg:px-16 bg-surface-container-low" id="warum-matti">
 <div class="max-w-7xl mx-auto">
-<div class="mb-16">
+<div class="mb-16 reveal">
 <h2 class="font-headline text-4xl font-bold text-primary mb-4">Warum Matti?</h2>
 <p class="text-lg text-on-surface-variant max-w-2xl font-body">Ein Mentor, der zuhört. Wir bauen Brücken in die digitale Zukunft, Schritt für Schritt.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 <!-- Feature 1 -->
-<div class="md:col-span-2 glass-card p-10 rounded-[2rem] editorial-shadow flex flex-col justify-between min-h-[320px]">
+<div class="md:col-span-2 glass-card p-10 rounded-[2rem] editorial-shadow flex flex-col justify-between min-h-[320px] reveal">
+<div class="glare"></div>
 <div>
-<span class="material-symbols-outlined text-4xl text-primary mb-6" data-icon="chat_bubble">chat_bubble</span>
+<span class="material-symbols-outlined text-4xl text-primary mb-6">chat_bubble</span>
 <h3 class="font-headline text-3xl font-bold text-primary mb-4">Kein Fachchinesisch</h3>
 <p class="text-lg text-on-surface-variant font-body leading-relaxed max-w-xl">Ich erkläre komplexe Themen in einfacher, alltagsrelevanter Sprache. Wir reden über das, was Sie wirklich brauchen – nicht über Bits und Bytes.</p>
 </div>
-<div class="mt-8 flex items-center text-primary font-bold">
+<a class="mt-8 flex items-center text-primary font-bold hover:gap-2 transition-all" href="/leistungen/">
 <span>Mehr erfahren</span>
-<span class="material-symbols-outlined ml-2" data-icon="arrow_forward">arrow_forward</span>
-</div>
+<span class="material-symbols-outlined ml-2">arrow_forward</span>
+</a>
 </div>
 <!-- Feature 2 -->
-<div class="bg-primary text-on-primary p-10 rounded-[2rem] flex flex-col justify-center text-center">
-<span class="material-symbols-outlined text-6xl mb-6 text-secondary-fixed" data-icon="verified_user" style="font-variation-settings: 'FILL' 1;">verified_user</span>
+<div class="bg-primary text-on-primary p-10 rounded-[2rem] flex flex-col justify-center text-center reveal">
+<span class="material-symbols-outlined text-6xl mb-6 text-secondary-fixed" style="font-variation-settings: 'FILL' 1;">verified_user</span>
 <h3 class="font-headline text-2xl font-bold mb-2">100% Sicher</h3>
 <p class="opacity-90 font-body">Sicherheit im Internet ist unser oberstes Gebot bei jeder Sitzung.</p>
 </div>
 <!-- Feature 3 -->
-<div class="bg-surface-container-highest p-10 rounded-[2rem] flex flex-col justify-between border border-outline-variant/15">
+<div class="bg-surface-container-highest p-10 rounded-[2rem] flex flex-col justify-between border border-outline-variant/15 reveal">
 <h3 class="font-headline text-2xl font-bold text-primary mb-4">In Ihrem Tempo</h3>
 <p class="text-on-surface-variant font-body">Keine Eile. Wir wiederholen jeden Schritt so oft, bis Sie sich absolut sicher fühlen.</p>
 <div class="mt-6 flex -space-x-3">
@@ -164,57 +190,61 @@
 </div>
 </div>
 <!-- Feature 4 -->
-<div class="md:col-span-2 glass-card p-10 rounded-[2rem] editorial-shadow flex flex-col md:flex-row gap-8 items-center">
+<div class="md:col-span-2 glass-card p-10 rounded-[2rem] editorial-shadow flex flex-col md:flex-row gap-8 items-center reveal">
+<div class="glare"></div>
 <div class="flex-1">
 <h3 class="font-headline text-3xl font-bold text-primary mb-4">Individuelle Betreuung</h3>
 <p class="text-lg text-on-surface-variant font-body">Vom ersten Smartphone bis zur Videotelefonie mit den Enkeln – ich richte mich nach Ihren Wünschen und Bedürfnissen.</p>
 </div>
 <div class="w-full md:w-64 h-48 rounded-2xl overflow-hidden shadow-inner">
-<img class="w-full h-full object-cover" data-alt="close up of hands holding a tablet with vibrant icons and clear navigation in a bright workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFqd1sKr-acRaGXGdmkFc-hY8zZeWZbL1Jx2JvwisQGRGod107gVCt-DNocbuxAqLKAHPOe8Ihsam9LM2aV0eFD3IRWp9WPuTDl-_tyYaCQfmxQ8m5tVHk7RSrFZxzX2zMcbLSABClHtw6CpL1I_WzhbKFhn6IXorwkA_99QuAeUN4CxIF2r_RGVKOLZwrH9DGYK_19WrJ9SXPRZAqAInyJAUcLJi_YMMiGlKf-gA9vPOxVznxafJjWROgbQWExvWr5bXvO4QOU83C"/>
+<img alt="close up of hands holding a tablet with vibrant icons and clear navigation in a bright workspace" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFqd1sKr-acRaGXGdmkFc-hY8zZeWZbL1Jx2JvwisQGRGod107gVCt-DNocbuxAqLKAHPOe8Ihsam9LM2aV0eFD3IRWp9WPuTDl-_tyYaCQfmxQ8m5tVHk7RSrFZxzX2zMcbLSABClHtw6CpL1I_WzhbKFhn6IXorwkA_99QuAeUN4CxIF2r_RGVKOLZwrH9DGYK_19WrJ9SXPRZAqAInyJAUcLJi_YMMiGlKf-gA9vPOxVznxafJjWROgbQWExvWr5bXvO4QOU83C"/>
 </div>
 </div>
 </div>
 </div>
 </section>
 <!-- How it works - Overlapping Step Cards -->
-<section class="py-24 px-8 lg:px-16 bg-surface">
+<section class="py-24 px-8 lg:px-16 bg-surface" id="ablauf">
 <div class="max-w-5xl mx-auto">
-<div class="text-center mb-20">
+<div class="text-center mb-20 reveal">
 <h2 class="font-headline text-4xl font-bold text-primary mb-4 tracking-tight">So funktioniert es</h2>
 <p class="text-lg text-on-surface-variant font-body">In drei einfachen Schritten zu mehr digitaler Freiheit.</p>
 </div>
 <div class="space-y-12">
 <!-- Step 1 -->
-<div class="relative flex flex-col md:flex-row items-center gap-12 group">
+<div class="relative flex flex-col md:flex-row items-center gap-12 group reveal">
 <div class="absolute -top-10 -left-6 font-headline text-[10rem] font-extrabold text-primary/5 select-none leading-none z-0">1</div>
 <div class="relative z-10 flex-1 glass-card p-12 rounded-[2.5rem] editorial-shadow border border-white/40">
+<div class="glare"></div>
 <h3 class="font-headline text-2xl font-bold text-primary mb-4">Kennenlernen</h3>
 <p class="text-lg text-on-surface-variant font-body leading-relaxed">Wir telefonieren kurz oder treffen uns auf einen Kaffee, um Ihre Ziele zu besprechen. Ganz unverbindlich und kostenfrei.</p>
 </div>
-<div class="hidden md:block w-1/3">
-<span class="material-symbols-outlined text-8xl text-secondary/20" data-icon="coffee">coffee</span>
+<div class="hidden md:block w-1/3 text-center">
+<span class="material-symbols-outlined text-8xl text-secondary/20 group-hover:text-secondary/40 transition-colors">coffee</span>
 </div>
 </div>
 <!-- Step 2 -->
-<div class="relative flex flex-col md:flex-row-reverse items-center gap-12 group">
+<div class="relative flex flex-col md:flex-row-reverse items-center gap-12 group reveal">
 <div class="absolute -top-10 -right-6 font-headline text-[10rem] font-extrabold text-primary/5 select-none leading-none z-0">2</div>
 <div class="relative z-10 flex-1 glass-card p-12 rounded-[2.5rem] editorial-shadow border border-white/40">
+<div class="glare"></div>
 <h3 class="font-headline text-2xl font-bold text-primary mb-4">Lernplan erstellen</h3>
 <p class="text-lg text-on-surface-variant font-body leading-relaxed">Ich erstelle eine maßgeschneiderte Liste mit Themen, die für Sie wichtig sind. Kein unnötiger Ballast, nur das Wesentliche.</p>
 </div>
-<div class="hidden md:block w-1/3 text-right">
-<span class="material-symbols-outlined text-8xl text-secondary/20" data-icon="assignment">assignment</span>
+<div class="hidden md:block w-1/3 text-center">
+<span class="material-symbols-outlined text-8xl text-secondary/20 group-hover:text-secondary/40 transition-colors">assignment</span>
 </div>
 </div>
 <!-- Step 3 -->
-<div class="relative flex flex-col md:flex-row items-center gap-12 group">
+<div class="relative flex flex-col md:flex-row items-center gap-12 group reveal">
 <div class="absolute -top-10 -left-6 font-headline text-[10rem] font-extrabold text-primary/5 select-none leading-none z-0">3</div>
 <div class="relative z-10 flex-1 glass-card p-12 rounded-[2.5rem] editorial-shadow border border-white/40">
+<div class="glare"></div>
 <h3 class="font-headline text-2xl font-bold text-primary mb-4">Gemeinsam starten</h3>
 <p class="text-lg text-on-surface-variant font-body leading-relaxed">Wir gehen die Themen gemeinsam durch. Sie bedienen das Gerät, ich leite Sie an. So bleibt das Gelernte am besten im Gedächtnis.</p>
 </div>
-<div class="hidden md:block w-1/3">
-<span class="material-symbols-outlined text-8xl text-secondary/20" data-icon="rocket_launch">rocket_launch</span>
+<div class="hidden md:block w-1/3 text-center">
+<span class="material-symbols-outlined text-8xl text-secondary/20 group-hover:text-secondary/40 transition-colors">rocket_launch</span>
 </div>
 </div>
 </div>
@@ -222,16 +252,16 @@
 </section>
 <!-- CTA Section -->
 <section class="py-24 px-8 lg:px-16">
-<div class="max-w-7xl mx-auto bg-primary-container rounded-[3rem] p-12 md:p-24 overflow-hidden relative shadow-2xl">
+<div class="max-w-7xl mx-auto bg-primary-container rounded-[3rem] p-12 md:p-24 overflow-hidden relative shadow-2xl reveal">
 <div class="absolute top-0 right-0 w-1/2 h-full opacity-10">
-<span class="material-symbols-outlined text-[30rem] absolute -right-20 -top-20 text-white" data-icon="calendar_month">calendar_month</span>
+<span class="material-symbols-outlined text-[30rem] absolute -right-20 -top-20 text-white">calendar_month</span>
 </div>
 <div class="relative z-10 max-w-2xl">
 <h2 class="font-headline text-4xl md:text-5xl font-bold text-white mb-6">Bereit für den ersten Schritt?</h2>
 <p class="text-xl text-blue-100 mb-10 font-body">Lassen Sie uns gemeinsam die digitale Welt entdecken. Ich freue mich darauf, Sie kennenzulernen!</p>
-<button class="px-10 py-5 bg-white text-primary font-headline text-xl font-extrabold rounded-2xl shadow-xl hover:bg-surface-bright transition-all transform hover:scale-105 active:scale-95">
-                        Jetzt Termin vereinbaren
-                    </button>
+<a class="px-10 py-5 bg-white text-primary font-headline text-xl font-extrabold rounded-2xl shadow-xl hover:bg-surface-bright transition-all transform hover:scale-105 active:scale-95 inline-block" href="/kontakt/">
+                    Jetzt Termin vereinbaren
+                </a>
 <p class="mt-6 text-blue-200 font-label italic text-sm">Oder rufen Sie mich an: +49 123 456 789</p>
 </div>
 </div>
@@ -240,22 +270,78 @@
 <!-- Footer -->
 <footer class="bg-slate-50 w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6 border-t border-slate-200 font-body text-sm leading-relaxed text-blue-900">
 <div class="flex flex-col items-center md:items-start gap-2">
-<div class="font-headline font-bold text-blue-800 text-xl">Mentoren-Ecke</div>
-<p class="text-slate-600">© 2024 Mentoren-Ecke. In Ruhe lernen.</p>
+<a class="font-headline font-bold text-blue-800 text-xl" href="/">Mentoren-Ecke</a>
+<p class="text-slate-600">© 2026 Mentoren-Ecke. In Ruhe lernen.</p>
 </div>
 <div class="flex flex-wrap justify-center gap-8">
-<a class="text-slate-600 hover:text-blue-600 hover:underline decoration-2 transition-all" href="#">Datenschutz</a>
-<a class="text-slate-600 hover:text-blue-600 hover:underline decoration-2 transition-all" href="#">Impressum</a>
-<a class="text-slate-600 hover:text-blue-600 hover:underline decoration-2 transition-all" href="#">Kontakt</a>
-<a class="text-slate-600 hover:text-blue-600 hover:underline decoration-2 transition-all" href="#">Barrierefreiheit</a>
+<a class="text-slate-600 hover:text-blue-600 hover:underline decoration-2 transition-all" href="/datenschutz/">Datenschutz</a>
+<a class="text-slate-600 hover:text-blue-600 hover:underline decoration-2 transition-all" href="/impressum/">Impressum</a>
+<a class="text-slate-600 hover:text-blue-600 hover:underline decoration-2 transition-all" href="/kontakt/">Kontakt</a>
+<a class="text-slate-600 hover:text-blue-600 hover:underline decoration-2 transition-all" href="/barrierefreiheit/">Barrierefreiheit</a>
 </div>
 <div class="flex items-center gap-4">
-<div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700">
-<span class="material-symbols-outlined text-lg" data-icon="mail">mail</span>
-</div>
-<div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700">
-<span class="material-symbols-outlined text-lg" data-icon="call">call</span>
-</div>
+<a class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 hover:bg-blue-200 transition-colors" href="mailto:info@mentoren-ecke.de">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 hover:bg-blue-200 transition-colors" href="tel:+49123456789">
+<span class="material-symbols-outlined text-lg">call</span>
+</a>
 </div>
 </footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // 1. Intersection Observer for fade-in and slide-up animations
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
+
+        const revealObserver = new IntersectionObserver(revealCallback, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // 2. Hover effects for glass cards (subtle 3D tilt & glare tracking)
+        const cards = document.querySelectorAll('.glass-card');
+        
+        cards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 25;
+                const rotateY = (centerX - x) / 25;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+                
+                const glare = card.querySelector('.glare');
+                if (glare) {
+                    const percentageX = (x / rect.width) * 100;
+                    const percentageY = (y / rect.height) * 100;
+                    glare.style.background = `radial-gradient(circle at ${percentageX}% ${percentageY}%, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 80%)`;
+                }
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)`;
+                const glare = card.querySelector('.glare');
+                if (glare) {
+                    glare.style.background = `linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0) 50%)`;
+                }
+            });
+        });
+    });
+</script>
 </body></html>
