@@ -3,298 +3,329 @@
 <html class="scroll-smooth" lang="de"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Leistungen - Matti | Ihr geduldiger Tech-Mentor</title>
+<title>Leistungen | Matti Tech-Mentoring</title>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "surface-tint": "#316760",
-                        "tertiary-fixed": "#ffdbd0",
-                        "tertiary": "#4a2113",
-                        "surface-container-high": "#eae8e4",
-                        "on-secondary-container": "#785c28",
-                        "on-error": "#ffffff",
-                        "on-surface": "#1b1c1a",
-                        "secondary-container": "#fdd897",
-                        "error-container": "#ffdad6",
-                        "primary": "#00332e",
-                        "on-tertiary-fixed": "#351005",
-                        "surface-container-lowest": "#ffffff",
-                        "primary-container": "#0e4b44",
-                        "on-primary-container": "#83bab1",
-                        "primary-fixed": "#b5eee3",
-                        "on-tertiary": "#ffffff",
-                        "primary-fixed-dim": "#9ad1c8",
-                        "inverse-on-surface": "#f2f0ed",
-                        "surface-bright": "#fbf9f5",
-                        "inverse-surface": "#30312e",
-                        "surface-variant": "#e4e2de",
-                        "tertiary-container": "#653627",
-                        "on-primary": "#ffffff",
-                        "error": "#ba1a1a",
-                        "inverse-primary": "#9ad1c8",
-                        "surface-container-low": "#f5f3ef",
-                        "on-secondary-fixed": "#271900",
-                        "on-secondary": "#ffffff",
-                        "surface-container-highest": "#e4e2de",
-                        "on-tertiary-container": "#e2a08c",
-                        "secondary": "#755a25",
-                        "secondary-fixed": "#ffdea7",
-                        "on-surface-variant": "#404947",
-                        "background": "#fbf9f5",
-                        "surface": "#fbf9f5",
-                        "outline": "#707977",
-                        "tertiary-fixed-dim": "#fbb6a1",
-                        "surface-container": "#efeeea",
-                        "outline-variant": "#bfc8c6",
-                        "secondary-fixed-dim": "#e6c182",
-                        "on-background": "#1b1c1a",
-                        "on-primary-fixed": "#00201c",
-                        "on-error-container": "#93000a",
-                        "on-primary-fixed-variant": "#144f48",
-                        "surface-dim": "#dbdad6",
-                        "on-tertiary-fixed-variant": "#6a3a2b"
-                    },
-                    fontFamily: {
-                        "headline": ["Lexend"],
-                        "body": ["Inter"],
-                        "label": ["Lexend"]
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-                },
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#b1f0ce",
+              "surface-bright": "#f8f9fa",
+              "inverse-on-surface": "#f0f1f2",
+              "on-primary-fixed-variant": "#0e5138",
+              "tertiary-fixed-dim": "#cec5bb",
+              "inverse-surface": "#2e3132",
+              "primary-container": "#236146",
+              "surface-dim": "#d9dadb",
+              "surface-container-high": "#e7e8e9",
+              "error": "#ba1a1a",
+              "primary-fixed-dim": "#95d4b3",
+              "surface-variant": "#e1e3e4",
+              "on-tertiary": "#ffffff",
+              "on-error": "#ffffff",
+              "secondary-fixed-dim": "#86d7ad",
+              "on-tertiary-fixed-variant": "#4c463e",
+              "surface-container-lowest": "#ffffff",
+              "on-surface-variant": "#3f4949",
+              "surface-container-highest": "#e1e3e4",
+              "on-secondary-fixed-variant": "#005236",
+              "on-primary": "#ffffff",
+              "outline": "#6f7979",
+              "surface-container": "#edeeef",
+              "secondary-container": "#a1f4c8",
+              "inverse-primary": "#95d4b3",
+              "tertiary-fixed": "#ebe1d6",
+              "on-primary-fixed": "#002114",
+              "secondary-fixed": "#a1f4c8",
+              "on-error-container": "#93000a",
+              "on-tertiary-fixed": "#1f1b14",
+              "on-surface": "#191c1d",
+              "on-secondary": "#ffffff",
+              "surface": "#f8f9fa",
+              "secondary": "#116c4a",
+              "on-secondary-container": "#1b724f",
+              "surface-tint": "#2c694e",
+              "primary": "#004930",
+              "tertiary": "#433e36",
+              "surface-container-low": "#f3f4f5",
+              "on-background": "#191c1d",
+              "outline-variant": "#bec8c9",
+              "tertiary-container": "#5b554d",
+              "background": "#f8f9fa",
+              "error-container": "#ffdad6",
+              "on-secondary-fixed": "#002113",
+              "on-primary-container": "#9ad9b8",
+              "on-tertiary-container": "#d3cabf"
             },
-        }
+            fontFamily: {
+              "headline": ["Lexend"],
+              "body": ["Lexend"],
+              "label": ["Lexend"]
+            },
+            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+          },
+        },
+      }
     </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        body { font-family: 'Inter', sans-serif; }
-        h1, h2, h3, .font-lexend { font-family: 'Lexend', sans-serif; }
+      body { font-family: 'Lexend', sans-serif; }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        border: 1.5px solid rgba(149, 212, 179, 0.2);
+      }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .active-nav-border {
+        position: relative;
+      }
+      .active-nav-border::after {
+        content: '';
+        position: absolute;
+        bottom: -4px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: #004930;
+      }
     </style>
 </head>
-<body class="bg-surface text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed">
-<!-- TopAppBar Navigation -->
-<nav class="fixed top-0 w-full z-50 bg-[#fbf9f5]/80 dark:bg-[#1b1c1a]/80 backdrop-blur-md shadow-sm shadow-[#1b1c1a]/5">
-<div class="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
-<a class="text-2xl font-bold tracking-tight text-[#00332e] dark:text-[#fbf9f5] font-lexend" href="#">Matti</a>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(25,28,29,0.06)]">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<a class="text-2xl font-bold text-teal-900 tracking-tighter" href="/">Matti</a>
 <div class="hidden md:flex items-center space-x-8">
-<a class="text-[#1b1c1a]/70 dark:text-[#fbf9f5]/70 font-medium hover:text-[#0e4b44] hover:bg-[#f5f3ef] dark:hover:bg-[#2c2d2a] transition-all duration-300" href="#">Home</a>
-<a class="text-[#0e4b44] dark:text-[#fbf9f5] font-semibold border-b-2 border-[#0e4b44] pb-1" href="#">Leistungen</a>
-<a class="text-[#1b1c1a]/70 dark:text-[#fbf9f5]/70 font-medium hover:text-[#0e4b44] hover:bg-[#f5f3ef] dark:hover:bg-[#2c2d2a] transition-all duration-300" href="#">Über mich</a>
-<a class="text-[#1b1c1a]/70 dark:text-[#fbf9f5]/70 font-medium hover:text-[#0e4b44] hover:bg-[#f5f3ef] dark:hover:bg-[#2c2d2a] transition-all duration-300" href="#">Kontakt</a>
-<a class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-3 rounded-lg font-semibold hover:scale-95 transition-all duration-150 ease-in-out" href="#">Termin vereinbaren</a>
+<a class="text-teal-900/60 hover:text-teal-900 transition-colors font-medium" href="/">Home</a>
+<a class="text-teal-900 border-b-2 border-teal-900 pb-1 font-medium" href="/leistungen/">Leistungen</a>
+<a class="text-teal-900/60 hover:text-teal-900 transition-colors font-medium" href="/ueber-mich/">Über mich</a>
+<a class="text-teal-900/60 hover:text-teal-900 transition-colors font-medium" href="/kontakt/">Kontakt</a>
 </div>
-<!-- Mobile Menu Icon (Placeholder) -->
-<button class="md:hidden text-primary">
-<span class="material-symbols-outlined">menu</span>
-</button>
+<a class="bg-primary text-on-primary px-6 py-3 rounded-full font-medium hover:scale-105 transition-all duration-400 ease-out shadow-lg" href="/kontakt/">
+                Termin vereinbaren
+            </a>
 </div>
+<div class="bg-gradient-to-r from-teal-900/10 to-transparent h-[1.5px]"></div>
 </nav>
-<!-- Hero Section / Editorial Header -->
-<header class="pt-32 pb-20 px-8 max-w-7xl mx-auto">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-end">
-<div class="lg:col-span-7">
-<span class="inline-block bg-secondary-fixed text-on-secondary-fixed px-4 py-1 rounded-full text-sm font-medium mb-6 font-label">Was ich für Sie tun kann</span>
-<h1 class="text-5xl md:text-7xl font-bold text-primary leading-[1.1] tracking-tight mb-8">
-                    Technik verstehen, <br/><span class="text-primary/60 italic font-light">ganz ohne Hektik.</span>
+<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+<!-- Hero Section -->
+<header class="mb-20">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 space-y-6">
+<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container text-sm font-semibold tracking-wide">INDIVIDUELLE BEGLEITUNG</span>
+<h1 class="text-5xl md:text-6xl font-extrabold text-primary tracking-tight leading-[1.1]">
+                        Technik verstehen, <br/><span class="text-secondary">ganz ohne Hektik.</span>
 </h1>
-<p class="text-xl text-on-surface-variant max-w-xl leading-relaxed">
-                    Ob Smartphone-Basics oder Sicherheit im Netz – ich stehe Ihnen geduldig zur Seite. Gemeinsam machen wir die digitale Welt zu Ihrem Zuhause.
-                </p>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-xl leading-relaxed">
+                        Ich begleite Sie Schritt für Schritt durch die digitale Welt. Ob Smartphone-Basics oder sicheres Online-Shopping – wir finden gemeinsam die Lösung, die zu Ihnen passt.
+                    </p>
 </div>
-<div class="lg:col-span-5 hidden lg:block">
-<div class="relative overflow-hidden rounded-3xl h-64 w-full bg-surface-container-low border-8 border-surface-container-lowest">
-<img alt="Matti hilft Senioren" class="object-cover w-full h-full opacity-90" data-alt="Close-up of a patient young man showing an elderly person how to use a tablet, soft warm sunlight indoors, trust and connection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGt5O3qatwz6h4A0NhdmwzAMAXUtsPSdyCfcDFYGA4-di-VdrEhvr_jUfD1CDJXAKD8DUN_6gatAg4EtePi1EwKL0ijQQR7ZTpibqE4uiF53wTwdFOumkntRSdkmMpvUJ9nybSnKarrQbFqw3Mk4HrnuzEVGBIXt3q7kk0bHUOW30vrnFC8NzordZUt9g-6Zih5XpyPvfI93GVmr_Aj3_tENvIwWZrv-sKPweqJrwRiNyPC-2F44VQzEZ6TOlDgf1dGSLL7yVU7aKJ"/>
-</div>
+<div class="flex-1 relative w-full aspect-video md:aspect-square rounded-xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="Calm close-up of a younger person patiently explaining a tablet screen to an older person in a bright, sunlit modern living room with soft teal accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBeOG8MYN-Fn_UUqFZ08xgpkgOVvp_kxWLIuxYE7hb7ZIGlmaAPlG4am_wqSwpKxYnOgE14cFemxm5Nw_znOKOIOXi0tAUiATcY6Wt3dZ2JFukn75O3O_VGJERQadciDZXim22c3woSax9U-fqZhN9g7f5j9i_j0LHjRS5nIdfE6cuaFMpqT8YlIEod1OBev7JsAxIZ0N4y7J9qbs2styuwZKVfc3M84Cz3huHTdwgnVQ7VyIVB8ZeiHXJljY0ShSHJ9Fw_KrLuezNY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
 </div>
 </div>
 </header>
-<!-- Services Bento Grid -->
-<main class="px-8 max-w-7xl mx-auto pb-24">
-<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-<!-- Service Card 1 -->
-<div class="group bg-surface-container-lowest p-8 rounded-[2rem] flex flex-col justify-between transition-all duration-300 hover:bg-surface-container hover:translate-y-[-4px]">
+<!-- Services Grid -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-24">
+<!-- Card 1 -->
+<div class="glass-card p-10 rounded-xl group hover:scale-[1.02] transition-all duration-500 flex flex-col justify-between">
 <div>
-<div class="w-16 h-16 bg-primary-container/10 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-4xl" data-icon="smartphone">smartphone</span>
+<div class="w-16 h-16 rounded-2xl bg-primary-fixed flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="smartphone">smartphone</span>
 </div>
 <h3 class="text-2xl font-bold text-primary mb-4">Smartphone &amp; Tablet Basics</h3>
-<p class="text-on-surface-variant leading-relaxed mb-6">
-                        Wir richten Ihr Gerät gemeinsam ein. Vom App-Store bis zu den Einstellungen – ich erkläre Ihnen alles Schritt für Schritt.
-                    </p>
-<ul class="space-y-3 mb-8">
-<li class="flex items-center gap-3 text-on-surface/80">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span>Ersteinrichtung &amp; Konten</span>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Ersteinrichtung Ihres neuen Geräts</span>
 </li>
-<li class="flex items-center gap-3 text-on-surface/80">
-<span class="material-symbols-outlined text-primary text-xl">check_circle</span>
-<span>Fotos machen &amp; teilen</span>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Apps sicher installieren und verwalten</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Gestensteuerung und Menüführung verstehen</span>
 </li>
 </ul>
 </div>
-<div class="pt-6 border-t border-on-surface/5">
-<p class="text-sm font-label text-on-surface/60 uppercase tracking-widest mb-1">Honorar</p>
-<p class="text-xl font-bold text-primary">Preise auf Anfrage</p>
+<div class="pt-6 border-t border-outline-variant/20 text-secondary font-semibold flex items-center gap-2 group-hover:gap-4 transition-all">
+                    Mehr erfahren <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
 </div>
 </div>
-<!-- Service Card 2 (Large Highlight) -->
-<div class="group lg:col-span-2 bg-primary text-on-primary p-8 rounded-[2rem] flex flex-col md:flex-row gap-8 items-center transition-all duration-300 hover:bg-primary-container">
-<div class="flex-1 order-2 md:order-1">
-<span class="inline-block bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider mb-6">Beliebteste Wahl</span>
-<h3 class="text-3xl font-bold mb-4">WhatsApp &amp; Videoanrufe</h3>
-<p class="text-on-primary/80 leading-relaxed mb-8 text-lg">
-                        Bleiben Sie mit Enkeln und Freunden in Kontakt. Ich zeige Ihnen, wie Sie sicher telefonieren, Bilder senden und in Gruppen kommunizieren.
-                    </p>
-<div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-<div class="bg-primary-container/30 p-4 rounded-xl">
-<h4 class="font-bold mb-1">Privatsphäre</h4>
-<p class="text-sm opacity-70">Schutz vor unerwünschten Anrufen.</p>
-</div>
-<div class="bg-primary-container/30 p-4 rounded-xl">
-<h4 class="font-bold mb-1">Live-Video</h4>
-<p class="text-sm opacity-70">Einfach und stabil telefonieren.</p>
-</div>
-</div>
-<p class="text-2xl font-bold">Ab 45 € / Std.</p>
-</div>
-<div class="w-full md:w-1/2 h-64 md:h-full min-h-[300px] relative rounded-2xl overflow-hidden order-1 md:order-2">
-<img alt="Videoanruf mit Familie" class="object-cover w-full h-full" data-alt="A smartphone screen showing a friendly video call with multiple people, held by hands in a warm living room environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn4BVGl1sIl2PFj70iqg_C9K9GIRNWbJFTQGFISwH3mSaz6hl3Bj4Vbx-0_6Bz3nc33o_rLkzlZCV91nDDhFYVkYZqsP21R0VvmUEyw7V6NkQ6f_SW9dpWNFor3YoVAoe4ESdbBcb7ODXAdQGNK6jwBNLxsKpWYTo94fKUKbpbXy-jvzUHOs7BDKnjBBowC8ttAiPMBPFf0SQFS9HtaZAy_v3pVkTIaXzXIsMBL0URH7E8rxiMSlQ3n--IuRKgxKO0ruDaiw-7701g"/>
-</div>
-</div>
-<!-- Service Card 3 -->
-<div class="group bg-surface-container-low p-8 rounded-[2rem] flex flex-col justify-between transition-all duration-300 hover:bg-surface-container-high">
+<!-- Card 2 -->
+<div class="glass-card p-10 rounded-xl group hover:scale-[1.02] transition-all duration-500 flex flex-col justify-between">
 <div>
-<div class="w-16 h-16 bg-secondary-fixed rounded-2xl flex items-center justify-center text-on-secondary-fixed mb-8 group-hover:rotate-6 transition-transform">
-<span class="material-symbols-outlined text-4xl" data-icon="shield_with_heart">shield_with_heart</span>
+<div class="w-16 h-16 rounded-2xl bg-secondary-fixed flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-on-secondary-fixed-variant text-3xl" data-icon="shopping_bag">shopping_bag</span>
 </div>
 <h3 class="text-2xl font-bold text-primary mb-4">Sicher online einkaufen</h3>
-<p class="text-on-surface-variant leading-relaxed mb-6">
-                        Keine Angst vor Betrug. Wir besprechen, woran Sie sichere Seiten erkennen und wie Sie sicher bezahlen (z.B. PayPal).
-                    </p>
-<ul class="space-y-3 mb-8">
-<li class="flex items-center gap-3 text-on-surface/80">
-<span class="material-symbols-outlined text-secondary text-xl">lock</span>
-<span>Passwort-Management</span>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Seriöse Shops von Betrügern unterscheiden</span>
 </li>
-<li class="flex items-center gap-3 text-on-surface/80">
-<span class="material-symbols-outlined text-secondary text-xl">shopping_cart</span>
-<span>Bestellvorgang üben</span>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Sichere Bezahlmethoden (PayPal, Kreditkarte)</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Bestellvorgang und Rücksendungen üben</span>
 </li>
 </ul>
 </div>
-<div class="pt-6 border-t border-on-surface/10">
-<p class="text-sm font-label text-on-surface/60 uppercase tracking-widest mb-1">Honorar</p>
-<p class="text-xl font-bold text-primary">Preise auf Anfrage</p>
+<div class="pt-6 border-t border-outline-variant/20 text-secondary font-semibold flex items-center gap-2 group-hover:gap-4 transition-all">
+                    Sicherheit zuerst <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
 </div>
 </div>
-<!-- Service Card 4 -->
-<div class="group bg-surface-container-lowest p-8 rounded-[2rem] border border-on-surface/5 flex flex-col justify-between transition-all duration-300 hover:bg-surface-container hover:translate-y-[-4px]">
+<!-- Card 3 -->
+<div class="glass-card p-10 rounded-xl group hover:scale-[1.02] transition-all duration-500 flex flex-col justify-between">
 <div>
-<div class="w-16 h-16 bg-primary-container/10 rounded-2xl flex items-center justify-center text-primary mb-8 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-4xl" data-icon="print">print</span>
+<div class="w-16 h-16 rounded-2xl bg-tertiary-fixed flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-tertiary text-3xl" data-icon="print">print</span>
 </div>
 <h3 class="text-2xl font-bold text-primary mb-4">Computer &amp; Drucker Hilfe</h3>
-<p class="text-on-surface-variant leading-relaxed mb-6">
-                        Ihr Computer ist langsam oder der Drucker streikt? Ich komme vorbei und behebe technische Hürden direkt bei Ihnen vor Ort.
-                    </p>
-<ul class="space-y-3 mb-8">
-<li class="flex items-center gap-3 text-on-surface/80">
-<span class="material-symbols-outlined text-primary text-xl">cleaning_services</span>
-<span>System-Reinigung</span>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Drucker drahtlos mit WLAN verbinden</span>
 </li>
-<li class="flex items-center gap-3 text-on-surface/80">
-<span class="material-symbols-outlined text-primary text-xl">wifi</span>
-<span>WLAN Optimierung</span>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Dateien sortieren und Backups erstellen</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Virenschutz und System-Updates</span>
 </li>
 </ul>
 </div>
-<div class="pt-6 border-t border-on-surface/5">
-<p class="text-sm font-label text-on-surface/60 uppercase tracking-widest mb-1">Vor Ort Service</p>
-<p class="text-xl font-bold text-primary">Preise auf Anfrage</p>
+<div class="pt-6 border-t border-outline-variant/20 text-secondary font-semibold flex items-center gap-2 group-hover:gap-4 transition-all">
+                    Alles läuft <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
 </div>
 </div>
-<!-- Focus Statement Card -->
-<div class="group lg:col-span-1 bg-secondary-container p-8 rounded-[2rem] flex flex-col justify-center items-center text-center">
-<span class="material-symbols-outlined text-5xl text-on-secondary-container mb-6" data-icon="forum">forum</span>
-<h3 class="text-2xl font-bold text-on-secondary-container mb-4">Keine Frage ist zu "einfach"</h3>
-<p class="text-on-secondary-container/80 leading-relaxed italic">
-                    "Ich nehme mir die Zeit, die Sie brauchen. Ohne Fachchinesisch, dafür mit viel Geduld."
-                </p>
+<!-- Card 4 -->
+<div class="glass-card p-10 rounded-xl group hover:scale-[1.02] transition-all duration-500 flex flex-col justify-between">
+<div>
+<div class="w-16 h-16 rounded-2xl bg-primary-fixed-dim flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="video_call">video_call</span>
+</div>
+<h3 class="text-2xl font-bold text-primary mb-4">WhatsApp &amp; Videoanrufe</h3>
+<ul class="space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Fotos und Videos an Familie versenden</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Sichere Videotelefonie (Zoom, Skype)</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-secondary shrink-0 mt-0.5" data-icon="check_circle">check_circle</span>
+<span class="text-on-surface-variant">Statusmeldungen und Gruppenchats</span>
+</li>
+</ul>
+</div>
+<div class="pt-6 border-t border-outline-variant/20 text-secondary font-semibold flex items-center gap-2 group-hover:gap-4 transition-all">
+                    In Verbindung bleiben <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
 </div>
 </div>
-</main>
-<!-- Pricing / Trust Section -->
-<section class="bg-surface-container-low py-24">
-<div class="max-w-7xl mx-auto px-8">
-<div class="bg-surface-container-lowest rounded-[3rem] p-12 md:p-20 shadow-sm flex flex-col md:flex-row gap-16 items-center">
+</section>
+<!-- Pricing Section -->
+<section class="bg-primary-container rounded-xl p-12 md:p-16 text-on-primary-container relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary-fixed/10 blur-[100px] rounded-full"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-primary-fixed/5 blur-[80px] rounded-full"></div>
+<div class="relative z-10 flex flex-col md:flex-row items-center gap-12">
 <div class="flex-1">
-<h2 class="text-4xl font-bold text-primary mb-6">Fair &amp; Transparent</h2>
-<p class="text-lg text-on-surface-variant mb-8 leading-relaxed">
-                        Ich arbeite auf privater Basis und rechne fair ab. Mir ist wichtig, dass Sie sich nicht gedrängt fühlen. Wir besprechen die Kosten immer vorab, damit es keine Überraschungen gibt.
+<h2 class="text-3xl md:text-4xl font-extrabold mb-6 tracking-tight">Fair &amp; Transparent</h2>
+<p class="text-on-primary-container/80 text-lg mb-8 leading-relaxed">
+                        Qualität hat ihren Preis, aber keine versteckten Kosten. Wir klären alles Wichtige vorab, damit Sie sich ganz auf das Lernen konzentrieren können.
                     </p>
-<div class="space-y-6">
-<div class="flex items-start gap-4">
-<div class="p-2 bg-primary/5 rounded-lg text-primary">
-<span class="material-symbols-outlined">euro_symbol</span>
+<div class="space-y-4">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-on-primary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="timer">timer</span>
 </div>
 <div>
-<p class="font-bold">Individuelle Angebote</p>
-<p class="text-on-surface-variant">Je nach Umfang und Dauer der Begleitung.</p>
+<p class="font-bold text-xl">Kennenlerngespräch (15 Min.)</p>
+<p class="text-on-primary-container/60">Kostenlos und unverbindlich</p>
 </div>
+<div class="ml-auto text-2xl font-bold">0€</div>
 </div>
-<div class="flex items-start gap-4">
-<div class="p-2 bg-primary/5 rounded-lg text-primary">
-<span class="material-symbols-outlined">home_pin</span>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-on-primary-container/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-primary-container" data-icon="euro">euro</span>
 </div>
 <div>
-<p class="font-bold">Hausbesuche inklusive</p>
-<p class="text-on-surface-variant">In einem Umkreis von 15km fahre ich kostenfrei zu Ihnen.</p>
+<p class="font-bold text-xl">Stundensatz (60 Min.)</p>
+<p class="text-on-primary-container/60">Individuelle Einzelsitzung</p>
+</div>
+<div class="ml-auto text-2xl font-bold">45€</div>
 </div>
 </div>
 </div>
-</div>
-<div class="flex-shrink-0 text-center bg-primary p-12 rounded-[2.5rem] text-on-primary min-w-[300px]">
-<p class="text-sm uppercase tracking-widest opacity-70 mb-4">Kennenlernen</p>
-<p class="text-5xl font-extrabold mb-4">0€</p>
-<p class="text-lg opacity-80 mb-8">Erste 15 Min. <br/>Telefonat gratis</p>
-<button class="w-full bg-secondary-fixed text-on-secondary-fixed py-4 rounded-xl font-bold hover:bg-secondary-fixed-dim transition-colors">
-                        Jetzt anfragen
-                    </button>
+<div class="flex-1 w-full flex justify-center">
+<div class="bg-white/10 backdrop-blur-md p-8 rounded-xl border border-white/10 w-full max-w-sm">
+<h4 class="font-bold text-xl mb-4">Immer inklusive:</h4>
+<ul class="space-y-3 text-on-primary-container/90">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="done">done</span>
+                                Anfahrt innerhalb des Stadtgebiets
+                            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="done">done</span>
+                                Geduldige Erklärungen auf Augenhöhe
+                            </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-sm" data-icon="done">done</span>
+                                Nachbesprechung via Telefon
+                            </li>
+</ul>
+<button class="w-full mt-8 bg-surface-bright text-primary font-bold py-4 rounded-full hover:bg-secondary-container transition-colors">
+                            Jetzt anfragen
+                        </button>
 </div>
 </div>
 </div>
 </section>
+</main>
 <!-- Footer -->
-<footer class="w-full rounded-t-3xl mt-20 bg-[#f5f3ef] dark:bg-[#1b1c1a]">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 py-12 max-w-7xl mx-auto border-t border-[#0e4b44]/10">
-<div>
-<p class="text-lg font-bold text-[#00332e] dark:text-[#fbf9f5] font-lexend mb-4">Matti</p>
-<p class="text-[#1b1c1a]/60 dark:text-[#fbf9f5]/60 max-w-xs leading-relaxed">
-                    Ihr Technik-Mentor in der Nachbarschaft. Geduldig, verständlich und persönlich.
+<footer class="bg-teal-50 w-full rounded-t-xl mt-20">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-16 max-w-7xl mx-auto">
+<div class="space-y-4">
+<div class="text-xl font-bold text-teal-900">Matti Tech-Mentoring</div>
+<p class="text-teal-800/70 leading-relaxed font-['Lexend'] body-lg">
+                    Ihr Partner für digitale Souveränität. Geduldig, kompetent und direkt bei Ihnen vor Ort.
                 </p>
 </div>
-<div class="flex flex-col space-y-3">
-<p class="font-lexend font-bold text-primary mb-2">Navigation</p>
-<a class="text-[#1b1c1a]/60 dark:text-[#fbf9f5]/60 hover:text-[#0e4b44] dark:hover:text-[#fbf9f5] transition-colors" href="#">Impressum</a>
-<a class="text-[#1b1c1a]/60 dark:text-[#fbf9f5]/60 hover:text-[#0e4b44] dark:hover:text-[#fbf9f5] transition-colors" href="#">Datenschutz</a>
-<a class="text-[#1b1c1a]/60 dark:text-[#fbf9f5]/60 hover:text-[#0e4b44] dark:hover:text-[#fbf9f5] transition-colors" href="#">Hilfe anfragen</a>
-</div>
-<div class="flex flex-col space-y-3">
-<p class="font-lexend font-bold text-primary mb-2">Kontakt</p>
-<p class="text-[#1b1c1a]/60 dark:text-[#fbf9f5]/60">E-Mail: matti@tech-hilfe.de</p>
-<p class="text-[#1b1c1a]/60 dark:text-[#fbf9f5]/60">Mobil: 0123 / 456 789 10</p>
+<div class="space-y-4">
+<h4 class="font-bold text-teal-900">Links</h4>
+<div class="flex flex-col space-y-2">
+<a class="text-teal-800/70 hover:text-teal-600 transition-colors duration-300" href="/">Home</a>
+<a class="text-teal-800/70 hover:text-teal-600 transition-colors duration-300" href="/ueber-mich/">Über mich</a>
+<a class="font-bold text-teal-900" href="/leistungen/">Leistungen</a>
+<a class="text-teal-800/70 hover:text-teal-600 transition-colors duration-300" href="/kontakt/">Kontakt</a>
 </div>
 </div>
-<div class="px-8 pb-12 max-w-7xl mx-auto">
-<p class="text-sm text-[#1b1c1a]/40 dark:text-[#fbf9f5]/40">© 2024 Matti - Ihr geduldiger Tech-Mentor</p>
+<div class="space-y-4">
+<h4 class="font-bold text-teal-900">Rechtliches</h4>
+<div class="flex flex-col space-y-2">
+<a class="text-teal-800/70 hover:text-teal-600 transition-colors duration-300" href="#">Impressum</a>
+<a class="text-teal-800/70 hover:text-teal-600 transition-colors duration-300" href="#">Datenschutz</a>
+<div class="pt-4 text-teal-800/50 text-sm">
+                        © 2024 Matti Tech-Mentoring. Alle Rechte vorbehalten.
+                    </div>
+</div>
+</div>
 </div>
 </footer>
 </body></html>
