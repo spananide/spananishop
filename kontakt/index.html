@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 
-<html lang="de"><head>
+<html class="scroll-smooth" lang="de"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Leistungen | Mentoren-Ecke</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;family=Public+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;family=Public+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
       tailwind.config = {
@@ -71,306 +72,282 @@
       }
     </script>
 <style>
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
-        }
-        .glass-panel {
-            background: rgba(255, 255, 255, 0.7);
+        .glass-card {
+            background: rgba(255, 255, 255, 0.6);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
-        body {
-            background-color: #fbfbe2;
-            color: #1b1d0e;
-            font-family: 'Public Sans', sans-serif;
-            scroll-behavior: smooth;
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        .form-input-error {
-            border: 2px solid #ba1a1a !important;
-            background-color: #fff8f7 !important;
+        .step-number {
+            font-family: 'Lexend';
+            line-height: 0.8;
+            opacity: 0.15;
         }
-        .error-message {
-            color: #ba1a1a;
-            font-size: 0.875rem;
-            margin-top: 0.25rem;
-            display: none;
-            animation: fadeIn 0.3s ease-in-out;
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
         }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-5px); }
-            to { opacity: 1; transform: translateY(0); }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
         }
-        @keyframes scaleIn {
-            from { transform: scale(0.9); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-        .success-animation {
-            animation: scaleIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
     </style>
 </head>
-<body class="min-h-screen">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-md shadow-sm backdrop-saturate-150 h-20 flex justify-between items-center px-8 max-w-full mx-auto">
-<a class="text-2xl font-bold text-blue-900 font-headline" href="/">Mentoren-Ecke</a>
-<div class="hidden md:flex items-center gap-8 font-headline text-lg font-medium tracking-tight" id="nav-links">
-<a class="text-slate-700 hover:text-blue-600 transition-colors nav-item" data-link="lernen" href="/lernen/">Lernen</a>
-<a class="text-slate-700 hover:text-blue-600 transition-colors nav-item" data-link="kurse" href="/kurse/">Kurse</a>
-<a class="text-slate-700 hover:text-blue-600 transition-colors nav-item" data-link="hilfe" href="/hilfe/">Hilfe</a>
-<a class="text-slate-700 hover:text-blue-600 transition-colors nav-item" data-link="ueber-uns" href="/ueber-uns/">Über uns</a>
-<a class="text-blue-700 border-b-2 border-blue-700 pb-1 nav-item" data-link="kontakt" href="/kontakt/">Kontakt</a>
+<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar Shared Component -->
+<nav class="sticky top-0 w-full z-50 bg-white/85 backdrop-blur-md shadow-sm dark:bg-slate-900/85">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<a class="text-2xl font-bold text-blue-900 dark:text-blue-100 font-headline" href="/">Mentoren-Ecke</a>
+<div class="hidden md:flex items-center gap-8" id="main-nav">
+<a class="font-headline tracking-tight text-slate-700 dark:text-slate-300 hover:text-blue-600 transition-colors" href="/">Home</a>
+<a class="font-headline tracking-tight text-blue-700 dark:text-blue-400 font-bold border-b-2 border-blue-700" href="/leistungen/">Leistungen</a>
+<a class="font-headline tracking-tight text-slate-700 dark:text-slate-300 hover:text-blue-600 transition-colors" href="/ueber-mich/">Über mich</a>
+<a class="font-headline tracking-tight text-slate-700 dark:text-slate-300 hover:text-blue-600 transition-colors" href="/kontakt/">Kontakt</a>
+<a class="ml-4 px-6 py-2.5 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-medium transition-transform scale-95 hover:scale-100 duration-200 ease-in-out active:opacity-80" href="/kontakt/">Termin vereinbaren</a>
 </div>
-<div class="flex items-center gap-4">
-<button class="bg-primary text-on-primary px-6 py-2 rounded-xl font-headline font-medium transition-transform active:opacity-80 scale-95 hover:bg-primary-container" onclick="window.location.href='/anmelden/'">
-                Anmelden
-            </button>
+<div class="md:hidden">
+<span class="material-symbols-outlined text-primary text-3xl cursor-pointer">menu</span>
+</div>
 </div>
 </nav>
-<main class="pt-32 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
+<main class="pt-12 pb-24">
 <!-- Hero Section -->
-<header class="mb-16">
-<h1 class="font-headline text-6xl md:text-7xl font-bold text-primary mb-6 leading-tight">Lassen Sie uns <br/>sprechen.</h1>
-<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed">
-                Ich bin Matti. Ich helfe Ihnen gerne dabei, die digitale Welt in Ihrem eigenen Tempo zu entdecken. Schreiben Sie mir einfach eine Nachricht.
-            </p>
-</header>
-<!-- Main Content Grid -->
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-<!-- Contact Form (Left/Center) -->
-<section class="lg:col-span-7 bg-white/70 backdrop-blur-xl p-8 md:p-12 rounded-[2rem] shadow-sm border border-white/40 relative min-h-[600px]" id="form-container">
-<div id="contact-form-content">
-<h2 class="font-headline text-3xl font-semibold text-primary mb-8">Kontaktformular</h2>
-<form action="#" class="space-y-8" id="contact-form" method="POST" novalidate="">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="space-y-2">
-<label class="block font-headline text-lg font-medium text-on-surface" for="name">Ihr Name</label>
-<input class="w-full bg-surface-container-low border-2 border-transparent rounded-xl p-4 text-lg focus:ring-2 focus:ring-primary-container transition-all" id="name" name="name" placeholder="z.B. Maria Schmidt" required="" type="text"/>
-<p class="error-message" id="name-error">Bitte geben Sie Ihren Namen an, damit ich weiß, wie ich Sie ansprechen darf.</p>
-</div>
-<div class="space-y-2">
-<label class="block font-headline text-lg font-medium text-on-surface" for="email">Ihre E-Mail</label>
-<input class="w-full bg-surface-container-low border-2 border-transparent rounded-xl p-4 text-lg focus:ring-2 focus:ring-primary-container transition-all" id="email" name="email" placeholder="beispiel@mail.de" required="" type="email"/>
-<p class="error-message" id="email-error">Bitte geben Sie eine gültige E-Mail-Adresse an (z.B. name@web.de).</p>
+<section class="px-8 max-w-7xl mx-auto mb-20 reveal">
+<div class="flex flex-col md:flex-row items-center gap-12">
+<div class="md:w-3/5">
+<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-primary mb-6 tracking-tight leading-tight">
+                    Technik verstehen, <br/><span class="text-secondary">Schritt für Schritt.</span>
+</h1>
+<p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed mb-8">
+                    Keine Angst vor der digitalen Welt. Matti begleitet Sie geduldig und kompetent bei all Ihren Fragen rund um Smartphone, Tablet und Computer.
+                </p>
+<div class="flex flex-wrap gap-4">
+<a class="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-bold text-lg shadow-lg hover:opacity-90 transition-all hover:-translate-y-1 inline-block" href="/kontakt/">Beratung buchen</a>
+<a class="px-8 py-4 bg-surface-container-high text-primary rounded-xl font-bold text-lg hover:bg-surface-container-highest transition-all inline-block" href="#pricing">Alle Preise sehen</a>
 </div>
 </div>
-<div class="space-y-2">
-<label class="block font-headline text-lg font-medium text-on-surface" for="subject">Wobei kann ich helfen?</label>
-<select class="w-full bg-surface-container-low border-2 border-transparent rounded-xl p-4 text-lg focus:ring-2 focus:ring-primary-container appearance-none" id="subject" name="subject">
-<option>Frage zu einem Kurs</option>
-<option>Hilfe bei der Einrichtung (Laptop/Tablet)</option>
-<option>Terminanfrage für ein Treffen</option>
-<option>Sonstiges</option>
-</select>
+<div class="md:w-2/5 relative">
+<div class="absolute -inset-4 bg-primary-fixed blur-3xl opacity-30 rounded-full"></div>
+<img alt="Senioren lernen am Tablet" class="relative rounded-[2rem] shadow-2xl z-10 w-full object-cover aspect-[4/5]" data-alt="friendly elderly person smiling while using a modern tablet with a patient mentor in a bright cozy living room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIAZ7kSlp_iLBK688QGPIWAgmzs7K4yamy_fkv50gwLJF_SbuLsUa1H0yQr-P4vyGrpXmxvY4WjUn_SBEAXUWFIs89ZxOeH1qTr55PHiB4Rge4wJWYoYBSmOqazAccdqcr1GWYHslcGAETArlacWxVeJppMqXXk7N1cISBo0qg2pBhbqP_I1ylgzJt7IVrZFelh63iaxo3kIDLhghAequN5xWGD272jDYQlxErw94ibEeip1kIT7wefYDPtAnGbd4Q-sIF0F9rxIpQ"/>
 </div>
-<div class="space-y-2">
-<label class="block font-headline text-lg font-medium text-on-surface" for="message">Ihre Nachricht</label>
-<textarea class="w-full bg-surface-container-low border-2 border-transparent rounded-xl p-4 text-lg focus:ring-2 focus:ring-primary-container transition-all" id="message" name="message" placeholder="Wie kann ich Sie unterstützen?" required="" rows="5"></textarea>
-<p class="error-message" id="message-error">Bitte schreiben Sie kurz, was Ihr Anliegen ist.</p>
-</div>
-<button class="w-full md:w-auto bg-gradient-to-br from-primary to-primary-container text-on-primary px-10 py-5 rounded-2xl font-headline text-xl font-semibold shadow-lg hover:shadow-xl transition-all active:scale-95" id="submit-btn" type="submit">
-                            Nachricht senden
-                        </button>
-</form>
-</div>
-<!-- Success Message (Hidden by default) -->
-<div class="hidden absolute inset-0 flex flex-col items-center justify-center p-8 text-center success-animation" id="success-view">
-<div class="w-24 h-24 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center mb-6">
-<span class="material-symbols-outlined text-6xl" data-icon="check_circle">check_circle</span>
-</div>
-<h2 class="font-headline text-4xl font-bold text-primary mb-4">Vielen Dank!</h2>
-<p class="font-body text-xl text-on-surface-variant max-w-md">
-                        Ihre Nachricht wurde erfolgreich gesendet. Ich werde mich so schnell wie möglich bei Ihnen melden.
-                    </p>
-<button class="mt-10 text-primary font-headline font-bold flex items-center gap-2 hover:underline" onclick="resetForm()">
-<span class="material-symbols-outlined">arrow_back</span>
-                        Weitere Nachricht senden
-                    </button>
 </div>
 </section>
-<!-- Sidebar Info (Right) -->
-<aside class="lg:col-span-5 space-y-8">
-<!-- Availability Card -->
-<div class="bg-secondary-fixed text-on-secondary-fixed p-8 rounded-[2rem] relative overflow-hidden">
-<div class="relative z-10">
-<div class="flex items-center gap-3 mb-4">
-<span class="material-symbols-outlined text-3xl" data-icon="schedule">schedule</span>
-<h3 class="font-headline text-2xl font-bold">Verfügbarkeit</h3>
+<!-- Services Grid (Bento Style) -->
+<section class="px-8 max-w-7xl mx-auto mb-32 scroll-mt-28" id="specialties">
+<h2 class="font-headline text-3xl font-bold mb-12 text-blue-900 reveal">Unsere Spezialgebiete</h2>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Smartphone & Tablet -->
+<div class="md:col-span-8 glass-card rounded-3xl p-10 flex flex-col md:flex-row gap-8 items-center border border-white/40 shadow-xl group hover:bg-white/80 transition-all reveal hover:shadow-2xl">
+<div class="flex-1">
+<span class="material-symbols-outlined text-5xl text-primary mb-4 p-4 bg-primary-fixed rounded-2xl transition-transform group-hover:scale-110 group-hover:rotate-3 duration-300 inline-block">smartphone</span>
+<h3 class="font-headline text-3xl font-bold mb-4">Smartphone &amp; Tablet</h3>
+<p class="text-lg text-on-surface-variant mb-6">Wir richten Ihr neues Gerät ein, erklären die Grundfunktionen und zeigen Ihnen, wie Sie Fotos verschicken oder Apps installieren.</p>
+<a class="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="/mobil/">Mehr erfahren <span class="material-symbols-outlined">arrow_forward</span></a>
 </div>
-<p class="font-body text-lg mb-6 leading-relaxed">Da ich noch zur Schule gehe, bin ich zu folgenden Zeiten für Sie da:</p>
-<ul class="space-y-4 font-body text-lg">
-<li class="flex justify-between items-center border-b border-on-secondary-fixed/10 pb-2">
-<span>Mo — Fr:</span>
-<span class="font-bold">Ab 16:30 Uhr</span>
-</li>
-<li class="flex justify-between items-center pb-2">
-<span>Sa — So:</span>
-<span class="font-bold">Ganztägig</span>
-</li>
-</ul>
-</div>
-<!-- Decorative element -->
-<div class="absolute -right-10 -bottom-10 opacity-10">
-<span class="material-symbols-outlined text-[12rem]" data-icon="school">school</span>
+<div class="w-full md:w-1/3 h-64 rounded-2xl overflow-hidden">
+<img alt="Smartphone Schulung" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="close up of hands holding a modern smartphone with colorful apps on screen in a sunlit indoor environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxRb48W97MHEGNW2KMJMU3WpVZ9Z_1QrOuHSrs6Hfvfu3rj_7u3GuXsfgJ5nBsVjeAs_L5CifXmxUSl3JXxDy-hh8Qtqp9xWk2YHuOxJ-4lNWTvkCwLudcVXz08nwtCGrbysrSxWQw8okG9g7ZtKjh6niK-Q7UdDp2nPgvB-lv23yihE-oQ9gzwtMmEVGOv0UTIAxTLylRBdpXGj84NxQ6whhFG4Qa1ZgJR6cBMZWREZwsTJkww7tVAcc4uNXd4SMTaL2zMm2_S5Eu"/>
 </div>
 </div>
-<!-- Service Area Map -->
-<div class="bg-surface-container-highest p-8 rounded-[2rem] border border-outline-variant/20">
-<div class="flex items-center gap-3 mb-6">
-<span class="material-symbols-outlined text-3xl text-primary" data-icon="distance">distance</span>
-<h3 class="font-headline text-2xl font-bold text-primary">Einsatzgebiet</h3>
-</div>
-<div class="rounded-2xl overflow-hidden aspect-video relative group mb-6">
-<img alt="Einsatzgebiet Map" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="detailed topographic map showing a quiet residential district with green parks and winding streets in soft blue and beige tones" data-location="Berlin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpuExlc58n3W-94kDekXf6rS_8fUSVxhjHskvwFqQDrM855yfOjUMg_QKLSUomWto5LtmjrkS6bLp2SUXoxpJizh-wonXdPIxBkDRx78ICdx5USdLK0f7qz62dB6gXWW9XQIY-MVC8cXGs1TqLppzu1ocSrFzvzEyWipQSAx2u9nT9U5XiIgcs2Eqfrk2HglpzIsgivAleaMo8MR4toiP2R4Hht-AK0dLoNUp1MDUwXOhgKbBA0l3r436faW4zD1OsqGia2I79cU6o"/>
-<div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
-<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-<span class="material-symbols-outlined text-5xl text-primary drop-shadow-md" data-icon="location_on" data-weight="fill" style="font-variation-settings: 'FILL' 1;">location_on</span>
-</div>
-</div>
-<p class="font-body text-on-surface-variant leading-relaxed">
-                        Ich unterstütze Sie gerne in ganz <strong>Berlin-Zehlendorf</strong> und Umgebung (Kleinmachnow, Teltow). Für Online-Hilfe bin ich natürlich überall erreichbar!
-                    </p>
-</div>
-<!-- Quick Help Tip -->
-<div class="p-8 rounded-[2rem] bg-white/40 border border-white/60 flex gap-4">
-<span class="material-symbols-outlined text-4xl text-secondary" data-icon="lightbulb">lightbulb</span>
+<!-- WhatsApp -->
+<div class="md:col-span-4 glass-card rounded-3xl p-10 border border-white/40 shadow-xl flex flex-col justify-between hover:bg-white/80 transition-all group reveal hover:shadow-2xl">
 <div>
-<h4 class="font-headline text-lg font-bold text-on-surface mb-1">Tipp für Senioren</h4>
-<p class="font-body text-base text-on-surface-variant">Schreiben Sie mir gerne auch direkt per WhatsApp, falls Ihnen das Tippen am Computer schwerfällt.</p>
+<span class="material-symbols-outlined text-5xl text-secondary mb-4 p-4 bg-secondary-container rounded-2xl transition-transform group-hover:scale-110 group-hover:-rotate-3 duration-300 inline-block">chat</span>
+<h3 class="font-headline text-2xl font-bold mb-4">WhatsApp &amp; Kommunikation</h3>
+<p class="text-on-surface-variant">Bleiben Sie mit Enkeln und Freunden in Kontakt. Wir zeigen Ihnen Videoanrufe, Sprachnachrichten und Status-Updates.</p>
+</div>
+<a class="mt-8 text-secondary font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="/whatsapp/">Details ansehen <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<!-- Online Shopping -->
+<div class="md:col-span-5 glass-card rounded-3xl p-10 border border-white/40 shadow-xl hover:bg-white/80 transition-all group reveal hover:shadow-2xl">
+<span class="material-symbols-outlined text-5xl text-primary mb-4 p-4 bg-primary-fixed rounded-2xl transition-transform group-hover:scale-110 group-hover:rotate-3 duration-300 inline-block">shopping_cart</span>
+<h3 class="font-headline text-2xl font-bold mb-4">Sicher Online Einkaufen</h3>
+<p class="text-on-surface-variant mb-6">Wir begleiten Sie bei Ihren ersten Bestellungen, erklären Bezahlmethoden und worauf Sie bei der Sicherheit achten müssen.</p>
+<a class="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="/shopping/">Sicher bestellen <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<!-- Computer & Printer -->
+<div class="md:col-span-7 glass-card rounded-3xl p-10 flex flex-col md:flex-row gap-8 items-center border border-white/40 shadow-xl hover:bg-white/80 transition-all group reveal hover:shadow-2xl">
+<div class="flex-1">
+<span class="material-symbols-outlined text-5xl text-primary mb-4 p-4 bg-primary-fixed rounded-2xl transition-transform group-hover:scale-110 group-hover:-rotate-3 duration-300 inline-block">print</span>
+<h3 class="font-headline text-2xl font-bold mb-4">PC, Laptop &amp; Drucker</h3>
+<p class="text-on-surface-variant mb-6">Hilfe bei Windows-Updates, E-Mail-Einrichtung oder wenn der Drucker mal wieder nicht so will wie Sie.</p>
+<a class="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="/computer/">Hilfe anfordern <span class="material-symbols-outlined">arrow_forward</span></a>
+</div>
+<div class="w-full md:w-2/5 h-48 rounded-2xl overflow-hidden hidden md:block">
+<img alt="Laptop am Schreibtisch" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="clean minimal workspace with a laptop on a wooden desk next to a green plant and soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBENdu-3fE8MqTzRwMn6V0euuQ73MDToqLEUM1lZFwUuDTDPTlCSQP08ov7hTWDKoig7_Z0eHQSbqBv-EmVFYfyeHE44V0Tl1Hc3fxuXahwTxC1W7sv_uy7cwLaOizK8Yfb1PiIsUmNFWnb_6UU5O3G-Q8TizA6Zp2sfY3ALZHWslGOTNxMIWQkf5rHaPU6HL9rodvI0GSm4aoMuQvdwqg4NmjZ8caz0NBGlsbM2Ze7jWKyv4ujyPlb3wUqjIxCvo4uQEIDydlTB-tY"/>
 </div>
 </div>
-</aside>
 </div>
+</section>
+<!-- Pricing Section (Transparent/Asymmetric) -->
+<section class="bg-surface-container-low py-24 px-8 scroll-mt-20" id="pricing">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="reveal">
+<h2 class="font-headline text-4xl font-bold text-primary mb-6">Ehrliche &amp; Transparente Preise</h2>
+<p class="text-xl text-on-surface-variant mb-12 leading-relaxed">
+                        Bei uns gibt es keine versteckten Kosten. Wir arbeiten auf Stundenbasis oder bieten faire Festpreise für bestimmte Pakete an.
+                    </p>
+<div class="space-y-6">
+<div class="flex items-center gap-6 p-6 rounded-2xl bg-white/40 border border-white/60 transition-all hover:bg-white/80 hover:scale-[1.02]">
+<span class="text-5xl font-bold text-primary">45€</span>
+<div>
+<h4 class="font-bold text-xl">Einzelstunde</h4>
+<p class="text-on-surface-variant">Individuelle Betreuung bei Ihnen vor Ort oder Online.</p>
+</div>
+</div>
+<div class="flex items-center gap-6 p-6 rounded-2xl bg-secondary-container/30 border border-secondary/20 transition-all hover:bg-secondary-container/40 hover:scale-[1.02]">
+<span class="text-5xl font-bold text-secondary">199€</span>
+<div>
+<h4 class="font-bold text-xl">Rundum-Sorglos Paket</h4>
+<p class="text-on-surface-variant">5 Stunden Betreuung + Telefon-Joker für Notfälle.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative bg-white p-12 rounded-[3rem] shadow-sm border border-outline-variant/15 reveal reveal-delay-2">
+<div class="absolute -top-12 -right-12 w-32 h-32 bg-secondary-fixed-dim rounded-full blur-3xl opacity-50"></div>
+<h3 class="font-headline text-2xl font-bold mb-8">Häufige Fragen</h3>
+<div class="space-y-8">
+<div class="cursor-help transition-transform hover:translate-x-2 duration-300">
+<h5 class="font-bold text-primary mb-2">Kommen Sie auch nach Hause?</h5>
+<p class="text-on-surface-variant">Ja, im Umkreis von 15km besuchen wir Sie gerne direkt in Ihrer gewohnten Umgebung.</p>
+</div>
+<div class="cursor-help transition-transform hover:translate-x-2 duration-300">
+<h5 class="font-bold text-primary mb-2">Muss ich Technik-Vorkenntnisse haben?</h5>
+<p class="text-on-surface-variant">Absolut nicht! Wir fangen genau dort an, wo Sie gerade stehen – ganz ohne Fachchinesisch.</p>
+</div>
+<div class="cursor-help transition-transform hover:translate-x-2 duration-300">
+<h5 class="font-bold text-primary mb-2">Gibt es auch Gruppenkurse?</h5>
+<p class="text-on-surface-variant">Regelmäßig bieten wir kleine Gruppenworkshops in lokalen Gemeindezentren an.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Step-by-Step Philosophy -->
+<section class="px-8 max-w-7xl mx-auto py-32">
+<h2 class="font-headline text-4xl font-bold text-center mb-16 reveal">So einfach starten wir</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="relative p-10 bg-surface-container-highest rounded-3xl overflow-hidden reveal reveal-delay-1 group">
+<span class="absolute -top-4 -left-2 step-number text-9xl font-bold text-primary select-none transition-transform group-hover:scale-110 group-hover:-translate-y-2 duration-500">1</span>
+<div class="relative z-10 pt-12">
+<h4 class="font-headline text-2xl font-bold mb-4">Anruf oder Nachricht</h4>
+<p class="text-on-surface-variant text-lg">Kontaktieren Sie uns unverbindlich. Wir besprechen kurz Ihre Wünsche und Fragen.</p>
+</div>
+</div>
+<div class="relative p-10 bg-surface-container-highest rounded-3xl overflow-hidden reveal reveal-delay-2 group">
+<span class="absolute -top-4 -left-2 step-number text-9xl font-bold text-primary select-none transition-transform group-hover:scale-110 group-hover:-translate-y-2 duration-500">2</span>
+<div class="relative z-10 pt-12">
+<h4 class="font-headline text-2xl font-bold mb-4">Termin vereinbaren</h4>
+<p class="text-on-surface-variant text-lg">Wir finden einen passenden Zeitpunkt für unseren ersten Besuch bei Ihnen zu Hause.</p>
+</div>
+</div>
+<div class="relative p-10 bg-surface-container-highest rounded-3xl overflow-hidden reveal reveal-delay-3 group">
+<span class="absolute -top-4 -left-2 step-number text-9xl font-bold text-primary select-none transition-transform group-hover:scale-110 group-hover:-translate-y-2 duration-500">3</span>
+<div class="relative z-10 pt-12">
+<h4 class="font-headline text-2xl font-bold mb-4">Gemeinsam lernen</h4>
+<p class="text-on-surface-variant text-lg">In aller Ruhe gehen wir Ihre Themen durch. Sie bestimmen das Tempo, wir geben die Sicherheit.</p>
+</div>
+</div>
+</div>
+</section>
 </main>
-<!-- Footer -->
-<footer class="bg-slate-50 border-t border-slate-200 py-12 px-8 w-full">
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
-<div class="flex flex-col gap-2">
-<a class="font-headline font-bold text-blue-800 text-xl" href="/">Mentoren-Ecke</a>
-<p class="font-body text-sm text-slate-600">© 2026 Mentoren-Ecke. In Ruhe lernen.</p>
+<!-- Footer Shared Component -->
+<footer class="bg-slate-100 dark:bg-slate-950 w-full py-12 px-8">
+<div class="flex flex-col md:flex-row justify-between items-center w-full max-w-7xl mx-auto gap-6">
+<div class="flex flex-col items-center md:items-start gap-2">
+<a class="font-lexend font-semibold text-blue-900 dark:text-blue-100 text-xl" href="/">Mentoren-Ecke</a>
+<p class="font-public-sans text-sm leading-relaxed text-slate-600 dark:text-slate-400">© 2026 Mentoren-Ecke. In Ruhe lernen.</p>
 </div>
-<div class="flex flex-wrap justify-center gap-8 font-body text-sm">
-<a class="text-slate-600 hover:text-blue-600 transition-all hover:underline decoration-2" href="/datenschutz/">Datenschutz</a>
-<a class="text-slate-600 hover:text-blue-600 transition-all hover:underline decoration-2" href="/impressum/">Impressum</a>
-<a class="text-blue-700 underline font-medium" href="/kontakt/">Kontakt</a>
-<a class="text-slate-600 hover:text-blue-600 transition-all hover:underline decoration-2" href="/barrierefreiheit/">Barrierefreiheit</a>
-</div>
-<div class="flex gap-4">
-<a class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 text-slate-600 hover:bg-primary hover:text-white transition-all" href="mailto:hallo@mentoren-ecke.de">
-<span class="material-symbols-outlined text-xl" data-icon="mail">mail</span>
-</a>
-<a class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 text-slate-600 hover:bg-primary hover:text-white transition-all" href="tel:+49123456789">
-<span class="material-symbols-outlined text-xl" data-icon="phone">phone</span>
-</a>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="font-public-sans text-sm text-slate-600 dark:text-slate-400 hover:text-blue-700 transition-all hover:underline decoration-2 underline-offset-4" href="/datenschutz/">Datenschutz</a>
+<a class="font-public-sans text-sm text-slate-600 dark:text-slate-400 hover:text-blue-700 transition-all hover:underline decoration-2 underline-offset-4" href="/impressum/">Impressum</a>
+<a class="font-public-sans text-sm text-slate-600 dark:text-slate-400 hover:text-blue-700 transition-all hover:underline decoration-2 underline-offset-4" href="/kontakt/">Kontakt</a>
 </div>
 </div>
 </footer>
+<!-- FAB for Help -->
+<a class="fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50 group" href="/kontakt/">
+<span class="material-symbols-outlined text-3xl transition-transform group-hover:rotate-12">question_mark</span>
+</a>
 <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const contactForm = document.getElementById('contact-form');
-            const formContainer = document.getElementById('form-container');
-            const formContent = document.getElementById('contact-form-content');
-            const successView = document.getElementById('success-view');
-
-            // 1. Pretty URL Navigation
-            const handleNavigation = (e) => {
-                if (e.target.classList.contains('nav-item') || e.target.closest('.nav-item')) {
-                    const link = e.target.getAttribute('href') || e.target.closest('.nav-item').getAttribute('href');
-                    if (link && link.startsWith('/')) {
-                        e.preventDefault();
-                        const page = e.target.dataset.link || e.target.closest('.nav-item').dataset.link;
-                        history.pushState({ page }, '', link);
-                        console.log(`Navigating to: ${link}`);
-                        
-                        document.querySelectorAll('.nav-item').forEach(el => {
-                            el.classList.remove('text-blue-700', 'border-b-2', 'border-blue-700', 'pb-1');
-                            el.classList.add('text-slate-700');
-                        });
-                        const activeEl = e.target.closest('.nav-item');
-                        activeEl.classList.add('text-blue-700', 'border-b-2', 'border-blue-700', 'pb-1');
-                        activeEl.classList.remove('text-slate-700');
-                    }
-                }
-            };
-
-            document.getElementById('nav-links').addEventListener('click', handleNavigation);
-
-            // Handle back/forward buttons
-            window.onpopstate = (event) => {
-                console.log("PopState event triggered", event.state);
-            };
-
-            // 2. Form Validation & Submission
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
+    document.addEventListener('DOMContentLoaded', () => {
+        // 1. Smooth scroll for local anchors
+        const localLinks = document.querySelectorAll('a[href^="#"]');
+        localLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
                 
-                let isValid = true;
-                const fields = ['name', 'email', 'message'];
-
-                fields.forEach(fieldId => {
-                    const field = document.getElementById(fieldId);
-                    const error = document.getElementById(`${fieldId}-error`);
-                    
-                    if (!field.value.trim() || (fieldId === 'email' && !validateEmail(field.value))) {
-                        field.classList.add('form-input-error');
-                        error.style.display = 'block';
-                        isValid = false;
-                    } else {
-                        field.classList.remove('form-input-error');
-                        error.style.display = 'none';
-                    }
-                });
-
-                if (isValid) {
-                    const submitBtn = document.getElementById('submit-btn');
-                    submitBtn.disabled = true;
-                    submitBtn.innerText = 'Wird gesendet...';
-                    
-                    setTimeout(() => {
-                        showSuccess();
-                    }, 800);
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
                 }
             });
-
-            // Real-time validation clear
-            ['name', 'email', 'message'].forEach(id => {
-                const el = document.getElementById(id);
-                el.addEventListener('input', () => {
-                    if (el.value.trim()) {
-                        el.classList.remove('form-input-error');
-                        const error = document.getElementById(`${id}-error`);
-                        if(error) error.style.display = 'none';
-                    }
-                });
-            });
-
-            function validateEmail(email) {
-                const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                return re.test(email);
-            }
-
-            function showSuccess() {
-                formContent.classList.add('opacity-0', 'transition-opacity', 'duration-300');
-                setTimeout(() => {
-                    formContent.classList.add('hidden');
-                    successView.classList.remove('hidden');
-                }, 300);
-            }
         });
 
-        // Global function to reset the form
-        function resetForm() {
-            const formContent = document.getElementById('contact-form-content');
-            const successView = document.getElementById('success-view');
-            const contactForm = document.getElementById('contact-form');
-            const submitBtn = document.getElementById('submit-btn');
+        // 2. Intersection Observer for fade-in animations
+        const revealCallback = (entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        };
 
-            contactForm.reset();
-            submitBtn.disabled = false;
-            submitBtn.innerText = 'Nachricht senden';
+        const revealObserver = new IntersectionObserver(revealCallback, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // 3. Subtle JS-based hover effects for glass-cards
+        const floatingElements = document.querySelectorAll('.glass-card');
+        floatingElements.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                if (window.innerWidth < 768) return;
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                const centerX = rect.width / 2;
+                const centerY = rect.height / 2;
+                
+                const rotateX = (y - centerY) / 25;
+                const rotateY = (centerX - x) / 25;
+                
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
+            });
             
-            successView.classList.add('hidden');
-            formContent.classList.remove('hidden', 'opacity-0');
-        }
-    </script>
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = '';
+            });
+        });
+
+        // Sticky Nav Shadow
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                nav.classList.add('shadow-md');
+            } else {
+                nav.classList.remove('shadow-md');
+            }
+        });
+    });
+</script>
 </body></html>
