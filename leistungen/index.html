@@ -1,70 +1,70 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="de"><head>
+<html class="light" lang="de"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Leistungen | Mentoren-Ecke</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;family=Public+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
             colors: {
-              "on-secondary-fixed-variant": "#005312",
-              "tertiary-fixed-dim": "#e4beb2",
-              "surface-variant": "#e4e4cc",
-              "primary": "#004493",
-              "on-surface": "#1b1d0e",
-              "background": "#fbfbe2",
-              "on-primary": "#ffffff",
-              "on-error": "#ffffff",
-              "secondary": "#1b6d24",
-              "outline-variant": "#c3c6d6",
-              "surface-container": "#efefd7",
-              "surface-bright": "#fbfbe2",
-              "outline": "#737785",
-              "surface-container-highest": "#e4e4cc",
+              "surface-container-low": "#f3f4f5",
+              "on-secondary-fixed-variant": "#005049",
+              "secondary": "#006a62",
+              "on-primary-container": "#c0dbff",
+              "surface-container": "#edeeef",
+              "inverse-on-surface": "#f0f1f2",
+              "tertiary-fixed-dim": "#89d4cd",
               "on-secondary": "#ffffff",
-              "tertiary-fixed": "#ffdbce",
-              "surface-container-lowest": "#ffffff",
-              "surface-container-low": "#f5f5dc",
-              "tertiary-container": "#75584e",
-              "primary-container": "#235cb2",
-              "surface-dim": "#dbdcc3",
-              "on-tertiary-container": "#f7d1c3",
-              "on-secondary-fixed": "#002204",
-              "secondary-fixed-dim": "#88d982",
-              "on-primary-fixed-variant": "#004492",
-              "inverse-primary": "#acc7ff",
-              "inverse-surface": "#303221",
-              "secondary-container": "#a0f399",
-              "error-container": "#ffdad6",
-              "tertiary": "#5b4137",
-              "surface-container-high": "#eaead1",
-              "on-surface-variant": "#424654",
-              "surface-tint": "#235cb2",
+              "on-secondary-container": "#006f66",
+              "surface-dim": "#d9dadb",
               "on-tertiary": "#ffffff",
-              "on-primary-container": "#c9d9ff",
-              "secondary-fixed": "#a3f69c",
-              "primary-fixed": "#d8e2ff",
-              "on-tertiary-fixed": "#2b160f",
-              "on-primary-fixed": "#001a41",
-              "on-error-container": "#93000a",
-              "surface": "#fbfbe2",
-              "on-background": "#1b1d0e",
+              "inverse-surface": "#2e3132",
+              "secondary-fixed": "#84f5e8",
+              "outline": "#717782",
+              "on-primary-fixed": "#001d36",
+              "surface": "#f8f9fa",
+              "outline-variant": "#c1c7d2",
+              "secondary-fixed-dim": "#66d9cc",
+              "primary-fixed-dim": "#9fcaff",
+              "on-surface-variant": "#414750",
+              "on-surface": "#191c1d",
+              "on-primary-fixed-variant": "#00497d",
+              "on-tertiary-fixed-variant": "#00504b",
+              "surface-variant": "#e1e3e4",
+              "surface-container-highest": "#e1e3e4",
+              "secondary-container": "#81f3e5",
+              "surface-tint": "#0061a4",
+              "on-error": "#ffffff",
+              "tertiary-container": "#126964",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-high": "#e7e8e9",
               "error": "#ba1a1a",
-              "primary-fixed-dim": "#acc7ff",
-              "on-secondary-container": "#217128",
-              "on-tertiary-fixed-variant": "#5b4137",
-              "inverse-on-surface": "#f2f2d9"
+              "tertiary-fixed": "#a4f0e9",
+              "background": "#f8f9fa",
+              "primary-container": "#0061a4",
+              "error-container": "#ffdad6",
+              "on-tertiary-fixed": "#00201e",
+              "primary": "#00497d",
+              "primary-fixed": "#d1e4ff",
+              "surface-bright": "#f8f9fa",
+              "inverse-primary": "#9fcaff",
+              "on-background": "#191c1d",
+              "on-secondary-fixed": "#00201d",
+              "on-error-container": "#93000a",
+              "on-tertiary-container": "#9ae6de",
+              "tertiary": "#00504b",
+              "on-primary": "#ffffff"
             },
             fontFamily: {
               "headline": ["Lexend"],
-              "body": ["Public Sans"],
-              "label": ["Public Sans"]
+              "body": ["Inter"],
+              "label": ["Inter"]
             },
             borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
           },
@@ -72,285 +72,175 @@
       }
     </script>
 <style>
-        .glass-card {
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        .step-number {
-            font-family: 'Lexend';
-            line-height: 0.8;
-            opacity: 0.15;
-        }
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
-        }
-        .reveal.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-        .reveal-delay-1 { transition-delay: 0.1s; }
-        .reveal-delay-2 { transition-delay: 0.2s; }
-        .reveal-delay-3 { transition-delay: 0.3s; }
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .glass-card {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(16px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+      }
     </style>
 </head>
-<body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
-<nav class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-md shadow-sm flex justify-between items-center px-8 h-20 max-w-full mx-auto">
-<a class="text-2xl font-bold text-blue-900 font-headline" href="/">Mentoren-Ecke</a>
-<div class="hidden md:flex items-center gap-8">
-<a class="nav-link text-slate-700 hover:text-blue-600 transition-colors font-headline text-lg font-medium tracking-tight" href="/">Home</a>
-<a class="nav-link text-blue-700 border-b-2 border-blue-700 pb-1 font-headline text-lg font-medium tracking-tight" href="/leistungen/">Leistungen</a>
-<a class="nav-link text-slate-700 hover:text-blue-600 transition-colors font-headline text-lg font-medium tracking-tight" href="/ueber-mich/">Über mich</a>
-<a class="nav-link text-slate-700 hover:text-blue-600 transition-colors font-headline text-lg font-medium tracking-tight" href="/kontakt/">Kontakt</a>
+<body class="bg-surface font-body text-on-surface antialiased">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 dark:bg-slate-900/70 backdrop-blur-md shadow-[0_20px_40px_rgba(0,73,125,0.06)]">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 py-4">
+<div class="text-2xl font-bold text-blue-900 dark:text-blue-100 tracking-tighter font-headline">
+                Tech Helper
+            </div>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex items-center gap-8 font-lexend font-medium text-body-lg tracking-tight">
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="/">Home</a>
+<a class="text-blue-700 dark:text-blue-400 border-b-2 border-blue-600 pb-1" href="/leistungen">Leistungen</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="/ueber-mich">Über mich</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-colors" href="/kontakt">Kontakt</a>
 </div>
-<div class="flex items-center gap-4">
-<a class="bg-primary text-on-primary px-6 py-2.5 rounded-xl font-headline font-medium transition-transform scale-95 active:scale-90 inline-block" href="/kontakt/">
-            Termin vereinbaren
-        </a>
+<button class="bg-primary hover:bg-primary-container text-on-primary px-6 py-3 rounded-xl font-headline font-semibold transition-all active:scale-95 duration-200">
+                Termin vereinbaren
+            </button>
 </div>
 </nav>
-<main class="pb-24 pt-32">
+<main class="pt-32 pb-24">
 <!-- Hero Section -->
-<section class="px-8 max-w-7xl mx-auto mb-20 reveal">
-<div class="flex flex-col md:flex-row items-center gap-12">
-<div class="md:w-3/5">
-<h1 class="font-headline text-5xl md:text-7xl font-extrabold text-primary mb-6 tracking-tight leading-tight">
-                    Technik verstehen, <br/><span class="text-secondary">Schritt für Schritt.</span>
-</h1>
-<p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed mb-8">
-                    Keine Angst vor der digitalen Welt. Matti begleitet Sie geduldig und kompetent bei all Ihren Fragen rund um Smartphone, Tablet und Computer.
+<header class="max-w-7xl mx-auto px-8 mb-20 text-center">
+<span class="inline-block py-1 px-4 bg-secondary-container text-on-secondary-container rounded-full text-sm font-bold tracking-wide uppercase mb-4">Digitale Hilfe mit Herz</span>
+<h1 class="text-5xl md:text-7xl font-headline font-extrabold text-primary mb-6 tracking-tight">Einfach &amp; Sicher.</h1>
+<p class="text-xl text-on-surface-variant max-w-2xl mx-auto leading-relaxed">
+                Ich unterstütze Sie dabei, die digitale Welt zu verstehen. Ohne Fachchinesisch, in Ihrem Tempo und direkt bei Ihnen vor Ort.
+            </p>
+</header>
+<!-- Pricing Banner -->
+<section class="max-w-4xl mx-auto px-8 mb-24">
+<div class="bg-primary-container rounded-[2rem] p-1 w-full shadow-xl">
+<div class="bg-surface-container-lowest rounded-[1.8rem] px-10 py-8 flex flex-col md:flex-row items-center justify-between gap-6">
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 rounded-full bg-secondary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-fixed text-3xl">payments</span>
+</div>
+<div>
+<h3 class="font-headline text-2xl font-bold text-on-background">Transparente Preise</h3>
+<p class="text-on-surface-variant">Keine versteckten Kosten oder Anfahrtsgebühren.</p>
+</div>
+</div>
+<div class="text-center md:text-right">
+<span class="text-5xl font-headline font-black text-primary">39€</span>
+<span class="text-on-surface-variant font-medium">/ Stunde</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Bento Grid -->
+<section class="max-w-7xl mx-auto px-8 grid grid-cols-1 md:grid-cols-12 gap-6">
+<!-- Large Feature: WhatsApp -->
+<div class="md:col-span-8 glass-card rounded-[2.5rem] p-10 overflow-hidden relative group">
+<div class="relative z-10 h-full flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 bg-emerald-100 rounded-2xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-emerald-600 text-3xl">chat</span>
+</div>
+<h2 class="text-3xl font-headline font-bold text-on-surface mb-4">WhatsApp &amp; Kommunikation</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed max-w-md">
+                            Bleiben Sie mit Enkeln und Freunden in Kontakt. Ich zeige Ihnen, wie Sie Fotos verschicken, Videoanrufe tätigen und den Status nutzen.
+                        </p>
+</div>
+<div class="mt-8">
+<ul class="space-y-3 font-medium text-on-surface-variant">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span> Gruppenchats einrichten
+                            </li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">check_circle</span> Sprachnachrichten verstehen
+                            </li>
+</ul>
+</div>
+</div>
+<div class="absolute -right-20 -bottom-20 w-80 h-80 bg-emerald-50 rounded-full opacity-50 blur-3xl group-hover:scale-110 transition-transform duration-700"></div>
+<img alt="" class="absolute bottom-0 right-0 w-1/2 h-full object-cover opacity-20 pointer-events-none mix-blend-multiply" data-alt="close up of elderly hands holding a modern smartphone displaying a green messaging application in a sunlit living room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvirBcJNDG1bV5RywxsH3DJ-gC9DfQkD2TP3aLvLKSM5bkxi_ytQlmcM9V5dgvELi2KatO3caSMAbvL4qE3Z0AHAtp-XTCnsYtS-XaIqn2idxw4xskdIFnXboM_tcDkWk9fp48TJOY_u1QPR4Lawb8W46623G1TbeXYQnkHKUM-Rm-SRSK3vTc6pBQG1q4HUlDte-yynMqUKLw03KXmQ9SuzNwk2GwNwTThjoagqAjmouTwxt7IJ9205rg3xOfE0BTJsmIf-LRZbyA"/>
+</div>
+<!-- Small Feature: Online Shopping -->
+<div class="md:col-span-4 bg-surface-container-low rounded-[2.5rem] p-10 flex flex-col justify-between">
+<div>
+<div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-blue-600 text-3xl">shopping_cart</span>
+</div>
+<h2 class="text-2xl font-headline font-bold text-on-surface mb-4">Online-Shopping</h2>
+<p class="text-on-surface-variant">Bequem von zuhause einkaufen. Wir richten Konten ein und üben den sicheren Bestellvorgang.</p>
+</div>
+<div class="mt-6 flex justify-end">
+<span class="material-symbols-outlined text-outline-variant text-4xl">arrow_forward</span>
+</div>
+</div>
+<!-- Feature: PC & Laptop -->
+<div class="md:col-span-4 bg-secondary-fixed/30 rounded-[2.5rem] p-10 flex flex-col">
+<div class="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-8 shadow-sm">
+<span class="material-symbols-outlined text-secondary text-3xl">laptop_mac</span>
+</div>
+<h2 class="text-2xl font-headline font-bold text-on-surface mb-4">PC &amp; Laptop Hilfe</h2>
+<p class="text-on-surface-variant mb-6">Ob Windows oder Mac – ich helfe bei Updates, Programminstallationen oder wenn der Rechner mal wieder zu langsam ist.</p>
+<div class="mt-auto aspect-video rounded-xl bg-white/50 overflow-hidden relative">
+<img alt="" class="w-full h-full object-cover" data-alt="clean minimal workspace with a laptop on a wooden desk with soft natural lighting and a small green plant" src="https://lh3.googleusercontent.com/aida-public/AB6AXuChl5arJsChTJXpMJSx9Gyy7t5lwj39lWWFaS6wC_k9blaii7P8D9xhxRNP4byNZb3_qX1k4SttWW3H-6Ci1dcvKfj4saGrtrs6gnaJTiSd64doYNq4eGAzbtws5r-Smjk09PEO31wqUjXjewNuzaD989SVbo-Y8RfSUN4u6wKI7zQeDBGYZuAXA5_7y5OMmfJyjlgW6PpC2DBJxyDU6mNDqJGcKgffxAAHF-ECV5j2czPDdccaIied816NZHQES6fVxZWWQkfqeu5S"/>
+</div>
+</div>
+<!-- Feature: Safety & Privacy -->
+<div class="md:col-span-8 glass-card rounded-[2.5rem] p-10 relative overflow-hidden group">
+<div class="grid md:grid-cols-2 gap-8 items-center">
+<div>
+<div class="w-14 h-14 bg-red-50 rounded-2xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-error text-3xl">security</span>
+</div>
+<h2 class="text-3xl font-headline font-bold text-on-surface mb-4">Sicherheit im Netz</h2>
+<p class="text-lg text-on-surface-variant leading-relaxed">
+                            Betrugsversuche erkennen, sichere Passwörter vergeben und Virenscanner richtig einstellen. Wir machen Ihr digitales Leben sicher.
+                        </p>
+</div>
+<div class="bg-surface-container rounded-3xl p-6 border border-white/50">
+<div class="flex items-center gap-4 mb-4">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="text-sm font-bold uppercase tracking-widest text-on-surface-variant">Schutz-Check</span>
+</div>
+<div class="space-y-4">
+<div class="h-2 w-full bg-outline-variant/20 rounded-full overflow-hidden">
+<div class="h-full bg-secondary w-3/4"></div>
+</div>
+<p class="text-sm italic text-on-surface-variant">„Endlich habe ich keine Angst mehr, auf den falschen Knopf zu drücken.“</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-7xl mx-auto px-8 mt-32">
+<div class="bg-primary rounded-[3rem] p-12 md:p-20 text-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+<div class="absolute top-0 left-0 w-64 h-64 bg-white rounded-full -translate-x-1/2 -translate-y-1/2 blur-3xl"></div>
+<div class="absolute bottom-0 right-0 w-96 h-96 bg-secondary-fixed rounded-full translate-x-1/3 translate-y-1/3 blur-3xl"></div>
+</div>
+<h2 class="text-4xl md:text-5xl font-headline font-bold text-on-primary mb-8 relative z-10 leading-tight">Bereit für den ersten Schritt?</h2>
+<p class="text-xl text-on-primary-container max-w-xl mx-auto mb-10 relative z-10">
+                    Rufen Sie mich einfach an oder schreiben Sie mir eine Nachricht. Wir finden gemeinsam die beste Lösung für Ihre Technik-Fragen.
                 </p>
-<div class="flex flex-wrap gap-4">
-<a class="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-bold text-lg shadow-lg hover:opacity-90 transition-all hover:-translate-y-1 inline-block" href="/kontakt/">Beratung buchen</a>
-<a class="px-8 py-4 bg-surface-container-high text-primary rounded-xl font-bold text-lg hover:bg-surface-container-highest transition-all inline-block" href="#pricing">Alle Preise sehen</a>
-</div>
-</div>
-<div class="md:w-2/5 relative">
-<div class="absolute -inset-4 bg-primary-fixed blur-3xl opacity-30 rounded-full"></div>
-<img alt="Senioren lernen am Tablet" class="relative rounded-[2rem] shadow-2xl z-10 w-full object-cover aspect-[4/5]" data-alt="friendly elderly person smiling while using a modern tablet with a patient mentor in a bright cozy living room" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBIAZ7kSlp_iLBK688QGPIWAgmzs7K4yamy_fkv50gwLJF_SbuLsUa1H0yQr-P4vyGrpXmxvY4WjUn_SBEAXUWFIs89ZxOeH1qTr55PHiB4Rge4wJWYoYBSmOqazAccdqcr1GWYHslcGAETArlacWxVeJppMqXXk7N1cISBo0qg2pBhbqP_I1ylgzJt7IVrZFelh63iaxo3kIDLhghAequN5xWGD272jDYQlxErw94ibEeip1kIT7wefYDPtAnGbd4Q-sIF0F9rxIpQ"/>
-</div>
-</div>
-</section>
-<!-- Services Grid (Bento Style) -->
-<section class="px-8 max-w-7xl mx-auto mb-32 scroll-mt-28" id="specialties">
-<h2 class="font-headline text-3xl font-bold mb-12 text-blue-900 reveal">Unsere Spezialgebiete</h2>
-<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
-<!-- Smartphone & Tablet -->
-<div class="md:col-span-8 glass-card rounded-3xl p-10 flex flex-col md:flex-row gap-8 items-center border border-white/40 shadow-xl group hover:bg-white/80 transition-all reveal hover:shadow-2xl">
-<div class="flex-1">
-<span class="material-symbols-outlined text-5xl text-primary mb-4 p-4 bg-primary-fixed rounded-2xl transition-transform group-hover:scale-110 group-hover:rotate-3 duration-300 inline-block">smartphone</span>
-<h3 class="font-headline text-3xl font-bold mb-4">Smartphone &amp; Tablet</h3>
-<p class="text-lg text-on-surface-variant mb-6">Wir richten Ihr neues Gerät ein, erklären die Grundfunktionen und zeigen Ihnen, wie Sie Fotos verschicken oder Apps installieren.</p>
-<a class="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="/mobil/">Mehr erfahren <span class="material-symbols-outlined">arrow_forward</span></a>
-</div>
-<div class="w-full md:w-1/3 h-64 rounded-2xl overflow-hidden">
-<img alt="Smartphone Schulung" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="close up of hands holding a modern smartphone with colorful apps on screen in a sunlit indoor environment" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxRb48W97MHEGNW2KMJMU3WpVZ9Z_1QrOuHSrs6Hfvfu3rj_7u3GuXsfgJ5nBsVjeAs_L5CifXmxUSl3JXxDy-hh8Qtqp9xWk2YHuOxJ-4lNWTvkCwLudcVXz08nwtCGrbysrSxWQw8okG9g7ZtKjh6niK-Q7UdDp2nPgvB-lv23yihE-oQ9gzwtMmEVGOv0UTIAxTLylRBdpXGj84NxQ6whhFG4Qa1ZgJR6cBMZWREZwsTJkww7tVAcc4uNXd4SMTaL2zMm2_S5Eu"/>
-</div>
-</div>
-<!-- WhatsApp -->
-<div class="md:col-span-4 glass-card rounded-3xl p-10 border border-white/40 shadow-xl flex flex-col justify-between hover:bg-white/80 transition-all group reveal hover:shadow-2xl">
-<div>
-<span class="material-symbols-outlined text-5xl text-secondary mb-4 p-4 bg-secondary-container rounded-2xl transition-transform group-hover:scale-110 group-hover:-rotate-3 duration-300 inline-block">chat</span>
-<h3 class="font-headline text-2xl font-bold mb-4">WhatsApp &amp; Kommunikation</h3>
-<p class="text-on-surface-variant">Bleiben Sie mit Enkeln und Freunden in Kontakt. Wir zeigen Ihnen Videoanrufe, Sprachnachrichten und Status-Updates.</p>
-</div>
-<a class="mt-8 text-secondary font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="/whatsapp/">Details ansehen <span class="material-symbols-outlined">arrow_forward</span></a>
-</div>
-<!-- Online Shopping -->
-<div class="md:col-span-5 glass-card rounded-3xl p-10 border border-white/40 shadow-xl hover:bg-white/80 transition-all group reveal hover:shadow-2xl">
-<span class="material-symbols-outlined text-5xl text-primary mb-4 p-4 bg-primary-fixed rounded-2xl transition-transform group-hover:scale-110 group-hover:rotate-3 duration-300 inline-block">shopping_cart</span>
-<h3 class="font-headline text-2xl font-bold mb-4">Sicher Online Einkaufen</h3>
-<p class="text-on-surface-variant mb-6">Wir begleiten Sie bei Ihren ersten Bestellungen, erklären Bezahlmethoden und worauf Sie bei der Sicherheit achten müssen.</p>
-<a class="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="/shopping/">Sicher bestellen <span class="material-symbols-outlined">arrow_forward</span></a>
-</div>
-<!-- Computer & Printer -->
-<div class="md:col-span-7 glass-card rounded-3xl p-10 flex flex-col md:flex-row gap-8 items-center border border-white/40 shadow-xl hover:bg-white/80 transition-all group reveal hover:shadow-2xl">
-<div class="flex-1">
-<span class="material-symbols-outlined text-5xl text-primary mb-4 p-4 bg-primary-fixed rounded-2xl transition-transform group-hover:scale-110 group-hover:-rotate-3 duration-300 inline-block">print</span>
-<h3 class="font-headline text-2xl font-bold mb-4">PC, Laptop &amp; Drucker</h3>
-<p class="text-on-surface-variant mb-6">Hilfe bei Windows-Updates, E-Mail-Einrichtung oder wenn der Drucker mal wieder nicht so will wie Sie.</p>
-<a class="text-primary font-bold flex items-center gap-2 group-hover:gap-4 transition-all" href="/computer/">Hilfe anfordern <span class="material-symbols-outlined">arrow_forward</span></a>
-</div>
-<div class="w-full md:w-2/5 h-48 rounded-2xl overflow-hidden hidden md:block">
-<img alt="Laptop am Schreibtisch" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="clean minimal workspace with a laptop on a wooden desk next to a green plant and soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBENdu-3fE8MqTzRwMn6V0euuQ73MDToqLEUM1lZFwUuDTDPTlCSQP08ov7hTWDKoig7_Z0eHQSbqBv-EmVFYfyeHE44V0Tl1Hc3fxuXahwTxC1W7sv_uy7cwLaOizK8Yfb1PiIsUmNFWnb_6UU5O3G-Q8TizA6Zp2sfY3ALZHWslGOTNxMIWQkf5rHaPU6HL9rodvI0GSm4aoMuQvdwqg4NmjZ8caz0NBGlsbM2Ze7jWKyv4ujyPlb3wUqjIxCvo4uQEIDydlTB-tY"/>
-</div>
-</div>
-</div>
-</section>
-<!-- Pricing Section (Transparent/Asymmetric) -->
-<section class="bg-surface-container-low py-24 px-8 scroll-mt-20" id="pricing">
-<div class="max-w-7xl mx-auto">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-<div class="reveal">
-<h2 class="font-headline text-4xl font-bold text-primary mb-6">Ehrliche &amp; Transparente Preise</h2>
-<p class="text-xl text-on-surface-variant mb-12 leading-relaxed">
-                        Bei uns gibt es keine versteckten Kosten. Wir arbeiten auf Stundenbasis oder bieten faire Festpreise für bestimmte Pakete an.
-                    </p>
-<div class="space-y-6">
-<div class="flex items-center gap-6 p-6 rounded-2xl bg-white/40 border border-white/60 transition-all hover:bg-white/80 hover:scale-[1.02]">
-<span class="text-5xl font-bold text-primary">39€</span>
-<div>
-<h4 class="font-bold text-xl">Einzelstunde</h4>
-<p class="text-on-surface-variant">Individuelle Betreuung bei Ihnen vor Ort oder Online.</p>
-</div>
-</div>
-<div class="flex items-center gap-6 p-6 rounded-2xl bg-secondary-container/30 border border-secondary/20 transition-all hover:bg-secondary-container/40 hover:scale-[1.02]">
-<span class="text-5xl font-bold text-secondary">169€</span>
-<div>
-<h4 class="font-bold text-xl">Rundum-Sorglos Paket</h4>
-<p class="text-on-surface-variant">5 Stunden Betreuung + Telefon-Joker für Notfälle.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="relative bg-white p-12 rounded-[3rem] shadow-sm border border-outline-variant/15 reveal reveal-delay-2">
-<div class="absolute -top-12 -right-12 w-32 h-32 bg-secondary-fixed-dim rounded-full blur-3xl opacity-50"></div>
-<h3 class="font-headline text-2xl font-bold mb-8">Häufige Fragen</h3>
-<div class="space-y-8">
-<div class="cursor-help transition-transform hover:translate-x-2 duration-300">
-<h5 class="font-bold text-primary mb-2">Kommen Sie auch nach Hause?</h5>
-<p class="text-on-surface-variant">Ja, im Umkreis von 15km besuchen wir Sie gerne direkt in Ihrer gewohnten Umgebung.</p>
-</div>
-<div class="cursor-help transition-transform hover:translate-x-2 duration-300">
-<h5 class="font-bold text-primary mb-2">Muss ich Technik-Vorkenntnisse haben?</h5>
-<p class="text-on-surface-variant">Absolut nicht! Wir fangen genau dort an, wo Sie gerade stehen – ganz ohne Fachchinesisch.</p>
-</div>
-<div class="cursor-help transition-transform hover:translate-x-2 duration-300">
-<h5 class="font-bold text-primary mb-2">Gibt es auch Gruppenkurse?</h5>
-<p class="text-on-surface-variant">Regelmäßig bieten wir kleine Gruppenworkshops in lokalen Gemeindezentren an.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Step-by-Step Philosophy -->
-<section class="px-8 max-w-7xl mx-auto py-32">
-<h2 class="font-headline text-4xl font-bold text-center mb-16 reveal">So einfach starten wir</h2>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-<div class="relative p-10 bg-surface-container-highest rounded-3xl overflow-hidden reveal reveal-delay-1 group">
-<span class="absolute -top-4 -left-2 step-number text-9xl font-bold text-primary select-none transition-transform group-hover:scale-110 group-hover:-translate-y-2 duration-500">1</span>
-<div class="relative z-10 pt-12">
-<h4 class="font-headline text-2xl font-bold mb-4">Anruf oder Nachricht</h4>
-<p class="text-on-surface-variant text-lg">Kontaktieren Sie uns unverbindlich. Wir besprechen kurz Ihre Wünsche und Fragen.</p>
-</div>
-</div>
-<div class="relative p-10 bg-surface-container-highest rounded-3xl overflow-hidden reveal reveal-delay-2 group">
-<span class="absolute -top-4 -left-2 step-number text-9xl font-bold text-primary select-none transition-transform group-hover:scale-110 group-hover:-translate-y-2 duration-500">2</span>
-<div class="relative z-10 pt-12">
-<h4 class="font-headline text-2xl font-bold mb-4">Termin vereinbaren</h4>
-<p class="text-on-surface-variant text-lg">Wir finden einen passenden Zeitpunkt für unseren ersten Besuch bei Ihnen zu Hause.</p>
-</div>
-</div>
-<div class="relative p-10 bg-surface-container-highest rounded-3xl overflow-hidden reveal reveal-delay-3 group">
-<span class="absolute -top-4 -left-2 step-number text-9xl font-bold text-primary select-none transition-transform group-hover:scale-110 group-hover:-translate-y-2 duration-500">3</span>
-<div class="relative z-10 pt-12">
-<h4 class="font-headline text-2xl font-bold mb-4">Gemeinsam lernen</h4>
-<p class="text-on-surface-variant text-lg">In aller Ruhe gehen wir Ihre Themen durch. Sie bestimmen das Tempo, wir geben die Sicherheit.</p>
-</div>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6 relative z-10">
+<button class="w-full md:w-auto bg-surface-container-lowest text-primary px-10 py-5 rounded-2xl font-headline font-extrabold text-xl shadow-lg hover:shadow-2xl transition-all">
+                        Jetzt anfragen
+                    </button>
+<button class="w-full md:w-auto border-2 border-primary-container text-on-primary px-10 py-5 rounded-2xl font-headline font-bold text-xl hover:bg-primary-container transition-all">
+                        Mehr über mich
+                    </button>
 </div>
 </div>
 </section>
 </main>
-<footer class="bg-slate-100 dark:bg-slate-950 w-full py-12 px-8">
-<div class="flex flex-col md:flex-row justify-between items-center w-full max-w-7xl mx-auto gap-6 font-public-sans text-on-surface-variant">
-<div class="flex flex-col items-center md:items-start gap-2">
-<a class="font-lexend font-semibold text-blue-900 text-xl" href="/">Mentoren-Ecke</a>
-<p class="text-slate-600 dark:text-slate-400">© 2026 Mentoren-Ecke. In Ruhe lernen.</p>
-</div>
-<div class="flex flex-wrap justify-center gap-8">
-<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="/">Home</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="/leistungen/">Leistungen</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="/ueber-mich/">Über mich</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="/kontakt/">Kontakt</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="/datenschutz/">Datenschutz</a>
-<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="/impressum/">Impressum</a>
-</div>
-<div class="flex items-center gap-4">
-<a class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/20 flex items-center justify-center text-blue-700 hover:bg-blue-200 transition-colors" href="mailto:info@mentoren-ecke.de">
-<span class="material-symbols-outlined text-lg">mail</span>
-</a>
-<a class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/20 flex items-center justify-center text-blue-700 hover:bg-blue-200 transition-colors" href="tel:+49123456789">
-<span class="material-symbols-outlined text-lg">call</span>
-</a>
+<!-- Footer -->
+<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 border-t border-slate-100 dark:border-slate-800">
+<div class="flex flex-col md:flex-row justify-between items-center max-w-7xl mx-auto px-8 gap-4">
+<div class="font-inter text-body-md text-slate-500">
+                © 2026 Tech Helper
+            </div>
+<div class="flex gap-8 font-inter text-body-md text-slate-500">
+<a class="hover:text-blue-600 hover:underline transition-all opacity-80 hover:opacity-100" href="/datenschutz">Datenschutz</a>
+<a class="hover:text-blue-600 hover:underline transition-all opacity-80 hover:opacity-100" href="/impressum">Impressum</a>
 </div>
 </div>
 </footer>
-<a class="fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50 group" href="/kontakt/">
-<span class="material-symbols-outlined text-3xl transition-transform group-hover:rotate-12">question_mark</span>
-</a>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const localLinks = document.querySelectorAll('a[href^="#"]');
-        localLinks.forEach(link => {
-            link.addEventListener('click', function(e) {
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    e.preventDefault();
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-
-        const revealCallback = (entries, observer) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                    observer.unobserve(entry.target);
-                }
-            });
-        };
-
-        const revealObserver = new IntersectionObserver(revealCallback, {
-            threshold: 0.15,
-            rootMargin: '0px 0px -50px 0px'
-        });
-
-        document.querySelectorAll('.reveal').forEach(el => {
-            revealObserver.observe(el);
-        });
-
-        const floatingElements = document.querySelectorAll('.glass-card');
-        floatingElements.forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                if (window.innerWidth < 768) return;
-                const rect = card.getBoundingClientRect();
-                const x = e.clientX - rect.left;
-                const y = e.clientY - rect.top;
-                
-                const centerX = rect.width / 2;
-                const centerY = rect.height / 2;
-                
-                const rotateX = (y - centerY) / 25;
-                const rotateY = (centerX - x) / 25;
-                
-                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-5px)`;
-            });
-            
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = '';
-            });
-        });
-
-        const nav = document.querySelector('nav');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 20) {
-                nav.classList.add('shadow-md');
-            } else {
-                nav.classList.remove('shadow-md');
-            }
-        });
-    });
-</script>
 </body></html>
