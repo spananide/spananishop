@@ -7,7 +7,6 @@
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;family=Public+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
         tailwind.config = {
             darkMode: "class",
@@ -73,6 +72,9 @@
         }
     </script>
 <style>
+        html {
+            scroll-behavior: smooth;
+        }
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
@@ -81,27 +83,37 @@
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
+        /* Reveal Animation Styles */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body class="bg-background font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
 <!-- Top Navigation -->
 <nav class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-md shadow-sm backdrop-saturate-150 flex justify-between items-center px-8 h-20 max-w-full mx-auto">
-<div class="text-2xl font-bold text-blue-900 font-headline">Mentoren-Ecke</div>
+<a class="text-2xl font-bold text-blue-900 font-headline" href="/">Mentoren-Ecke</a>
 <div class="hidden md:flex items-center gap-8">
-<a class="text-slate-700 hover:text-blue-600 transition-colors font-headline text-lg font-medium tracking-tight" href="/lernen">Lernen</a>
-<a class="text-slate-700 hover:text-blue-600 transition-colors font-headline text-lg font-medium tracking-tight" href="/kurse">Kurse</a>
-<a class="text-slate-700 hover:text-blue-600 transition-colors font-headline text-lg font-medium tracking-tight" href="/hilfe">Hilfe</a>
-<a class="text-blue-700 border-b-2 border-blue-700 pb-1 font-headline text-lg font-medium tracking-tight" href="/ueber-mich">Über uns</a>
+<a class="nav-link text-slate-700 hover:text-blue-600 transition-colors font-headline text-lg font-medium tracking-tight" href="/leistungen/">Leistungen</a>
+<a class="nav-link text-slate-700 hover:text-blue-600 transition-colors font-headline text-lg font-medium tracking-tight" href="/kurse/">Kurse</a>
+<a class="nav-link text-slate-700 hover:text-blue-600 transition-colors font-headline text-lg font-medium tracking-tight" href="/hilfe/">Hilfe</a>
+<a class="nav-link text-blue-700 border-b-2 border-blue-700 pb-1 font-headline text-lg font-medium tracking-tight" href="/ueber-mich/">Über uns</a>
 </div>
 <div class="flex items-center gap-4">
 <button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-headline font-medium transition-transform scale-95 active:opacity-80">
-                Anmelden
-            </button>
+            Anmelden
+        </button>
 </div>
 </nav>
 <main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
 <!-- Hero Section: Editorial Asymmetry -->
-<section class="flex flex-col md:flex-row gap-12 items-start mb-24">
+<section class="flex flex-col md:flex-row gap-12 items-start mb-24" id="hero">
 <div class="w-full md:w-5/12 relative">
 <div class="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl relative z-10">
 <img alt="Matti smiling warmly" class="w-full h-full object-cover" data-alt="Close-up portrait of a friendly 18-year-old young man with a warm smile, wearing a blue sweater in a bright sunlit library setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC72Jotv-nxx1njnhgVtDhhVIl2Cp934br4wXljphZzYOdMfWbC56WTKoew_sJ_BTD4lWJjVpKJqHJbZg8QMMNgiA8vmvQNdzkbDyaYSvBDzWNuwHKItiOFs2n3ePLTwX655Cyl0Hkk4beqC994Yv1BVKMuDucjziDxNnyD4XKFZ3aBdVo8pnYrwzuqVYyFhBjkyWERbfmHSWBpgp6Ap1ile9vzfYxUBcNmx1Ghv-szi-Kl_PtVTU2GzLM7IZvwZsxyXmEcWgyq9qQt"/>
@@ -112,20 +124,20 @@
 <div class="w-full md:w-7/12 pt-8">
 <span class="text-primary font-headline font-semibold tracking-widest uppercase text-sm mb-4 block">Der Kopf hinter der Ecke</span>
 <h1 class="text-6xl md:text-8xl font-headline font-bold text-primary mb-8 leading-tight tracking-tighter">
-                    Hallo, ich bin <span class="text-blue-900">Matti</span>.
-                </h1>
+                Hallo, ich bin <span class="text-blue-900">Matti</span>.
+            </h1>
 <p class="text-2xl font-body text-on-surface leading-relaxed max-w-2xl mb-10">
-                    Mit 18 Jahren sehe ich die digitale Welt als Spielplatz. Doch ich weiß, dass sie für viele wie ein Labyrinth wirkt. Ich habe es mir zur Aufgabe gemacht, die Brücke zwischen den Generationen zu bauen.
-                </p>
+                Mit 18 Jahren sehe ich die digitale Welt als Spielplatz. Doch ich weiß, dass sie für viele wie ein Labyrinth wirkt. Ich habe es mir zur Aufgabe gemacht, die Brücke zwischen den Generationen zu bauen.
+            </p>
 <div class="flex flex-wrap gap-4">
-<a class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-4 rounded-xl font-headline text-lg font-semibold hover:shadow-lg transition-all active:scale-95" href="/kontakt">
-                        Lernen wir uns kennen
-                    </a>
+<a class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-4 rounded-xl font-headline text-lg font-semibold hover:shadow-lg transition-all active:scale-95" href="/kontakt/">
+                    Lernen wir uns kennen
+                </a>
 </div>
 </div>
 </section>
 <!-- Values Section: Bento Grid with Glassmorphism -->
-<section class="mb-32">
+<section class="mb-32 reveal" id="werte">
 <h2 class="text-4xl font-headline font-bold text-primary mb-12 text-center">Meine Leitwerte</h2>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 <!-- Value 1 -->
@@ -135,8 +147,8 @@
 </div>
 <h3 class="text-2xl font-headline font-bold mb-4 text-blue-900">Empathie</h3>
 <p class="text-on-surface-variant font-body leading-relaxed">
-                        Es gibt keine "dummen" Fragen. Ich höre zu und verstehe Ihre individuellen Hürden, bevor wir den ersten Schritt machen.
-                    </p>
+                    Es gibt keine "dummen" Fragen. Ich höre zu und verstehe Ihre individuellen Hürden, bevor wir den ersten Schritt machen.
+                </p>
 </div>
 <!-- Value 2 -->
 <div class="glass-panel p-10 rounded-[2rem] border border-white/40 shadow-xl flex flex-col items-center text-center group hover:translate-y-[-8px] transition-all duration-500">
@@ -145,8 +157,8 @@
 </div>
 <h3 class="text-2xl font-headline font-bold mb-4 text-blue-900">Klarheit</h3>
 <p class="text-on-surface-variant font-body leading-relaxed">
-                        Kein Fachchinesisch. Ich erkläre komplexe Technik in Bildern und Begriffen, die Sie aus dem Alltag kennen.
-                    </p>
+                    Kein Fachchinesisch. Ich erkläre komplexe Technik in Bildern und Begriffen, die Sie aus dem Alltag kennen.
+                </p>
 </div>
 <!-- Value 3 -->
 <div class="glass-panel p-10 rounded-[2rem] border border-white/40 shadow-xl flex flex-col items-center text-center group hover:translate-y-[-8px] transition-all duration-500">
@@ -155,18 +167,18 @@
 </div>
 <h3 class="text-2xl font-headline font-bold mb-4 text-blue-900">Zuverlässigkeit</h3>
 <p class="text-on-surface-variant font-body leading-relaxed">
-                        Wir gehen den Weg gemeinsam bis zum Ende. Ich bin erst zufrieden, wenn Sie sich sicher im Umgang mit Ihrem Gerät fühlen.
-                    </p>
+                    Wir gehen den Weg gemeinsam bis zum Ende. Ich bin erst zufrieden, wenn Sie sich sicher im Umgang mit Ihrem Gerät fühlen.
+                </p>
 </div>
 </div>
 </section>
 <!-- Stats Section: Overlapping Tonal Surfaces -->
-<section class="mb-32 bg-surface-container-low rounded-[3rem] p-12 md:p-20 flex flex-col md:flex-row gap-16 items-center">
+<section class="mb-32 bg-surface-container-low rounded-[3rem] p-12 md:p-20 flex flex-col md:flex-row gap-16 items-center reveal">
 <div class="md:w-1/2">
 <h2 class="text-4xl font-headline font-bold text-primary mb-6">Gemeinsam wachsen</h2>
 <p class="text-xl font-body text-on-surface-variant mb-8 leading-relaxed">
-                    Seit über zwei Jahren begleite ich Senioren in die digitale Welt. Was als Nachbarschaftshilfe begann, ist heute eine Herzensangelegenheit geworden.
-                </p>
+                Seit über zwei Jahren begleite ich Senioren in die digitale Welt. Was als Nachbarschaftshilfe begann, ist heute eine Herzensangelegenheit geworden.
+            </p>
 <div class="space-y-6">
 <div class="flex items-center gap-6 p-6 bg-surface-container-highest rounded-2xl">
 <span class="text-5xl font-headline font-extrabold text-secondary">240+</span>
@@ -180,82 +192,140 @@
 </div>
 <div class="md:w-1/2 grid grid-cols-2 gap-4">
 <div class="aspect-square rounded-3xl overflow-hidden shadow-lg transform translate-y-8">
-<img alt="Interaction session" class="w-full h-full object-cover" data-alt="A young man and an elderly woman sitting together looking at a tablet screen with smiles, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZRGW-wLmUzqx8ZBkPcHdKBbAa8sdyKzS_fEN5BwLG2kB_PojJJaaZRfVPtfJcHTRwd6DK_giRqUZGHWfUOoSs8czbzaxQUDtz06rfz8bBlPx3-VXmzjcmmFN3xYUe_mGq3l6nSLjTgmlbduUtY8TQQIonYE3Do_mY6dMbIQNj5v5g2h2gbi_Tg6Rx9OG5h5F2RH0tV5XsEctK5MbrEVB96fGD1Fq3IROUZKChgWcfLuhGwjzHkmT4yX9M_c9c0hYRsvJb0FHi9JCi"/>
+<img alt="Interaction session" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZRGW-wLmUzqx8ZBkPcHdKBbAa8sdyKzS_fEN5BwLG2kB_PojJJaaZRfVPtfJcHTRwd6DK_giRqUZGHWfUOoSs8czbzaxQUDtz06rfz8bBlPx3-VXmzjcmmFN3xYUe_mGq3l6nSLjTgmlbduUtY8TQQIonYE3Do_mY6dMbIQNj5v5g2h2gbi_Tg6Rx9OG5h5F2RH0tV5XsEctK5MbrEVB96fGD1Fq3IROUZKChgWcfLuhGwjzHkmT4yX9M_c9c0hYRsvJb0FHi9JCi"/>
 </div>
 <div class="aspect-square rounded-3xl overflow-hidden shadow-lg">
-<img alt="Modern tech clarity" class="w-full h-full object-cover" data-alt="Modern clean workspace with a laptop and smartphone, minimalist aesthetic with blue accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJG9CiEsvPkxi_1xSgSglxh6WKn9xGQvGrkX6H5ResiAgcXDKd_LChN8IcaF8YVFb_NbtqOmwprYivoEEV5SnYXPG6Sfw-fmvDRUYCXzt9EJp32xoy4LXpilvdwOYMCqHGrNzHMXRHSk59H2_9XLYjkHtjMgyPxSfl3NYlxNLQOhp9_bj5wkxeN1nnyRh2vLclfbRrHnPN-Nzv123F98s4mlMfjVr1Jlu8MFZGlX-aG0FGLgI_5MJVOqBIvWFAVQeEhe3CieWkI7eb"/>
+<img alt="Modern tech clarity" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJG9CiEsvPkxi_1xSgSglxh6WKn9xGQvGrkX6H5ResiAgcXDKd_LChN8IcaF8YVFb_NbtqOmwprYivoEEV5SnYXPG6Sfw-fmvDRUYCXzt9EJp32xoy4LXpilvdwOYMCqHGrNzHMXRHSk59H2_9XLYjkHtjMgyPxSfl3NYlxNLQOhp9_bj5wkxeN1nnyRh2vLclfbRrHnPN-Nzv123F98s4mlMfjVr1Jlu8MFZGlX-aG0FGLgI_5MJVOqBIvWFAVQeEhe3CieWkI7eb"/>
 </div>
 <div class="aspect-square rounded-3xl overflow-hidden shadow-lg transform -translate-y-8">
-<img alt="Educational notes" class="w-full h-full object-cover" data-alt="Close up of handwritten notes on paper next to a digital tablet, symbolizing traditional and modern learning" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSR3aADo9ExjUPsfS8ht7DP9Uh4wqTsmdRrDG2aZFfih1rWNZxYf6bYfS4WBs--efeD74pW1DSBKdMzO5tuYO5je2EjEiAscQZIvaFQeRwPKEDn7-dnwhQ9kVmPJVAGur9_AzfU_rzt8naGo1mEWJY1YJAVTDF8lV66CLzL6QKO4qt9hxhp2b8P6pmU8X9Romk_LulOjPIWGwh6SaJy6vjUtgVZpwdSWmhjpj8KySOnp7fG3oPxX3GzYPny6LapUqbjf6EFAaDWMJq"/>
+<img alt="Educational notes" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSR3aADo9ExjUPsfS8ht7DP9Uh4wqTsmdRrDG2aZFfih1rWNZxYf6bYfS4WBs--efeD74pW1DSBKdMzO5tuYO5je2EjEiAscQZIvaFQeRwPKEDn7-dnwhQ9kVmPJVAGur9_AzfU_rzt8naGo1mEWJY1YJAVTDF8lV66CLzL6QKO4qt9hxhp2b8P6pmU8X9Romk_LulOjPIWGwh6SaJy6vjUtgVZpwdSWmhjpj8KySOnp7fG3oPxX3GzYPny6LapUqbjf6EFAaDWMJq"/>
 </div>
 <div class="aspect-square rounded-3xl overflow-hidden shadow-lg transform translate-y-4">
-<img alt="Teamwork" class="w-full h-full object-cover" data-alt="Group of people talking in a bright modern classroom, blurred background focusing on collaborative atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7vRygWLrPeQkW2fj6cUa3rPSORP3Ry4E_D-mrw1QAxMKozOdkSt3CwWkA_BfQFKQ7bbjcULakYLqY5NPPzwQyDx4IdCSUAQEwgurtWf2fWjKUmOJViLvkHwb8XOyj-96yOi7nd0En6_zOIXuPxI9qTUv3-_qSvP8sRhVJ215puZLE7s-m9mQpn9EBDf7UWhKsUkO82F4qNj615-NiP_sSnj01VMBjS6WkJFg5ctxzufoC0JwjXXaIwDwYpyInh4OlvlyGm8OR9cAu"/>
+<img alt="Teamwork" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7vRygWLrPeQkW2fj6cUa3rPSORP3Ry4E_D-mrw1QAxMKozOdkSt3CwWkA_BfQFKQ7bbjcULakYLqY5NPPzwQyDx4IdCSUAQEwgurtWf2fWjKUmOJViLvkHwb8XOyj-96yOi7nd0En6_zOIXuPxI9qTUv3-_qSvP8sRhVJ215puZLE7s-m9mQpn9EBDf7UWhKsUkO82F4qNj615-NiP_sSnj01VMBjS6WkJFg5ctxzufoC0JwjXXaIwDwYpyInh4OlvlyGm8OR9cAu"/>
 </div>
 </div>
 </section>
 <!-- Story Content: Step-by-Step Typography -->
-<section class="max-w-4xl mx-auto mb-32">
-<h2 class="text-4xl font-headline font-bold text-primary mb-16 text-center">Wie alles begann</h2>
+<section class="max-w-4xl mx-auto mb-32" id="geschichte">
+<h2 class="text-4xl font-headline font-bold text-primary mb-16 text-center reveal">Wie alles begann</h2>
 <div class="space-y-16">
 <!-- Step 1 -->
-<div class="relative flex flex-col md:flex-row gap-8 items-start">
+<div class="relative flex flex-col md:flex-row gap-8 items-start reveal">
 <div class="absolute -left-12 -top-8 text-9xl font-headline font-black text-primary/5 select-none">01</div>
 <div class="bg-surface-container-highest p-8 rounded-[2rem] flex-1">
 <h3 class="text-2xl font-headline font-bold mb-4 text-blue-900">Die Initialzündung</h3>
 <p class="text-lg font-body leading-relaxed text-on-surface-variant">
-                            Alles begann, als mein Großvater Schwierigkeiten hatte, Videoanrufe mit uns zu führen. Ich merkte, dass es nicht am Gerät lag, sondern an der Art und Weise, wie Software heute für junge Menschen designt wird, ohne Rücksicht auf andere Generationen.
-                        </p>
+                        Alles begann, als mein Großvater Schwierigkeiten hatte, Videoanrufe mit uns zu führen. Ich merkte, dass es nicht am Gerät lag, sondern an der Art und Weise, wie Software heute für junge Menschen designt wird, ohne Rücksicht auf andere Generationen.
+                    </p>
 </div>
 </div>
 <!-- Step 2 -->
-<div class="relative flex flex-col md:flex-row gap-8 items-start">
+<div class="relative flex flex-col md:flex-row gap-8 items-start reveal">
 <div class="absolute -left-12 -top-8 text-9xl font-headline font-black text-primary/5 select-none">02</div>
 <div class="bg-surface-container-highest p-8 rounded-[2rem] flex-1">
 <h3 class="text-2xl font-headline font-bold mb-4 text-blue-900">Die Entwicklung</h3>
 <p class="text-lg font-body leading-relaxed text-on-surface-variant">
-                            Ich entwickelte eigene Erklär-Methoden. Statt technischer Begriffe nutzte ich Metaphern. Das Internet wurde zum "digitalen Marktplatz", die Cloud zum "unendlichen Aktenschrank". Die Erfolge waren sofort sichtbar.
-                        </p>
+                        Ich entwickelte eigene Erklär-Methoden. Statt technischer Begriffe nutzte ich Metaphern. Das Internet wurde zum "digitalen Marktplatz", die Cloud zum "unendlichen Aktenschrank". Die Erfolge waren sofort sichtbar.
+                    </p>
 </div>
 </div>
 <!-- Step 3 -->
-<div class="relative flex flex-col md:flex-row gap-8 items-start">
+<div class="relative flex flex-col md:flex-row gap-8 items-start reveal">
 <div class="absolute -left-12 -top-8 text-9xl font-headline font-black text-primary/5 select-none">03</div>
 <div class="bg-surface-container-highest p-8 rounded-[2rem] flex-1">
 <h3 class="text-2xl font-headline font-bold mb-4 text-blue-900">Heute</h3>
 <p class="text-lg font-body leading-relaxed text-on-surface-variant">
-                            Mit der "Mentoren-Ecke" habe ich einen Ort geschaffen, an dem Seniorinnen und Senioren in ihrer eigenen Geschwindigkeit lernen können. Ich bin stolz darauf, jeden Tag zu sehen, wie digitale Barrieren fallen.
-                        </p>
+                        Mit der "Mentoren-Ecke" habe ich einen Ort geschaffen, an dem Seniorinnen und Senioren in ihrer eigenen Geschwindigkeit lernen können. Ich bin stolz darauf, jeden Tag zu sehen, wie digitale Barrieren fallen.
+                    </p>
 </div>
 </div>
 </div>
 </section>
 <!-- Call to Action: Focus Box -->
-<section class="bg-primary text-on-primary rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden">
+<section class="bg-primary text-on-primary rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden reveal">
 <div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
 <div class="absolute bottom-0 left-0 w-64 h-64 bg-primary-container/30 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
 <h2 class="text-4xl md:text-5xl font-headline font-bold mb-8 relative z-10">Bereit für Ihren digitalen Frühling?</h2>
 <p class="text-xl md:text-2xl font-body mb-12 opacity-90 relative z-10 max-w-2xl mx-auto">
-                Schreiben Sie mir eine kurze Nachricht. Ganz unverbindlich. Wir finden gemeinsam heraus, wie ich Ihnen helfen kann.
-            </p>
+            Schreiben Sie mir eine kurze Nachricht. Ganz unverbindlich. Wir finden gemeinsam heraus, wie ich Ihnen helfen kann.
+        </p>
 <div class="flex flex-wrap justify-center gap-6 relative z-10">
-<a class="bg-surface text-primary px-10 py-5 rounded-2xl font-headline text-xl font-bold hover:bg-surface-bright transition-all shadow-xl active:scale-95" href="/kontakt">
-                    Nachricht senden
-                </a>
-<a class="border-2 border-white/40 text-on-primary px-10 py-5 rounded-2xl font-headline text-xl font-bold hover:bg-white/10 transition-all active:scale-95" href="/kurse">
-                    Kursübersicht
-                </a>
+<a class="bg-surface text-primary px-10 py-5 rounded-2xl font-headline text-xl font-bold hover:bg-surface-bright transition-all shadow-xl active:scale-95" href="/kontakt/">
+                Nachricht senden
+            </a>
+<a class="border-2 border-white/40 text-on-primary px-10 py-5 rounded-2xl font-headline text-xl font-bold hover:bg-white/10 transition-all active:scale-95" href="/kurse/">
+                Kursübersicht
+            </a>
 </div>
 </section>
 </main>
 <!-- Footer -->
 <footer class="bg-slate-50 py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6 border-t border-slate-200">
-<div class="font-headline font-bold text-blue-800 text-xl">Mentoren-Ecke</div>
+<a class="font-headline font-bold text-blue-800 text-xl" href="/">Mentoren-Ecke</a>
 <div class="flex flex-wrap justify-center gap-8">
-<a class="text-slate-600 hover:text-blue-600 font-label text-sm leading-relaxed transition-all hover:underline decoration-2" href="/ueber-mich/datenschutz">Datenschutz</a>
-<a class="text-slate-600 hover:text-blue-600 font-label text-sm leading-relaxed transition-all hover:underline decoration-2" href="/ueber-mich/impressum">Impressum</a>
-<a class="text-slate-600 hover:text-blue-600 font-label text-sm leading-relaxed transition-all hover:underline decoration-2" href="/ueber-mich/kontakt">Kontakt</a>
-<a class="text-slate-600 hover:text-blue-600 font-label text-sm leading-relaxed transition-all hover:underline decoration-2" href="/ueber-mich/barrierefreiheit">Barrierefreiheit</a>
+<a class="text-slate-600 hover:text-blue-600 font-label text-sm leading-relaxed transition-all hover:underline decoration-2" href="/datenschutz/">Datenschutz</a>
+<a class="text-slate-600 hover:text-blue-600 font-label text-sm leading-relaxed transition-all hover:underline decoration-2" href="/impressum/">Impressum</a>
+<a class="text-slate-600 hover:text-blue-600 font-label text-sm leading-relaxed transition-all hover:underline decoration-2" href="/kontakt/">Kontakt</a>
+<a class="text-slate-600 hover:text-blue-600 font-label text-sm leading-relaxed transition-all hover:underline decoration-2" href="/barrierefreiheit/">Barrierefreiheit</a>
 </div>
-<div class="font-body text-sm text-slate-600 opacity-90">© 2024 Mentoren-Ecke. In Ruhe lernen.</div>
+<div class="font-body text-sm text-slate-600 opacity-90">© 2026 Mentoren-Ecke. In Ruhe lernen.</div>
 </footer>
+<script>
+    // 1. Smooth scroll for navigation links & "Pretty URL" preservation
+    document.querySelectorAll('.nav-link').forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            
+            // If it's an internal hash or we want to simulate SPA behavior
+            if (href.startsWith('#')) {
+                e.preventDefault();
+                const targetId = href.substring(1);
+                const targetElement = document.getElementById(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                    // Update URL without jump
+                    history.pushState(null, null, href);
+                }
+            }
+        });
+    });
+
+    // 2. Reveal animations for the timeline/story sections on scroll
+    function revealElements() {
+        const reveals = document.querySelectorAll('.reveal');
+        const windowHeight = window.innerHeight;
+        const revealPoint = 150;
+
+        reveals.forEach(element => {
+            const revealTop = element.getBoundingClientRect().top;
+            if (revealTop < windowHeight - revealPoint) {
+                element.classList.add('active');
+            }
+        });
+    }
+
+    // Run reveal once on load
+    window.addEventListener('load', revealElements);
+    // Run on scroll
+    window.addEventListener('scroll', revealElements);
+
+    // Optional: Active Link Highlighting
+    window.addEventListener('scroll', () => {
+        let current = "";
+        const sections = document.querySelectorAll("section[id]");
+        sections.forEach((section) => {
+            const sectionTop = section.offsetTop;
+            if (window.pageYOffset >= sectionTop - 100) {
+                current = section.getAttribute("id");
+            }
+        });
+
+        document.querySelectorAll(".nav-link").forEach((a) => {
+            a.classList.remove("text-blue-700", "border-b-2", "border-blue-700");
+            if (a.getAttribute("href").includes(current) && current !== "") {
+                a.classList.add("text-blue-700", "border-b-2", "border-blue-700");
+            }
+        });
+    });
+</script>
 </body></html>
