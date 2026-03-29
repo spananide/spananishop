@@ -4,7 +4,7 @@
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700&amp;family=Public+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
@@ -13,221 +13,215 @@
         theme: {
           extend: {
             colors: {
-              "primary-fixed": "#b1f0ce",
-              "surface-bright": "#f8f9fa",
-              "inverse-on-surface": "#f0f1f2",
-              "on-primary-fixed-variant": "#0e5138",
-              "tertiary-fixed-dim": "#cec5bb",
-              "inverse-surface": "#2e3132",
-              "primary-container": "#236146",
-              "surface-dim": "#d9dadb",
-              "surface-container-high": "#e7e8e9",
-              "error": "#ba1a1a",
-              "primary-fixed-dim": "#95d4b3",
-              "surface-variant": "#e1e3e4",
-              "on-tertiary": "#ffffff",
-              "on-error": "#ffffff",
-              "secondary-fixed-dim": "#86d7ad",
-              "on-tertiary-fixed-variant": "#4c463e",
-              "surface-container-lowest": "#ffffff",
-              "on-surface-variant": "#3f4949",
-              "surface-container-highest": "#e1e3e4",
-              "on-secondary-fixed-variant": "#005236",
+              "on-secondary-fixed-variant": "#005312",
+              "tertiary-fixed-dim": "#e4beb2",
+              "surface-variant": "#e4e4cc",
+              "primary": "#004493",
+              "on-surface": "#1b1d0e",
+              "background": "#fbfbe2",
               "on-primary": "#ffffff",
-              "outline": "#6f7979",
-              "surface-container": "#edeeef",
-              "secondary-container": "#a1f4c8",
-              "inverse-primary": "#95d4b3",
-              "tertiary-fixed": "#ebe1d6",
-              "on-primary-fixed": "#002114",
-              "secondary-fixed": "#a1f4c8",
-              "on-error-container": "#93000a",
-              "on-tertiary-fixed": "#1f1b14",
-              "on-surface": "#191c1d",
+              "on-error": "#ffffff",
+              "secondary": "#1b6d24",
+              "outline-variant": "#c3c6d6",
+              "surface-container": "#efefd7",
+              "surface-bright": "#fbfbe2",
+              "outline": "#737785",
+              "surface-container-highest": "#e4e4cc",
               "on-secondary": "#ffffff",
-              "surface": "#f8f9fa",
-              "secondary": "#116c4a",
-              "on-secondary-container": "#1b724f",
-              "surface-tint": "#2c694e",
-              "primary": "#004930",
-              "tertiary": "#433e36",
-              "surface-container-low": "#f3f4f5",
-              "on-background": "#191c1d",
-              "outline-variant": "#bec8c9",
-              "tertiary-container": "#5b554d",
-              "background": "#f8f9fa",
+              "tertiary-fixed": "#ffdbce",
+              "surface-container-lowest": "#ffffff",
+              "surface-container-low": "#f5f5dc",
+              "tertiary-container": "#75584e",
+              "primary-container": "#235cb2",
+              "surface-dim": "#dbdcc3",
+              "on-tertiary-container": "#f7d1c3",
+              "on-secondary-fixed": "#002204",
+              "secondary-fixed-dim": "#88d982",
+              "on-primary-fixed-variant": "#004492",
+              "inverse-primary": "#acc7ff",
+              "inverse-surface": "#303221",
+              "secondary-container": "#a0f399",
               "error-container": "#ffdad6",
-              "on-secondary-fixed": "#002113",
-              "on-primary-container": "#9ad9b8",
-              "on-tertiary-container": "#d3cabf"
+              "tertiary": "#5b4137",
+              "surface-container-high": "#eaead1",
+              "on-surface-variant": "#424654",
+              "surface-tint": "#235cb2",
+              "on-tertiary": "#ffffff",
+              "on-primary-container": "#c9d9ff",
+              "secondary-fixed": "#a3f69c",
+              "primary-fixed": "#d8e2ff",
+              "on-tertiary-fixed": "#2b160f",
+              "on-primary-fixed": "#001a41",
+              "on-error-container": "#93000a",
+              "surface": "#fbfbe2",
+              "on-background": "#1b1d0e",
+              "error": "#ba1a1a",
+              "primary-fixed-dim": "#acc7ff",
+              "on-secondary-container": "#217128",
+              "on-tertiary-fixed-variant": "#5b4137",
+              "inverse-on-surface": "#f2f2d9"
             },
             fontFamily: {
               "headline": ["Lexend"],
-              "body": ["Lexend"],
-              "label": ["Lexend"]
+              "body": ["Public Sans"],
+              "label": ["Public Sans"]
             },
-            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
           },
         },
       }
     </script>
 <style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
         .glass-panel {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
-            border: 1.5px solid rgba(149, 212, 179, 0.3); /* light leak stroke */
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
         body {
-            background-color: #f8f9fa;
-            background-image: 
-                radial-gradient(at 0% 0%, rgba(161, 244, 200, 0.15) 0px, transparent 50%),
-                radial-gradient(at 100% 100%, rgba(0, 73, 48, 0.05) 0px, transparent 50%);
+            background-color: #fbfbe2;
+            color: #1b1d0e;
+            font-family: 'Public Sans', sans-serif;
         }
     </style>
 </head>
-<body class="font-body text-on-surface antialiased">
-<!-- TopAppBar -->
-<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(25,28,29,0.06)]">
-<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
-<a class="text-2xl font-bold text-teal-900 dark:text-teal-50 tracking-tighter" href="/">Matti</a>
-<div class="hidden md:flex items-center gap-8 font-['Lexend'] text-lg tracking-tight font-medium">
-<a class="text-teal-900/60 dark:text-teal-50/60 hover:text-teal-900 dark:hover:text-teal-50 transition-colors" href="/">Home</a>
-<a class="text-teal-900/60 dark:text-teal-50/60 hover:text-teal-900 dark:hover:text-teal-50 transition-colors" href="/leistungen/">Leistungen</a>
-<a class="text-teal-900/60 dark:text-teal-50/60 hover:text-teal-900 dark:hover:text-teal-50 transition-colors" href="/ueber-mich/">Über mich</a>
-<a class="text-teal-900 dark:text-teal-50 border-b-2 border-teal-900 dark:border-teal-50 pb-1" href="/kontakt/">Kontakt</a>
+<body class="min-h-screen">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-md shadow-sm backdrop-saturate-150 h-20 flex justify-between items-center px-8 max-w-full mx-auto">
+<div class="text-2xl font-bold text-blue-900 font-headline">Mentoren-Ecke</div>
+<div class="hidden md:flex items-center gap-8 font-headline text-lg font-medium tracking-tight">
+<a class="text-slate-700 hover:text-blue-600 transition-colors" href="/lernen/">Lernen</a>
+<a class="text-slate-700 hover:text-blue-600 transition-colors" href="/kurse/">Kurse</a>
+<a class="text-slate-700 hover:text-blue-600 transition-colors" href="/hilfe/">Hilfe</a>
+<a class="text-slate-700 hover:text-blue-600 transition-colors" href="/ueber-uns/">Über uns</a>
+<a class="text-blue-700 border-b-2 border-blue-700 pb-1" href="/kontakt/">Kontakt</a>
 </div>
-<a class="bg-primary text-white px-6 py-2 rounded-full hover:scale-105 transition-all duration-400 ease-out font-medium" href="/kontakt/">Termin vereinbaren</a>
+<div class="flex items-center gap-4">
+<button class="bg-primary text-on-primary px-6 py-2 rounded-xl font-headline font-medium transition-transform active:opacity-80 scale-95 hover:bg-primary-container">
+                Anmelden
+            </button>
 </div>
-<div class="bg-gradient-to-r from-teal-900/10 to-transparent h-[1.5px]"></div>
 </nav>
-<main class="pt-32 pb-20 px-6 max-w-7xl mx-auto">
+<main class="pt-32 pb-20 px-4 md:px-8 max-w-7xl mx-auto">
 <!-- Hero Section -->
-<header class="mb-16 md:mb-24 max-w-3xl">
-<h1 class="text-5xl md:text-7xl font-extrabold text-primary tracking-tight leading-[1.1] mb-6">
-                Lassen Sie uns ins Gespräch kommen.
-            </h1>
-<p class="text-xl text-on-surface-variant leading-relaxed">
-                Haben Sie Fragen zu Ihrer Technik oder benötigen Sie individuelle Unterstützung? Ich bin hier, um Ihnen den Weg durch die digitale Welt zu ebnen.
+<header class="mb-16">
+<h1 class="font-headline text-6xl md:text-7xl font-bold text-primary mb-6 leading-tight">Lassen Sie uns <br/>sprechen.</h1>
+<p class="font-body text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed">
+                Ich bin Matti. Ich helfe Ihnen gerne dabei, die digitale Welt in Ihrem eigenen Tempo zu entdecken. Schreiben Sie mir einfach eine Nachricht.
             </p>
 </header>
+<!-- Main Content Grid -->
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-<!-- Contact Details & Map (Asymmetric Layout) -->
-<div class="lg:col-span-5 space-y-8 order-2 lg:order-1">
-<!-- Availability Card -->
-<div class="glass-panel p-8 rounded-xl shadow-[0_20px_40px_rgba(25,28,29,0.06)] relative overflow-hidden group">
-<div class="absolute -right-4 -top-4 w-24 h-24 bg-secondary-fixed/20 rounded-full blur-3xl group-hover:bg-secondary-fixed/40 transition-colors duration-700"></div>
-<div class="flex items-start gap-4">
-<span class="material-symbols-outlined text-primary text-3xl" data-icon="schedule">schedule</span>
-<div>
-<h3 class="text-xl font-bold text-primary mb-2">Erreichbarkeit</h3>
-<p class="text-on-surface-variant">Wochentags meist ab <span class="font-bold text-primary">16:30 Uhr</span>.</p>
-<p class="text-on-surface-variant text-sm mt-1 italic">Am Wochenende nach individueller Vereinbarung.</p>
-</div>
-</div>
-</div>
-<!-- Contact Info Card -->
-<div class="glass-panel p-8 rounded-xl shadow-[0_20px_40px_rgba(25,28,29,0.06)] space-y-6">
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center">
-<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
-</div>
-<div>
-<p class="text-sm font-medium text-on-surface-variant">Telefon</p>
-<a class="text-lg font-bold text-primary hover:text-secondary transition-colors" href="tel:+49123456789">+49 (0) 123 456 789</a>
-</div>
-</div>
-<div class="flex items-center gap-4">
-<div class="w-12 h-12 rounded-full bg-primary-fixed flex items-center justify-center">
-<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
-</div>
-<div>
-<p class="text-sm font-medium text-on-surface-variant">E-Mail</p>
-<a class="text-lg font-bold text-primary hover:text-secondary transition-colors" href="mailto:hallo@matti-mentoring.de">hallo@matti-mentoring.de</a>
-</div>
-</div>
-</div>
-<!-- Service Area Map Visual -->
-<div class="rounded-xl overflow-hidden shadow-[0_20px_40px_rgba(25,28,29,0.06)] h-64 relative">
-<img class="w-full h-full object-cover" data-alt="Modern abstract stylized map of Northern Germany focused on Hamburg and Berlin with soft teal highlighting and clean minimalist markers" data-location="Hamburg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWRcIiLOPliiTaAsue9nTDfZk00uWNoctKgDLxol-6dM6JQRvHGyTSbh6Uzbzcgt_wAr7kKYvTbyXf7ZQnPg94pym8MkqNF2a3xw0B1tYO4MTkmGXN5rqjg1IovyLhu4TUj8NMPGVMS1EG3GDmfuD_EFLS0SRuWzbzTAX2Zw_Onfu-ifu44On-5L2pOIA3f3UGHzqGgbbqRc8ZPPVubtzyMQy2D_pWM55LmeO360ACJfFgd5B_5ZrE-4wOvy11ZmGfftaXQSRax6BX"/>
-<div class="absolute inset-0 bg-primary/20 backdrop-blur-[2px] flex flex-col justify-end p-6">
-<h4 class="text-white font-bold text-xl drop-shadow-md">Einsatzgebiet</h4>
-<p class="text-white/90 text-sm drop-shadow-md">Hamburg, Berlin &amp; Umgebung (vor Ort &amp; Remote)</p>
-</div>
-</div>
-</div>
-<!-- Contact Form (The Centerpiece) -->
-<div class="lg:col-span-7 order-1 lg:order-2">
-<form action="#" class="glass-panel p-8 md:p-12 rounded-xl shadow-[0_20px_40px_rgba(25,28,29,0.06)] space-y-8">
+<!-- Contact Form (Left/Center) -->
+<section class="lg:col-span-7 bg-white/70 backdrop-blur-xl p-8 md:p-12 rounded-[2rem] shadow-sm border border-white/40">
+<h2 class="font-headline text-3xl font-semibold text-primary mb-8">Kontaktformular</h2>
+<form action="#" class="space-y-8" method="POST">
 <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 <div class="space-y-2">
-<label class="block text-sm font-semibold text-primary px-2" for="name">Name</label>
-<input class="w-full bg-surface-container-lowest/60 border-none rounded-xl px-6 py-4 focus:ring-4 focus:ring-primary-fixed-dim/50 focus:bg-white transition-all duration-300 placeholder-on-surface-variant/40" id="name" name="name" placeholder="Ihr Name" type="text"/>
+<label class="block font-headline text-lg font-medium text-on-surface" for="name">Ihr Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl p-4 text-lg focus:ring-2 focus:ring-primary-container" id="name" name="name" placeholder="z.B. Maria Schmidt" type="text"/>
 </div>
 <div class="space-y-2">
-<label class="block text-sm font-semibold text-primary px-2" for="email">E-Mail Adresse</label>
-<input class="w-full bg-surface-container-lowest/60 border-none rounded-xl px-6 py-4 focus:ring-4 focus:ring-primary-fixed-dim/50 focus:bg-white transition-all duration-300 placeholder-on-surface-variant/40" id="email" name="email" placeholder="ihre@mail.de" type="email"/>
+<label class="block font-headline text-lg font-medium text-on-surface" for="email">Ihre E-Mail</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl p-4 text-lg focus:ring-2 focus:ring-primary-container" id="email" name="email" placeholder="beispiel@mail.de" type="email"/>
 </div>
 </div>
 <div class="space-y-2">
-<label class="block text-sm font-semibold text-primary px-2" for="subject">Thema</label>
-<select class="w-full bg-surface-container-lowest/60 border-none rounded-xl px-6 py-4 focus:ring-4 focus:ring-primary-fixed-dim/50 focus:bg-white transition-all duration-300 appearance-none" id="subject" name="subject">
-<option value="">Wählen Sie ein Thema</option>
-<option value="mentoring">Einzel-Mentoring</option>
-<option value="hardware">Hardware-Beratung</option>
-<option value="security">Sicherheit &amp; Datenschutz</option>
-<option value="other">Sonstiges</option>
+<label class="block font-headline text-lg font-medium text-on-surface" for="subject">Wobei kann ich helfen?</label>
+<select class="w-full bg-surface-container-low border-none rounded-xl p-4 text-lg focus:ring-2 focus:ring-primary-container appearance-none" id="subject" name="subject">
+<option>Frage zu einem Kurs</option>
+<option>Hilfe bei der Einrichtung (Laptop/Tablet)</option>
+<option>Terminanfrage für ein Treffen</option>
+<option>Sonstiges</option>
 </select>
 </div>
 <div class="space-y-2">
-<label class="block text-sm font-semibold text-primary px-2" for="message">Ihre Nachricht</label>
-<textarea class="w-full bg-surface-container-lowest/60 border-none rounded-xl px-6 py-4 focus:ring-4 focus:ring-primary-fixed-dim/50 focus:bg-white transition-all duration-300 placeholder-on-surface-variant/40" id="message" name="message" placeholder="Wie kann ich Ihnen helfen?" rows="5"></textarea>
+<label class="block font-headline text-lg font-medium text-on-surface" for="message">Ihre Nachricht</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-xl p-4 text-lg focus:ring-2 focus:ring-primary-container" id="message" name="message" placeholder="Wie kann ich Sie unterstützen?" rows="5"></textarea>
 </div>
-<div class="flex flex-col sm:flex-row items-center justify-between gap-6 pt-4">
-<p class="text-xs text-on-surface-variant leading-tight max-w-xs">
-                            Durch das Absenden akzeptieren Sie meine <a class="underline hover:text-primary" href="/datenschutz/">Datenschutzbestimmungen</a>.
-                        </p>
-<button class="w-full sm:w-auto bg-primary text-white text-lg font-bold px-10 py-4 rounded-xl shadow-lg hover:scale-[1.03] hover:shadow-primary/20 transition-all duration-400 ease-out flex items-center justify-center gap-3" type="submit">
-                            Nachricht senden
-                            <span class="material-symbols-outlined text-xl" data-icon="send">send</span>
-</button>
-</div>
+<button class="w-full md:w-auto bg-gradient-to-br from-primary to-primary-container text-on-primary px-10 py-5 rounded-2xl font-headline text-xl font-semibold shadow-lg hover:shadow-xl transition-all active:scale-95" type="submit">
+                        Nachricht senden
+                    </button>
 </form>
+</section>
+<!-- Sidebar Info (Right) -->
+<aside class="lg:col-span-5 space-y-8">
+<!-- Availability Card -->
+<div class="bg-secondary-fixed text-on-secondary-fixed p-8 rounded-[2rem] relative overflow-hidden">
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-3xl" data-icon="schedule">schedule</span>
+<h3 class="font-headline text-2xl font-bold">Verfügbarkeit</h3>
 </div>
+<p class="font-body text-lg mb-6 leading-relaxed">Da ich noch zur Schule gehe, bin ich zu folgenden Zeiten für Sie da:</p>
+<ul class="space-y-4 font-body text-lg">
+<li class="flex justify-between items-center border-b border-on-secondary-fixed/10 pb-2">
+<span>Mo — Fr:</span>
+<span class="font-bold">Ab 16:30 Uhr</span>
+</li>
+<li class="flex justify-between items-center pb-2">
+<span>Sa — So:</span>
+<span class="font-bold">Ganztägig</span>
+</li>
+</ul>
+</div>
+<!-- Decorative element -->
+<div class="absolute -right-10 -bottom-10 opacity-10">
+<span class="material-symbols-outlined text-[12rem]" data-icon="school">school</span>
+</div>
+</div>
+<!-- Service Area Map -->
+<div class="bg-surface-container-highest p-8 rounded-[2rem] border border-outline-variant/20">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-3xl text-primary" data-icon="distance">distance</span>
+<h3 class="font-headline text-2xl font-bold text-primary">Einsatzgebiet</h3>
+</div>
+<div class="rounded-2xl overflow-hidden aspect-video relative group mb-6">
+<img alt="Einsatzgebiet Map" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="detailed topographic map showing a quiet residential district with green parks and winding streets in soft blue and beige tones" data-location="Berlin" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpuExlc58n3W-94kDekXf6rS_8fUSVxhjHskvwFqQDrM855yfOjUMg_QKLSUomWto5LtmjrkS6bLp2SUXoxpJizh-wonXdPIxBkDRx78ICdx5USdLK0f7qz62dB6gXWW9XQIY-MVC8cXGs1TqLppzu1ocSrFzvzEyWipQSAx2u9nT9U5XiIgcs2Eqfrk2HglpzIsgivAleaMo8MR4toiP2R4Hht-AK0dLoNUp1MDUwXOhgKbBA0l3r436faW4zD1OsqGia2I79cU6o"/>
+<div class="absolute inset-0 bg-primary/10 pointer-events-none"></div>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<span class="material-symbols-outlined text-5xl text-primary drop-shadow-md" data-icon="location_on" data-weight="fill" style="font-variation-settings: 'FILL' 1;">location_on</span>
+</div>
+</div>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                        Ich unterstütze Sie gerne in ganz <strong>Berlin-Zehlendorf</strong> und Umgebung (Kleinmachnow, Teltow). Für Online-Hilfe bin ich natürlich überall erreichbar!
+                    </p>
+</div>
+<!-- Quick Help Tip -->
+<div class="p-8 rounded-[2rem] bg-white/40 border border-white/60 flex gap-4">
+<span class="material-symbols-outlined text-4xl text-secondary" data-icon="lightbulb">lightbulb</span>
+<div>
+<h4 class="font-headline text-lg font-bold text-on-surface mb-1">Tipp für Senioren</h4>
+<p class="font-body text-base text-on-surface-variant">Schreiben Sie mir gerne auch direkt per WhatsApp, falls Ihnen das Tippen am Computer schwerfällt.</p>
+</div>
+</div>
+</aside>
 </div>
 </main>
 <!-- Footer -->
-<footer class="bg-teal-50 dark:bg-slate-950 w-full rounded-t-[3rem] mt-20">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-16 max-w-7xl mx-auto font-['Lexend'] body-lg leading-relaxed">
-<div class="space-y-6">
-<span class="text-xl font-bold text-teal-900 dark:text-teal-100">Matti Tech-Mentoring</span>
-<p class="text-teal-800/70 dark:text-teal-200/70">
-                    Geduldige und kompetente Unterstützung für alle digitalen Lebenslagen. Gemeinsam machen wir Technik einfach.
-                </p>
+<footer class="bg-slate-50 border-t border-slate-200 py-12 px-8 w-full">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col gap-2">
+<span class="font-headline font-bold text-blue-800 text-xl">Mentoren-Ecke</span>
+<p class="font-body text-sm text-slate-600">© 2024 Mentoren-Ecke. In Ruhe lernen.</p>
 </div>
-<div class="space-y-6">
-<h4 class="font-bold text-teal-900 dark:text-teal-100">Quick Links</h4>
-<div class="flex flex-col gap-3">
-<a class="text-teal-800/70 dark:text-teal-200/70 hover:text-teal-600 dark:hover:text-teal-300 transition-colors duration-300" href="/leistungen/">Leistungen</a>
-<a class="font-bold text-teal-900 dark:text-teal-100" href="/kontakt/">Kontakt</a>
-<a class="text-teal-800/70 dark:text-teal-200/70 hover:text-teal-600 dark:hover:text-teal-300 transition-colors duration-300" href="/impressum/">Impressum</a>
-<a class="text-teal-800/70 dark:text-teal-200/70 hover:text-teal-600 dark:hover:text-teal-300 transition-colors duration-300" href="/datenschutz/">Datenschutz</a>
+<div class="flex flex-wrap justify-center gap-8 font-body text-sm">
+<a class="text-slate-600 hover:text-blue-600 transition-all hover:underline decoration-2" href="/datenschutz/">Datenschutz</a>
+<a class="text-slate-600 hover:text-blue-600 transition-all hover:underline decoration-2" href="/impressum/">Impressum</a>
+<a class="text-blue-700 underline font-medium" href="/kontakt/">Kontakt</a>
+<a class="text-slate-600 hover:text-blue-600 transition-all hover:underline decoration-2" href="/barrierefreiheit/">Barrierefreiheit</a>
 </div>
-</div>
-<div class="space-y-6">
-<h4 class="font-bold text-teal-900 dark:text-teal-100">Newsletter</h4>
-<p class="text-sm text-teal-800/70 dark:text-teal-200/70">Erhalten Sie monatlich einfache Technik-Tipps direkt in Ihr Postfach.</p>
-<div class="flex gap-2">
-<input class="bg-white/50 border-none rounded-full px-4 py-2 w-full text-sm" placeholder="E-Mail" type="email"/>
-<button class="bg-primary text-white px-4 py-2 rounded-full material-symbols-outlined" data-icon="chevron_right">chevron_right</button>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 text-slate-600 hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="mail">mail</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center rounded-full bg-slate-200 text-slate-600 hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined text-xl" data-icon="phone">phone</span>
+</a>
 </div>
 </div>
-</div>
-<div class="max-w-7xl mx-auto px-12 py-8 border-t border-teal-900/5 text-center text-teal-800/50 text-sm">
-            © 2024 Matti Tech-Mentoring. Alle Rechte vorbehalten.
-        </div>
 </footer>
 </body></html>
