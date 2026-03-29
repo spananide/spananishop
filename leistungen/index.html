@@ -85,7 +85,6 @@
             line-height: 0.8;
             opacity: 0.15;
         }
-        /* Animation classes */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
@@ -101,33 +100,32 @@
     </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-md shadow-sm backdrop-saturate-150">
-<div class="flex justify-between items-center px-8 h-20 max-w-full mx-auto">
+<!-- TopNavBar Shared Component -->
+<nav class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-md shadow-sm flex justify-between items-center px-8 h-20 max-w-full mx-auto">
 <a class="text-2xl font-bold text-blue-900 font-headline" href="/">Mentoren-Ecke</a>
-<div class="hidden md:flex items-center gap-8" id="main-nav">
-<a class="font-headline text-lg font-medium tracking-tight text-slate-700 hover:text-blue-600 transition-colors" href="/lernen/">Lernen</a>
-<a class="font-headline text-lg font-medium tracking-tight text-blue-700 border-b-2 border-blue-700 pb-1" href="/leistungen/">Kurse</a>
-<a class="font-headline text-lg font-medium tracking-tight text-slate-700 hover:text-blue-600 transition-colors" href="#specialties">Spezialgebiete</a>
-<a class="font-headline text-lg font-medium tracking-tight text-slate-700 hover:text-blue-600 transition-colors" href="#pricing">Preise</a>
-<button class="ml-4 px-6 py-2.5 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-medium transition-transform scale-95 active:opacity-80">Anmelden</button>
+<div class="hidden md:flex items-center gap-8">
+<a class="nav-link text-slate-700 hover:text-blue-600 transition-colors font-headline text-lg font-medium tracking-tight" href="/">Home</a>
+<a class="nav-link text-blue-700 border-b-2 border-blue-700 pb-1 font-headline text-lg font-medium tracking-tight" href="/leistungen/">Leistungen</a>
+<a class="nav-link text-slate-700 hover:text-blue-600 transition-colors font-headline text-lg font-medium tracking-tight" href="/ueber-mich/">Über mich</a>
+<a class="nav-link text-slate-700 hover:text-blue-600 transition-colors font-headline text-lg font-medium tracking-tight" href="/kontakt/">Kontakt</a>
 </div>
-<div class="md:hidden">
-<span class="material-symbols-outlined text-primary text-3xl cursor-pointer">menu</span>
-</div>
+<div class="flex items-center gap-4">
+<a class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-headline font-medium transition-transform scale-95 active:scale-90 inline-block" href="/kontakt/">
+            Termin vereinbaren
+        </a>
 </div>
 </nav>
-<main class="pt-32 pb-24">
+<main class="pb-24 pt-32">
 <!-- Hero Section -->
 <section class="px-8 max-w-7xl mx-auto mb-20 reveal">
 <div class="flex flex-col md:flex-row items-center gap-12">
 <div class="md:w-3/5">
 <h1 class="font-headline text-5xl md:text-7xl font-extrabold text-primary mb-6 tracking-tight leading-tight">
-                        Technik verstehen, <br/><span class="text-secondary">Schritt für Schritt.</span>
+                    Technik verstehen, <br/><span class="text-secondary">Schritt für Schritt.</span>
 </h1>
 <p class="text-xl md:text-2xl text-on-surface-variant max-w-2xl leading-relaxed mb-8">
-                        Keine Angst vor der digitalen Welt. Matti begleitet Sie geduldig und kompetent bei all Ihren Fragen rund um Smartphone, Tablet und Computer.
-                    </p>
+                    Keine Angst vor der digitalen Welt. Matti begleitet Sie geduldig und kompetent bei all Ihren Fragen rund um Smartphone, Tablet und Computer.
+                </p>
 <div class="flex flex-wrap gap-4">
 <a class="px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-xl font-bold text-lg shadow-lg hover:opacity-90 transition-all hover:-translate-y-1 inline-block" href="/kontakt/">Beratung buchen</a>
 <a class="px-8 py-4 bg-surface-container-high text-primary rounded-xl font-bold text-lg hover:bg-surface-container-highest transition-all inline-block" href="#pricing">Alle Preise sehen</a>
@@ -192,8 +190,8 @@
 <div class="reveal">
 <h2 class="font-headline text-4xl font-bold text-primary mb-6">Ehrliche &amp; Transparente Preise</h2>
 <p class="text-xl text-on-surface-variant mb-12 leading-relaxed">
-                            Bei uns gibt es keine versteckten Kosten. Wir arbeiten auf Stundenbasis oder bieten faire Festpreise für bestimmte Pakete an.
-                        </p>
+                        Bei uns gibt es keine versteckten Kosten. Wir arbeiten auf Stundenbasis oder bieten faire Festpreise für bestimmte Pakete an.
+                    </p>
 <div class="space-y-6">
 <div class="flex items-center gap-6 p-6 rounded-2xl bg-white/40 border border-white/60 transition-all hover:bg-white/80 hover:scale-[1.02]">
 <span class="text-5xl font-bold text-primary">45€</span>
@@ -260,30 +258,37 @@
 </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="bg-slate-50 dark:bg-slate-950 w-full py-12 px-8">
-<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6 border-t border-slate-200 dark:border-slate-800 pt-12">
+<!-- Footer Shared Component -->
+<footer class="bg-slate-100 dark:bg-slate-950 w-full py-12 px-8">
+<div class="flex flex-col md:flex-row justify-between items-center w-full max-w-7xl mx-auto gap-6 font-public-sans text-on-surface-variant">
 <div class="flex flex-col items-center md:items-start gap-2">
-<a class="font-['Lexend'] font-bold text-blue-800 text-xl" href="/">Mentoren-Ecke</a>
-<p class="font-['Public_Sans'] text-sm leading-relaxed text-slate-600 dark:text-slate-400">© 2026 Mentoren-Ecke. In Ruhe lernen.</p>
+<a class="font-lexend font-semibold text-blue-900 text-xl" href="/">Mentoren-Ecke</a>
+<p class="text-slate-600 dark:text-slate-400">© 2026 Mentoren-Ecke. In Ruhe lernen.</p>
 </div>
 <div class="flex flex-wrap justify-center gap-8">
-<a class="font-['Public_Sans'] text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-all hover:underline decoration-2" href="/datenschutz/">Datenschutz</a>
-<a class="font-['Public_Sans'] text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-all hover:underline decoration-2" href="/impressum/">Impressum</a>
-<a class="font-['Public_Sans'] text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-all hover:underline decoration-2" href="/kontakt/">Kontakt</a>
-<a class="font-['Public_Sans'] text-sm text-slate-600 dark:text-slate-400 hover:text-blue-600 transition-all hover:underline decoration-2" href="/barrierefreiheit/">Barrierefreiheit</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="/datenschutz/">Datenschutz</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="/impressum/">Impressum</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="/kontakt/">Kontakt</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/20 flex items-center justify-center text-blue-700 hover:bg-blue-200 transition-colors" href="mailto:info@mentoren-ecke.de">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/20 flex items-center justify-center text-blue-700 hover:bg-blue-200 transition-colors" href="tel:+49123456789">
+<span class="material-symbols-outlined text-lg">call</span>
+</a>
 </div>
 </div>
 </footer>
 <!-- FAB for Help -->
-<button class="fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50 group">
+<a class="fixed bottom-8 right-8 w-16 h-16 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-50 group" href="/kontakt/">
 <span class="material-symbols-outlined text-3xl transition-transform group-hover:rotate-12">question_mark</span>
-</button>
+</a>
 <script>
     document.addEventListener('DOMContentLoaded', () => {
-        // 1. Smooth scroll for navigation links (Enhanced)
-        const links = document.querySelectorAll('a[href^="#"]');
-        links.forEach(link => {
+        // 1. Smooth scroll for local anchors
+        const localLinks = document.querySelectorAll('a[href^="#"]');
+        localLinks.forEach(link => {
             link.addEventListener('click', function(e) {
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
@@ -295,9 +300,6 @@
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    
-                    // Maintain "Pretty URL" navigation state without reloading
-                    window.history.pushState(null, null, targetId);
                 }
             });
         });
@@ -307,7 +309,6 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    // Once animated, we don't need to observe it anymore
                     observer.unobserve(entry.target);
                 }
             });
@@ -322,11 +323,11 @@
             revealObserver.observe(el);
         });
 
-        // 3. Subtle JS-based hover effects (Complementing Tailwind)
+        // 3. Subtle JS-based hover effects for glass-cards
         const floatingElements = document.querySelectorAll('.glass-card');
         floatingElements.forEach(card => {
             card.addEventListener('mousemove', (e) => {
-                if (window.innerWidth < 768) return; // Only on desktop
+                if (window.innerWidth < 768) return;
                 const rect = card.getBoundingClientRect();
                 const x = e.clientX - rect.left;
                 const y = e.clientY - rect.top;
@@ -345,14 +346,12 @@
             });
         });
 
-        // Sticky Nav Blur on Scroll
+        // Sticky Nav Shadow
         const nav = document.querySelector('nav');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 20) {
                 nav.classList.add('shadow-md');
-                nav.classList.remove('shadow-sm');
             } else {
-                nav.classList.add('shadow-sm');
                 nav.classList.remove('shadow-md');
             }
         });
