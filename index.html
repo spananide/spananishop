@@ -112,19 +112,21 @@
     </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
-<!-- TopNavBar -->
-<nav class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-md shadow-sm backdrop-saturate-150 h-20 flex justify-between items-center px-8 max-w-full mx-auto">
-<a class="text-2xl font-bold text-blue-900 font-headline tracking-tight" href="/">Mentoren-Ecke</a>
+<!-- TopNavBar Shared Component -->
+<nav class="fixed top-0 w-full z-50 bg-white/85 dark:bg-slate-900/85 backdrop-blur-md shadow-sm h-20">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto h-full">
+<a class="text-2xl font-bold text-blue-900 dark:text-blue-100 font-headline tracking-tight" href="/">Mentoren-Ecke</a>
 <div class="hidden md:flex items-center gap-8">
-<a class="font-headline text-lg font-medium tracking-tight text-blue-700 border-b-2 border-blue-700 pb-1" href="/">Home</a>
-<a class="font-headline text-lg font-medium tracking-tight text-slate-700 hover:text-blue-600 transition-colors" href="/leistungen/">Leistungen</a>
-<a class="font-headline text-lg font-medium tracking-tight text-slate-700 hover:text-blue-600 transition-colors" href="/ueber-mich/">Über mich</a>
-<a class="font-headline text-lg font-medium tracking-tight text-slate-700 hover:text-blue-600 transition-colors" href="/kontakt/">Kontakt</a>
+<a class="font-headline text-lg font-bold tracking-tight text-blue-700 dark:text-blue-400 border-b-2 border-blue-700 pb-1" href="/">Home</a>
+<a class="font-headline text-lg font-medium tracking-tight text-slate-700 dark:text-slate-300 hover:text-blue-600 transition-colors" href="/leistungen/">Leistungen</a>
+<a class="font-headline text-lg font-medium tracking-tight text-slate-700 dark:text-slate-300 hover:text-blue-600 transition-colors" href="/ueber-mich/">Über mich</a>
+<a class="font-headline text-lg font-medium tracking-tight text-slate-700 dark:text-slate-300 hover:text-blue-600 transition-colors" href="/kontakt/">Kontakt</a>
 </div>
 <div class="flex items-center gap-4">
-<a class="px-6 py-2.5 bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-semibold rounded-xl scale-95 active:opacity-80 transition-transform shadow-md inline-block" href="/kontakt/">
-            Termin vereinbaren
-        </a>
+<a class="px-6 py-2.5 bg-gradient-to-br from-primary to-primary-container text-on-primary font-headline font-semibold rounded-xl scale-95 hover:scale-100 active:opacity-80 transition-all shadow-md inline-block" href="/kontakt/">
+                Termin vereinbaren
+            </a>
+</div>
 </div>
 </nav>
 <main class="pt-20">
@@ -267,25 +269,26 @@
 </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="bg-slate-50 w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6 border-t border-slate-200 font-body text-sm leading-relaxed text-blue-900">
+<!-- Footer Shared Component -->
+<footer class="bg-slate-100 dark:bg-slate-950 w-full py-12 px-8">
+<div class="flex flex-col md:flex-row justify-between items-center w-full max-w-7xl mx-auto gap-6 font-public-sans text-on-surface-variant">
 <div class="flex flex-col items-center md:items-start gap-2">
-<a class="font-headline font-bold text-blue-800 text-xl" href="/">Mentoren-Ecke</a>
-<p class="text-slate-600">© 2026 Mentoren-Ecke. In Ruhe lernen.</p>
+<a class="font-lexend font-semibold text-blue-900 text-xl" href="/">Mentoren-Ecke</a>
+<p class="text-slate-600 dark:text-slate-400">© 2026 Mentoren-Ecke. In Ruhe lernen.</p>
 </div>
 <div class="flex flex-wrap justify-center gap-8">
-<a class="text-slate-600 hover:text-blue-600 hover:underline decoration-2 transition-all" href="/datenschutz/">Datenschutz</a>
-<a class="text-slate-600 hover:text-blue-600 hover:underline decoration-2 transition-all" href="/impressum/">Impressum</a>
-<a class="text-slate-600 hover:text-blue-600 hover:underline decoration-2 transition-all" href="/kontakt/">Kontakt</a>
-<a class="text-slate-600 hover:text-blue-600 hover:underline decoration-2 transition-all" href="/barrierefreiheit/">Barrierefreiheit</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="/datenschutz/">Datenschutz</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="/impressum/">Impressum</a>
+<a class="text-slate-600 dark:text-slate-400 hover:text-blue-700 hover:underline decoration-2 underline-offset-4 transition-all opacity-80 hover:opacity-100" href="/kontakt/">Kontakt</a>
 </div>
 <div class="flex items-center gap-4">
-<a class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 hover:bg-blue-200 transition-colors" href="mailto:info@mentoren-ecke.de">
+<a class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/20 flex items-center justify-center text-blue-700 hover:bg-blue-200 transition-colors" href="mailto:info@mentoren-ecke.de">
 <span class="material-symbols-outlined text-lg">mail</span>
 </a>
-<a class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-700 hover:bg-blue-200 transition-colors" href="tel:+49123456789">
+<a class="w-10 h-10 rounded-full bg-blue-100 dark:bg-blue-900/20 flex items-center justify-center text-blue-700 hover:bg-blue-200 transition-colors" href="tel:+49123456789">
 <span class="material-symbols-outlined text-lg">call</span>
 </a>
+</div>
 </div>
 </footer>
 <script>
