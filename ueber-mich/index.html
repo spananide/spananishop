@@ -1,264 +1,261 @@
 <!DOCTYPE html>
 
-<html class="scroll-smooth" lang="de"><head>
+<html class="light" lang="de"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Über mich - Matti Tech-Mentoring</title>
+<title>Über mich - Mentoren-Ecke</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800&amp;family=Public+Sans:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "primary-fixed": "#b1f0ce",
-              "surface-bright": "#f8f9fa",
-              "inverse-on-surface": "#f0f1f2",
-              "on-primary-fixed-variant": "#0e5138",
-              "tertiary-fixed-dim": "#cec5bb",
-              "inverse-surface": "#2e3132",
-              "primary-container": "#236146",
-              "surface-dim": "#d9dadb",
-              "surface-container-high": "#e7e8e9",
-              "error": "#ba1a1a",
-              "primary-fixed-dim": "#95d4b3",
-              "surface-variant": "#e1e3e4",
-              "on-tertiary": "#ffffff",
-              "on-error": "#ffffff",
-              "secondary-fixed-dim": "#86d7ad",
-              "on-tertiary-fixed-variant": "#4c463e",
-              "surface-container-lowest": "#ffffff",
-              "on-surface-variant": "#3f4949",
-              "surface-container-highest": "#e1e3e4",
-              "on-secondary-fixed-variant": "#005236",
-              "on-primary": "#ffffff",
-              "outline": "#6f7979",
-              "surface-container": "#edeeef",
-              "secondary-container": "#a1f4c8",
-              "inverse-primary": "#95d4b3",
-              "tertiary-fixed": "#ebe1d6",
-              "on-primary-fixed": "#002114",
-              "secondary-fixed": "#a1f4c8",
-              "on-error-container": "#93000a",
-              "on-tertiary-fixed": "#1f1b14",
-              "on-surface": "#191c1d",
-              "on-secondary": "#ffffff",
-              "surface": "#f8f9fa",
-              "secondary": "#116c4a",
-              "on-secondary-container": "#1b724f",
-              "surface-tint": "#2c694e",
-              "primary": "#004930",
-              "tertiary": "#433e36",
-              "surface-container-low": "#f3f4f5",
-              "on-background": "#191c1d",
-              "outline-variant": "#bec8c9",
-              "tertiary-container": "#5b554d",
-              "background": "#f8f9fa",
-              "error-container": "#ffdad6",
-              "on-secondary-fixed": "#002113",
-              "on-primary-container": "#9ad9b8",
-              "on-tertiary-container": "#d3cabf"
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-fixed-variant": "#005312",
+                        "tertiary-fixed-dim": "#e4beb2",
+                        "surface-variant": "#e4e4cc",
+                        "primary": "#004493",
+                        "on-surface": "#1b1d0e",
+                        "background": "#fbfbe2",
+                        "on-primary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "secondary": "#1b6d24",
+                        "outline-variant": "#c3c6d6",
+                        "surface-container": "#efefd7",
+                        "surface-bright": "#fbfbe2",
+                        "outline": "#737785",
+                        "surface-container-highest": "#e4e4cc",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#ffdbce",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f5f5dc",
+                        "tertiary-container": "#75584e",
+                        "primary-container": "#235cb2",
+                        "surface-dim": "#dbdcc3",
+                        "on-tertiary-container": "#f7d1c3",
+                        "on-secondary-fixed": "#002204",
+                        "secondary-fixed-dim": "#88d982",
+                        "on-primary-fixed-variant": "#004492",
+                        "inverse-primary": "#acc7ff",
+                        "inverse-surface": "#303221",
+                        "secondary-container": "#a0f399",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#5b4137",
+                        "surface-container-high": "#eaead1",
+                        "on-surface-variant": "#424654",
+                        "surface-tint": "#235cb2",
+                        "on-tertiary": "#ffffff",
+                        "on-primary-container": "#c9d9ff",
+                        "secondary-fixed": "#a3f69c",
+                        "primary-fixed": "#d8e2ff",
+                        "on-tertiary-fixed": "#2b160f",
+                        "on-primary-fixed": "#001a41",
+                        "on-error-container": "#93000a",
+                        "surface": "#fbfbe2",
+                        "on-background": "#1b1d0e",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#acc7ff",
+                        "on-secondary-container": "#217128",
+                        "on-tertiary-fixed-variant": "#5b4137",
+                        "inverse-on-surface": "#f2f2d9"
+                    },
+                    fontFamily: {
+                        "headline": ["Lexend"],
+                        "body": ["Public Sans"],
+                        "label": ["Public Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
             },
-            fontFamily: {
-              "headline": ["Lexend"],
-              "body": ["Lexend"],
-              "label": ["Lexend"]
-            },
-            borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px"},
-          },
-        },
-      }
+        }
     </script>
 <style>
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
         }
-        .glass-card {
+        .glass-panel {
             background: rgba(255, 255, 255, 0.7);
             backdrop-filter: blur(12px);
             -webkit-backdrop-filter: blur(12px);
         }
-        .light-leak {
-            border-top: 1.5px solid rgba(149, 212, 179, 0.3);
-            border-left: 1.5px solid rgba(149, 212, 179, 0.3);
-        }
     </style>
 </head>
-<body class="bg-surface font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
-<!-- TopAppBar -->
-<nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_20px_40px_rgba(25,28,29,0.06)]">
-<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
-<div class="text-2xl font-bold text-teal-900 dark:text-teal-50 tracking-tighter">Matti</div>
-<div class="hidden md:flex space-x-8 items-center font-['Lexend'] text-lg tracking-tight font-medium">
-<a class="text-teal-900/60 dark:text-teal-50/60 hover:text-teal-900 dark:hover:text-teal-50 transition-colors" href="/">Home</a>
-<a class="text-teal-900/60 dark:text-teal-50/60 hover:text-teal-900 dark:hover:text-teal-50 transition-colors" href="/leistungen/">Leistungen</a>
-<a class="text-teal-900 dark:text-teal-50 border-b-2 border-teal-900 dark:border-teal-50 pb-1" href="/ueber-mich/">Über mich</a>
-<a class="text-teal-900/60 dark:text-teal-50/60 hover:text-teal-900 dark:hover:text-teal-50 transition-colors" href="/kontakt/">Kontakt</a>
-<a class="bg-primary text-on-primary px-6 py-2 rounded-full hover:scale-105 transition-all duration-400 ease-out" href="/kontakt/">Termin vereinbaren</a>
+<body class="bg-background font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-md shadow-sm backdrop-saturate-150 flex justify-between items-center px-8 h-20 max-w-full mx-auto">
+<div class="text-2xl font-bold text-blue-900 font-headline">Mentoren-Ecke</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="text-slate-700 hover:text-blue-600 transition-colors font-headline text-lg font-medium tracking-tight" href="/lernen">Lernen</a>
+<a class="text-slate-700 hover:text-blue-600 transition-colors font-headline text-lg font-medium tracking-tight" href="/kurse">Kurse</a>
+<a class="text-slate-700 hover:text-blue-600 transition-colors font-headline text-lg font-medium tracking-tight" href="/hilfe">Hilfe</a>
+<a class="text-blue-700 border-b-2 border-blue-700 pb-1 font-headline text-lg font-medium tracking-tight" href="/ueber-mich">Über uns</a>
 </div>
-<!-- Mobile Menu Icon (Visual Only) -->
-<div class="md:hidden">
-<span class="material-symbols-outlined text-teal-900">menu</span>
+<div class="flex items-center gap-4">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-headline font-medium transition-transform scale-95 active:opacity-80">
+                Anmelden
+            </button>
 </div>
-</div>
-<div class="bg-gradient-to-r from-teal-900/10 to-transparent h-[1.5px]"></div>
 </nav>
-<main class="pt-32 pb-20">
-<!-- Hero Section -->
-<section class="max-w-7xl mx-auto px-8 mb-24">
-<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-<div class="lg:col-span-7 space-y-8">
-<div class="inline-flex items-center px-4 py-2 rounded-full bg-secondary-container text-on-secondary-container text-sm font-medium">
-<span class="w-2 h-2 rounded-full bg-secondary mr-2"></span>
-                        Dein Tech-Mentor
-                    </div>
-<h1 class="text-5xl md:text-7xl font-bold text-primary tracking-tight leading-[1.1]">
-                        Geduld ist meine <br/>
-<span class="text-secondary italic">Superkraft.</span>
-</h1>
-<p class="text-xl md:text-2xl text-on-surface-variant leading-relaxed max-w-2xl">
-                        Ich bin Matti, 18 Jahre alt und leidenschaftlicher Gymnasiast. Meine Mission ist es, die digitale Kluft zu überbrücken und Senioren dabei zu helfen, mit ihren Liebsten vernetzt zu bleiben.
-                    </p>
+<main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
+<!-- Hero Section: Editorial Asymmetry -->
+<section class="flex flex-col md:flex-row gap-12 items-start mb-24">
+<div class="w-full md:w-5/12 relative">
+<div class="aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl relative z-10">
+<img alt="Matti smiling warmly" class="w-full h-full object-cover" data-alt="Close-up portrait of a friendly 18-year-old young man with a warm smile, wearing a blue sweater in a bright sunlit library setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC72Jotv-nxx1njnhgVtDhhVIl2Cp934br4wXljphZzYOdMfWbC56WTKoew_sJ_BTD4lWJjVpKJqHJbZg8QMMNgiA8vmvQNdzkbDyaYSvBDzWNuwHKItiOFs2n3ePLTwX655Cyl0Hkk4beqC994Yv1BVKMuDucjziDxNnyD4XKFZ3aBdVo8pnYrwzuqVYyFhBjkyWERbfmHSWBpgp6Ap1ile9vzfYxUBcNmx1Ghv-szi-Kl_PtVTU2GzLM7IZvwZsxyXmEcWgyq9qQt"/>
 </div>
-<div class="lg:col-span-5 relative">
-<div class="glass-card light-leak rounded-xl p-4 shadow-[0_20px_40px_rgba(25,28,29,0.06)] relative overflow-hidden group">
-<img alt="Matti" class="w-full aspect-[4/5] object-cover rounded-lg group-hover:scale-105 transition-transform duration-700 ease-out" data-alt="A friendly young male student with a kind smile, wearing a casual sweater, standing in a brightly lit modern library environment with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCd-aho3syRj5q9VW8TC9B7kdA5AqJwv93FZqn_inkK9hiB9JWnXcOQgYFqiUrZdPjSv3_BVeyADG9kZVfBBYyA72takf2Zy_3c-VSjCNnB3W90eLxyoHGiSfGWQGndKUPsiwPjkknr9qE0RTtKvlZ9mYKuRPGHqsVrBTWU6t-4rIyPR9GkJ1o5xfiFHNJ4kIIUo4S9ZeuRvEfETfWx2mIvo6JmAcXLnwWbLhwweTKI2V3qrvUTz_BZIHGR6x9_6b6c_56Qlh7qSadT"/>
-<!-- Mentorship Pulse Component -->
-<div class="absolute bottom-8 right-8 flex items-center bg-white/90 backdrop-blur-md px-4 py-2 rounded-full shadow-lg">
-<div class="relative flex h-3 w-3 mr-3">
-<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-fixed opacity-75"></span>
-<span class="relative inline-flex rounded-full h-3 w-3 bg-secondary-fixed"></span>
+<div class="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary-fixed rounded-full -z-10 blur-2xl opacity-40"></div>
+<div class="absolute -top-6 -left-6 w-48 h-48 bg-primary-fixed rounded-full -z-10 blur-3xl opacity-30"></div>
 </div>
-<span class="text-sm font-bold text-primary">Verfügbar für Termine</span>
-</div>
-</div>
-<!-- Decorative Background Element -->
-<div class="absolute -z-10 -top-12 -right-12 w-64 h-64 bg-primary-fixed/30 blur-[80px] rounded-full"></div>
-</div>
-</div>
-</section>
-<!-- Mission Bento Grid -->
-<section class="max-w-7xl mx-auto px-8 mb-32">
-<h2 class="text-3xl font-bold text-primary mb-12 flex items-center">
-<span class="w-12 h-[2px] bg-primary-fixed-dim mr-4"></span>
-                Meine Mission
-            </h2>
-<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-<!-- Empathy Card -->
-<div class="glass-card light-leak p-10 rounded-xl hover:bg-white/90 transition-all duration-400 group border border-outline-variant/15">
-<div class="w-16 h-16 rounded-2xl bg-primary-container flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-on-primary-container text-3xl" data-icon="favorite">favorite</span>
-</div>
-<h3 class="text-2xl font-bold text-primary mb-4">Empathie</h3>
-<p class="text-on-surface-variant leading-relaxed">
-                        Ich verstehe, dass Technik manchmal frustrierend sein kann. Deshalb erkläre ich alles in Ihrem Tempo – ohne Fachchinesisch.
-                    </p>
-</div>
-<!-- Clarity Card -->
-<div class="glass-card light-leak p-10 rounded-xl hover:bg-white/90 transition-all duration-400 group border border-outline-variant/15">
-<div class="w-16 h-16 rounded-2xl bg-secondary-container flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-on-secondary-container text-3xl" data-icon="visibility">visibility</span>
-</div>
-<h3 class="text-2xl font-bold text-primary mb-4">Klarheit</h3>
-<p class="text-on-surface-variant leading-relaxed">
-                        Komplexe Funktionen werden einfach. Wir konzentrieren uns auf das, was Sie wirklich brauchen, um digital sicher zu navigieren.
-                    </p>
-</div>
-<!-- Reliability Card -->
-<div class="glass-card light-leak p-10 rounded-xl hover:bg-white/90 transition-all duration-400 group border border-outline-variant/15">
-<div class="w-16 h-16 rounded-2xl bg-tertiary-fixed flex items-center justify-center mb-8 group-hover:scale-110 transition-transform">
-<span class="material-symbols-outlined text-on-tertiary-fixed text-3xl" data-icon="verified_user">verified_user</span>
-</div>
-<h3 class="text-2xl font-bold text-primary mb-4">Zuverlässigkeit</h3>
-<p class="text-on-surface-variant leading-relaxed">
-                        Pünktlichkeit und Vertrauen sind die Basis meiner Arbeit. Ich bin für Sie da, wenn Sie Hilfe benötigen – Schritt für Schritt.
-                    </p>
-</div>
-</div>
-</section>
-<!-- Background Section (Asymmetric Layout) -->
-<section class="max-w-7xl mx-auto px-8 mb-20">
-<div class="bg-surface-container-low rounded-xl p-12 md:p-20 relative overflow-hidden">
-<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 relative z-10">
-<div>
-<h2 class="text-4xl font-bold text-primary mb-8 tracking-tight">Mein Hintergrund</h2>
-<p class="text-lg text-on-surface-variant leading-relaxed mb-6">
-                            Als Digital Native bin ich mit Smartphones und Computern aufgewachsen. Doch was mich unterscheidet, ist nicht nur mein technisches Wissen, sondern meine Fähigkeit, dieses Wissen weiterzugeben.
-                        </p>
-<p class="text-lg text-on-surface-variant leading-relaxed mb-8">
-                            Als Schüler habe ich gelernt, wie man komplexe Themen strukturiert aufbereitet. Dieses Wissen nutze ich heute, um Senioren die Angst vor der Technik zu nehmen.
-                        </p>
+<div class="w-full md:w-7/12 pt-8">
+<span class="text-primary font-headline font-semibold tracking-widest uppercase text-sm mb-4 block">Der Kopf hinter der Ecke</span>
+<h1 class="text-6xl md:text-8xl font-headline font-bold text-primary mb-8 leading-tight tracking-tighter">
+                    Hallo, ich bin <span class="text-blue-900">Matti</span>.
+                </h1>
+<p class="text-2xl font-body text-on-surface leading-relaxed max-w-2xl mb-10">
+                    Mit 18 Jahren sehe ich die digitale Welt als Spielplatz. Doch ich weiß, dass sie für viele wie ein Labyrinth wirkt. Ich habe es mir zur Aufgabe gemacht, die Brücke zwischen den Generationen zu bauen.
+                </p>
 <div class="flex flex-wrap gap-4">
-<span class="px-6 py-3 bg-white/60 rounded-full text-primary font-medium border border-outline-variant/20">Digital Native</span>
-<span class="px-6 py-3 bg-white/60 rounded-full text-primary font-medium border border-outline-variant/20">Geduldiger Erklärer</span>
-<span class="px-6 py-3 bg-white/60 rounded-full text-primary font-medium border border-outline-variant/20">Gymnasiast</span>
-</div>
-</div>
-<div class="flex flex-col justify-center space-y-8">
-<div class="glass-card light-leak p-8 rounded-xl border border-outline-variant/10 shadow-sm">
-<div class="text-4xl font-extrabold text-primary mb-2">50+</div>
-<div class="text-on-surface-variant font-medium">Glückliche Senioren unterstützt</div>
-</div>
-<div class="glass-card light-leak p-8 rounded-xl border border-outline-variant/10 shadow-sm ml-0 lg:ml-12">
-<div class="text-4xl font-extrabold text-secondary mb-2">100%</div>
-<div class="text-on-surface-variant font-medium">Geduld-Garantie bei jedem Termin</div>
-</div>
-</div>
-</div>
-<!-- Decorative element -->
-<div class="absolute bottom-0 right-0 opacity-5 pointer-events-none">
-<span class="material-symbols-outlined text-[300px]" data-icon="school">school</span>
+<a class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-8 py-4 rounded-xl font-headline text-lg font-semibold hover:shadow-lg transition-all active:scale-95" href="/kontakt">
+                        Lernen wir uns kennen
+                    </a>
 </div>
 </div>
 </section>
-<!-- CTA Section -->
-<section class="max-w-7xl mx-auto px-8">
-<div class="bg-gradient-to-br from-primary to-primary-container rounded-xl p-12 text-center relative overflow-hidden">
-<div class="relative z-10">
-<h2 class="text-4xl font-bold text-on-primary mb-6 tracking-tight">Bereit für den ersten Schritt?</h2>
-<p class="text-on-primary-container text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
-                        Lassen Sie uns gemeinsam die Welt der Technik entdecken. Ich freue mich darauf, Sie kennenzulernen!
-                    </p>
-<a class="inline-flex items-center px-10 py-5 bg-primary-fixed text-on-primary-fixed rounded-full text-xl font-bold hover:scale-105 transition-all duration-400 shadow-xl" href="/kontakt/">
-                        Jetzt Termin anfragen
-                        <span class="material-symbols-outlined ml-2" data-icon="arrow_forward">arrow_forward</span>
-</a>
+<!-- Values Section: Bento Grid with Glassmorphism -->
+<section class="mb-32">
+<h2 class="text-4xl font-headline font-bold text-primary mb-12 text-center">Meine Leitwerte</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Value 1 -->
+<div class="glass-panel p-10 rounded-[2rem] border border-white/40 shadow-xl flex flex-col items-center text-center group hover:translate-y-[-8px] transition-all duration-500">
+<div class="w-20 h-20 bg-primary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary group-hover:text-white transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl" data-weight="fill">favorite</span>
 </div>
+<h3 class="text-2xl font-headline font-bold mb-4 text-blue-900">Empathie</h3>
+<p class="text-on-surface-variant font-body leading-relaxed">
+                        Es gibt keine "dummen" Fragen. Ich höre zu und verstehe Ihre individuellen Hürden, bevor wir den ersten Schritt machen.
+                    </p>
+</div>
+<!-- Value 2 -->
+<div class="glass-panel p-10 rounded-[2rem] border border-white/40 shadow-xl flex flex-col items-center text-center group hover:translate-y-[-8px] transition-all duration-500">
+<div class="w-20 h-20 bg-secondary/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-secondary group-hover:text-white transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl" data-weight="fill">lightbulb</span>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-4 text-blue-900">Klarheit</h3>
+<p class="text-on-surface-variant font-body leading-relaxed">
+                        Kein Fachchinesisch. Ich erkläre komplexe Technik in Bildern und Begriffen, die Sie aus dem Alltag kennen.
+                    </p>
+</div>
+<!-- Value 3 -->
+<div class="glass-panel p-10 rounded-[2rem] border border-white/40 shadow-xl flex flex-col items-center text-center group hover:translate-y-[-8px] transition-all duration-500">
+<div class="w-20 h-20 bg-primary-container/10 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-primary-container group-hover:text-white transition-colors duration-500">
+<span class="material-symbols-outlined text-4xl" data-weight="fill">verified_user</span>
+</div>
+<h3 class="text-2xl font-headline font-bold mb-4 text-blue-900">Zuverlässigkeit</h3>
+<p class="text-on-surface-variant font-body leading-relaxed">
+                        Wir gehen den Weg gemeinsam bis zum Ende. Ich bin erst zufrieden, wenn Sie sich sicher im Umgang mit Ihrem Gerät fühlen.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Stats Section: Overlapping Tonal Surfaces -->
+<section class="mb-32 bg-surface-container-low rounded-[3rem] p-12 md:p-20 flex flex-col md:flex-row gap-16 items-center">
+<div class="md:w-1/2">
+<h2 class="text-4xl font-headline font-bold text-primary mb-6">Gemeinsam wachsen</h2>
+<p class="text-xl font-body text-on-surface-variant mb-8 leading-relaxed">
+                    Seit über zwei Jahren begleite ich Senioren in die digitale Welt. Was als Nachbarschaftshilfe begann, ist heute eine Herzensangelegenheit geworden.
+                </p>
+<div class="space-y-6">
+<div class="flex items-center gap-6 p-6 bg-surface-container-highest rounded-2xl">
+<span class="text-5xl font-headline font-extrabold text-secondary">240+</span>
+<p class="text-lg font-body font-medium">Gelöste Technik-Rätsel</p>
+</div>
+<div class="flex items-center gap-6 p-6 bg-surface-container-highest rounded-2xl">
+<span class="text-5xl font-headline font-extrabold text-primary">50+</span>
+<p class="text-lg font-body font-medium">Glückliche Kursteilnehmer</p>
+</div>
+</div>
+</div>
+<div class="md:w-1/2 grid grid-cols-2 gap-4">
+<div class="aspect-square rounded-3xl overflow-hidden shadow-lg transform translate-y-8">
+<img alt="Interaction session" class="w-full h-full object-cover" data-alt="A young man and an elderly woman sitting together looking at a tablet screen with smiles, soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZRGW-wLmUzqx8ZBkPcHdKBbAa8sdyKzS_fEN5BwLG2kB_PojJJaaZRfVPtfJcHTRwd6DK_giRqUZGHWfUOoSs8czbzaxQUDtz06rfz8bBlPx3-VXmzjcmmFN3xYUe_mGq3l6nSLjTgmlbduUtY8TQQIonYE3Do_mY6dMbIQNj5v5g2h2gbi_Tg6Rx9OG5h5F2RH0tV5XsEctK5MbrEVB96fGD1Fq3IROUZKChgWcfLuhGwjzHkmT4yX9M_c9c0hYRsvJb0FHi9JCi"/>
+</div>
+<div class="aspect-square rounded-3xl overflow-hidden shadow-lg">
+<img alt="Modern tech clarity" class="w-full h-full object-cover" data-alt="Modern clean workspace with a laptop and smartphone, minimalist aesthetic with blue accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJG9CiEsvPkxi_1xSgSglxh6WKn9xGQvGrkX6H5ResiAgcXDKd_LChN8IcaF8YVFb_NbtqOmwprYivoEEV5SnYXPG6Sfw-fmvDRUYCXzt9EJp32xoy4LXpilvdwOYMCqHGrNzHMXRHSk59H2_9XLYjkHtjMgyPxSfl3NYlxNLQOhp9_bj5wkxeN1nnyRh2vLclfbRrHnPN-Nzv123F98s4mlMfjVr1Jlu8MFZGlX-aG0FGLgI_5MJVOqBIvWFAVQeEhe3CieWkI7eb"/>
+</div>
+<div class="aspect-square rounded-3xl overflow-hidden shadow-lg transform -translate-y-8">
+<img alt="Educational notes" class="w-full h-full object-cover" data-alt="Close up of handwritten notes on paper next to a digital tablet, symbolizing traditional and modern learning" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBSR3aADo9ExjUPsfS8ht7DP9Uh4wqTsmdRrDG2aZFfih1rWNZxYf6bYfS4WBs--efeD74pW1DSBKdMzO5tuYO5je2EjEiAscQZIvaFQeRwPKEDn7-dnwhQ9kVmPJVAGur9_AzfU_rzt8naGo1mEWJY1YJAVTDF8lV66CLzL6QKO4qt9hxhp2b8P6pmU8X9Romk_LulOjPIWGwh6SaJy6vjUtgVZpwdSWmhjpj8KySOnp7fG3oPxX3GzYPny6LapUqbjf6EFAaDWMJq"/>
+</div>
+<div class="aspect-square rounded-3xl overflow-hidden shadow-lg transform translate-y-4">
+<img alt="Teamwork" class="w-full h-full object-cover" data-alt="Group of people talking in a bright modern classroom, blurred background focusing on collaborative atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7vRygWLrPeQkW2fj6cUa3rPSORP3Ry4E_D-mrw1QAxMKozOdkSt3CwWkA_BfQFKQ7bbjcULakYLqY5NPPzwQyDx4IdCSUAQEwgurtWf2fWjKUmOJViLvkHwb8XOyj-96yOi7nd0En6_zOIXuPxI9qTUv3-_qSvP8sRhVJ215puZLE7s-m9mQpn9EBDf7UWhKsUkO82F4qNj615-NiP_sSnj01VMBjS6WkJFg5ctxzufoC0JwjXXaIwDwYpyInh4OlvlyGm8OR9cAu"/>
+</div>
+</div>
+</section>
+<!-- Story Content: Step-by-Step Typography -->
+<section class="max-w-4xl mx-auto mb-32">
+<h2 class="text-4xl font-headline font-bold text-primary mb-16 text-center">Wie alles begann</h2>
+<div class="space-y-16">
+<!-- Step 1 -->
+<div class="relative flex flex-col md:flex-row gap-8 items-start">
+<div class="absolute -left-12 -top-8 text-9xl font-headline font-black text-primary/5 select-none">01</div>
+<div class="bg-surface-container-highest p-8 rounded-[2rem] flex-1">
+<h3 class="text-2xl font-headline font-bold mb-4 text-blue-900">Die Initialzündung</h3>
+<p class="text-lg font-body leading-relaxed text-on-surface-variant">
+                            Alles begann, als mein Großvater Schwierigkeiten hatte, Videoanrufe mit uns zu führen. Ich merkte, dass es nicht am Gerät lag, sondern an der Art und Weise, wie Software heute für junge Menschen designt wird, ohne Rücksicht auf andere Generationen.
+                        </p>
+</div>
+</div>
+<!-- Step 2 -->
+<div class="relative flex flex-col md:flex-row gap-8 items-start">
+<div class="absolute -left-12 -top-8 text-9xl font-headline font-black text-primary/5 select-none">02</div>
+<div class="bg-surface-container-highest p-8 rounded-[2rem] flex-1">
+<h3 class="text-2xl font-headline font-bold mb-4 text-blue-900">Die Entwicklung</h3>
+<p class="text-lg font-body leading-relaxed text-on-surface-variant">
+                            Ich entwickelte eigene Erklär-Methoden. Statt technischer Begriffe nutzte ich Metaphern. Das Internet wurde zum "digitalen Marktplatz", die Cloud zum "unendlichen Aktenschrank". Die Erfolge waren sofort sichtbar.
+                        </p>
+</div>
+</div>
+<!-- Step 3 -->
+<div class="relative flex flex-col md:flex-row gap-8 items-start">
+<div class="absolute -left-12 -top-8 text-9xl font-headline font-black text-primary/5 select-none">03</div>
+<div class="bg-surface-container-highest p-8 rounded-[2rem] flex-1">
+<h3 class="text-2xl font-headline font-bold mb-4 text-blue-900">Heute</h3>
+<p class="text-lg font-body leading-relaxed text-on-surface-variant">
+                            Mit der "Mentoren-Ecke" habe ich einen Ort geschaffen, an dem Seniorinnen und Senioren in ihrer eigenen Geschwindigkeit lernen können. Ich bin stolz darauf, jeden Tag zu sehen, wie digitale Barrieren fallen.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action: Focus Box -->
+<section class="bg-primary text-on-primary rounded-[3rem] p-12 md:p-24 text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl"></div>
+<div class="absolute bottom-0 left-0 w-64 h-64 bg-primary-container/30 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl"></div>
+<h2 class="text-4xl md:text-5xl font-headline font-bold mb-8 relative z-10">Bereit für Ihren digitalen Frühling?</h2>
+<p class="text-xl md:text-2xl font-body mb-12 opacity-90 relative z-10 max-w-2xl mx-auto">
+                Schreiben Sie mir eine kurze Nachricht. Ganz unverbindlich. Wir finden gemeinsam heraus, wie ich Ihnen helfen kann.
+            </p>
+<div class="flex flex-wrap justify-center gap-6 relative z-10">
+<a class="bg-surface text-primary px-10 py-5 rounded-2xl font-headline text-xl font-bold hover:bg-surface-bright transition-all shadow-xl active:scale-95" href="/kontakt">
+                    Nachricht senden
+                </a>
+<a class="border-2 border-white/40 text-on-primary px-10 py-5 rounded-2xl font-headline text-xl font-bold hover:bg-white/10 transition-all active:scale-95" href="/kurse">
+                    Kursübersicht
+                </a>
 </div>
 </section>
 </main>
 <!-- Footer -->
-<footer class="bg-teal-50 dark:bg-slate-950 w-full rounded-t-[3rem] mt-20">
-<div class="grid grid-cols-1 md:grid-cols-3 gap-12 px-12 py-16 max-w-7xl mx-auto font-['Lexend'] body-lg leading-relaxed">
-<div class="space-y-6">
-<div class="text-xl font-bold text-teal-900 dark:text-teal-100">Matti</div>
-<p class="text-teal-800/70 dark:text-teal-200/70">
-                    Geduldiges Tech-Mentoring für Senioren. <br/>
-                    Individuell, klar und menschlich.
-                </p>
+<footer class="bg-slate-50 py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6 border-t border-slate-200">
+<div class="font-headline font-bold text-blue-800 text-xl">Mentoren-Ecke</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-slate-600 hover:text-blue-600 font-label text-sm leading-relaxed transition-all hover:underline decoration-2" href="/ueber-mich/datenschutz">Datenschutz</a>
+<a class="text-slate-600 hover:text-blue-600 font-label text-sm leading-relaxed transition-all hover:underline decoration-2" href="/ueber-mich/impressum">Impressum</a>
+<a class="text-slate-600 hover:text-blue-600 font-label text-sm leading-relaxed transition-all hover:underline decoration-2" href="/ueber-mich/kontakt">Kontakt</a>
+<a class="text-slate-600 hover:text-blue-600 font-label text-sm leading-relaxed transition-all hover:underline decoration-2" href="/ueber-mich/barrierefreiheit">Barrierefreiheit</a>
 </div>
-<div class="space-y-6">
-<h4 class="font-bold text-teal-900 dark:text-teal-100">Quick Links</h4>
-<div class="flex flex-col space-y-4">
-<a class="text-teal-800/70 dark:text-teal-200/70 hover:text-teal-600 dark:hover:text-teal-300 transition-colors duration-300" href="/">Home</a>
-<a class="text-teal-800/70 dark:text-teal-200/70 hover:text-teal-600 dark:hover:text-teal-300 transition-colors duration-300" href="/leistungen/">Leistungen</a>
-<a class="font-bold text-teal-900 dark:text-teal-100" href="/ueber-mich/">Über mich</a>
-<a class="text-teal-800/70 dark:text-teal-200/70 hover:text-teal-600 dark:hover:text-teal-300 transition-colors duration-300" href="/kontakt/">Kontakt</a>
-</div>
-</div>
-<div class="space-y-6">
-<h4 class="font-bold text-teal-900 dark:text-teal-100">Rechtliches</h4>
-<div class="flex flex-col space-y-4">
-<a class="text-teal-800/70 dark:text-teal-200/70 hover:text-teal-600 dark:hover:text-teal-300 transition-colors duration-300" href="#">Impressum</a>
-<a class="text-teal-800/70 dark:text-teal-200/70 hover:text-teal-600 dark:hover:text-teal-300 transition-colors duration-300" href="#">Datenschutz</a>
-<div class="pt-4 text-teal-900/40 text-sm">
-                        © 2024 Matti Tech-Mentoring. Alle Rechte vorbehalten.
-                    </div>
-</div>
-</div>
-</div>
+<div class="font-body text-sm text-slate-600 opacity-90">© 2024 Mentoren-Ecke. In Ruhe lernen.</div>
 </footer>
 </body></html>
