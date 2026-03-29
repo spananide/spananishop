@@ -96,19 +96,19 @@
     </style>
 </head>
 <body class="bg-background font-body text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
-<!-- Top Navigation -->
-<nav class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-md shadow-sm backdrop-saturate-150 flex justify-between items-center px-8 h-20 max-w-full mx-auto">
+<!-- Top Navigation (Shared Component Style) -->
+<nav class="fixed top-0 w-full z-50 bg-white/85 backdrop-blur-md shadow-sm flex justify-between items-center px-8 h-20 max-w-full mx-auto">
 <a class="text-2xl font-bold text-blue-900 font-headline" href="/">Mentoren-Ecke</a>
 <div class="hidden md:flex items-center gap-8">
+<a class="nav-link text-slate-700 hover:text-blue-600 transition-colors font-headline text-lg font-medium tracking-tight" href="/">Home</a>
 <a class="nav-link text-slate-700 hover:text-blue-600 transition-colors font-headline text-lg font-medium tracking-tight" href="/leistungen/">Leistungen</a>
-<a class="nav-link text-slate-700 hover:text-blue-600 transition-colors font-headline text-lg font-medium tracking-tight" href="/kurse/">Kurse</a>
-<a class="nav-link text-slate-700 hover:text-blue-600 transition-colors font-headline text-lg font-medium tracking-tight" href="/hilfe/">Hilfe</a>
-<a class="nav-link text-blue-700 border-b-2 border-blue-700 pb-1 font-headline text-lg font-medium tracking-tight" href="/ueber-mich/">Über uns</a>
+<a class="nav-link text-blue-700 border-b-2 border-blue-700 pb-1 font-headline text-lg font-medium tracking-tight" href="/ueber-mich/">Über mich</a>
+<a class="nav-link text-slate-700 hover:text-blue-600 transition-colors font-headline text-lg font-medium tracking-tight" href="/kontakt/">Kontakt</a>
 </div>
 <div class="flex items-center gap-4">
-<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-headline font-medium transition-transform scale-95 active:opacity-80">
-            Anmelden
-        </button>
+<a class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-xl font-headline font-medium transition-transform scale-95 active:scale-90 inline-block" href="/kontakt/">
+            Termin vereinbaren
+        </a>
 </div>
 </nav>
 <main class="pt-32 pb-24 px-6 md:px-12 max-w-7xl mx-auto">
@@ -253,44 +253,26 @@
 <a class="bg-surface text-primary px-10 py-5 rounded-2xl font-headline text-xl font-bold hover:bg-surface-bright transition-all shadow-xl active:scale-95" href="/kontakt/">
                 Nachricht senden
             </a>
-<a class="border-2 border-white/40 text-on-primary px-10 py-5 rounded-2xl font-headline text-xl font-bold hover:bg-white/10 transition-all active:scale-95" href="/kurse/">
-                Kursübersicht
+<a class="border-2 border-white/40 text-on-primary px-10 py-5 rounded-2xl font-headline text-xl font-bold hover:bg-white/10 transition-all active:scale-95" href="/leistungen/">
+                Leistungsübersicht
             </a>
 </div>
 </section>
 </main>
-<!-- Footer -->
-<footer class="bg-slate-50 py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-6 border-t border-slate-200">
-<a class="font-headline font-bold text-blue-800 text-xl" href="/">Mentoren-Ecke</a>
+<!-- Footer (Shared Component Style) -->
+<footer class="bg-slate-100 dark:bg-slate-950 py-12 px-8 border-t border-slate-200">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+<a class="font-headline font-bold text-blue-900 text-xl" href="/">Mentoren-Ecke</a>
 <div class="flex flex-wrap justify-center gap-8">
-<a class="text-slate-600 hover:text-blue-600 font-label text-sm leading-relaxed transition-all hover:underline decoration-2" href="/datenschutz/">Datenschutz</a>
-<a class="text-slate-600 hover:text-blue-600 font-label text-sm leading-relaxed transition-all hover:underline decoration-2" href="/impressum/">Impressum</a>
-<a class="text-slate-600 hover:text-blue-600 font-label text-sm leading-relaxed transition-all hover:underline decoration-2" href="/kontakt/">Kontakt</a>
-<a class="text-slate-600 hover:text-blue-600 font-label text-sm leading-relaxed transition-all hover:underline decoration-2" href="/barrierefreiheit/">Barrierefreiheit</a>
+<a class="text-slate-600 hover:text-blue-700 font-body text-sm transition-all hover:underline decoration-2 underline-offset-4" href="/datenschutz/">Datenschutz</a>
+<a class="text-slate-600 hover:text-blue-700 font-body text-sm transition-all hover:underline decoration-2 underline-offset-4" href="/impressum/">Impressum</a>
+<a class="text-slate-600 hover:text-blue-700 font-body text-sm transition-all hover:underline decoration-2 underline-offset-4" href="/kontakt/">Kontakt</a>
 </div>
 <div class="font-body text-sm text-slate-600 opacity-90">© 2026 Mentoren-Ecke. In Ruhe lernen.</div>
+</div>
 </footer>
 <script>
-    // 1. Smooth scroll for navigation links & "Pretty URL" preservation
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            
-            // If it's an internal hash or we want to simulate SPA behavior
-            if (href.startsWith('#')) {
-                e.preventDefault();
-                const targetId = href.substring(1);
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: 'smooth' });
-                    // Update URL without jump
-                    history.pushState(null, null, href);
-                }
-            }
-        });
-    });
-
-    // 2. Reveal animations for the timeline/story sections on scroll
+    // 1. Reveal animations for the timeline/story sections on scroll
     function revealElements() {
         const reveals = document.querySelectorAll('.reveal');
         const windowHeight = window.innerHeight;
@@ -309,21 +291,14 @@
     // Run on scroll
     window.addEventListener('scroll', revealElements);
 
-    // Optional: Active Link Highlighting
-    window.addEventListener('scroll', () => {
-        let current = "";
-        const sections = document.querySelectorAll("section[id]");
-        sections.forEach((section) => {
-            const sectionTop = section.offsetTop;
-            if (window.pageYOffset >= sectionTop - 100) {
-                current = section.getAttribute("id");
-            }
-        });
-
+    // Optional: Active Link Highlighting (simplified)
+    window.addEventListener('load', () => {
+        const path = window.location.pathname;
         document.querySelectorAll(".nav-link").forEach((a) => {
-            a.classList.remove("text-blue-700", "border-b-2", "border-blue-700");
-            if (a.getAttribute("href").includes(current) && current !== "") {
+            const href = a.getAttribute("href");
+            if (path === href || (path === "/" && href === "/")) {
                 a.classList.add("text-blue-700", "border-b-2", "border-blue-700");
+                a.classList.remove("text-slate-700");
             }
         });
     });
